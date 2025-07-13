@@ -87,9 +87,9 @@ global.Actual = {
       });
   },
 
-  startSyncServer: () => {},
+  startSyncServer: () => { },
 
-  stopSyncServer: () => {},
+  stopSyncServer: () => { },
 
   isSyncServerRunning: () => false,
 
@@ -97,7 +97,7 @@ global.Actual = {
     return '';
   },
 
-  restartElectronServer: () => {},
+  restartElectronServer: () => { },
 
   openFileDialog: async ({ filters = [] }) => {
     return new Promise(resolve => {
@@ -117,7 +117,27 @@ global.Actual = {
 
       const filter = filters.find(filter => filter.extensions);
       if (filter) {
-        input.accept = filter.extensions.map(ext => '.' + ext).join(',');
+        // Map extensions to both file extensions and MIME types for better browser compatibility
+        const extensionToMimeType = {
+          'xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+          'csv': 'text/csv',
+          'tsv': 'text/tab-separated-values',
+          'xml': 'application/xml',
+          'qif': '.qif',
+          'ofx': '.ofx',
+          'qfx': '.qfx'
+        };
+
+        const acceptValues = [];
+        filter.extensions.forEach(ext => {
+          acceptValues.push('.' + ext);
+          if (extensionToMimeType[ext] && !extensionToMimeType[ext].startsWith('.')) {
+            acceptValues.push(extensionToMimeType[ext]);
+          }
+        });
+
+        input.accept = acceptValues.join(',');
+        console.log('File dialog accept attribute set to:', input.accept);
       }
 
       input.style.position = 'absolute';
@@ -126,10 +146,12 @@ global.Actual = {
       input.style.display = 'none';
 
       input.onchange = e => {
+        console.log('File dialog onchange triggered, files:', e.target.files);
         const file = e.target.files[0];
         const filename = file.name.replace(/.*(\.[^.]*)/, 'file$1');
 
         if (file) {
+          console.log('Selected file:', file.name, 'type:', file.type, 'size:', file.size);
           const reader = new FileReader();
           reader.readAsArrayBuffer(file);
           reader.onload = async function (ev) {
@@ -151,6 +173,7 @@ global.Actual = {
         document.body.appendChild(input);
       }
 
+      console.log('Opening file dialog with accept:', input.accept);
       input.click();
     });
   },
@@ -169,18 +192,18 @@ global.Actual = {
   openURLInBrowser: url => {
     window.open(url, '_blank');
   },
-  onEventFromMain: () => {},
+  onEventFromMain: () => { },
   isUpdateReadyForDownload: () => isUpdateReadyForDownload,
   waitForUpdateReadyForDownload: () => isUpdateReadyForDownloadPromise,
   applyAppUpdate: async () => {
     updateSW();
 
     // Wait for the app to reload
-    await new Promise(() => {});
+    await new Promise(() => { });
   },
-  updateAppMenu: () => {},
+  updateAppMenu: () => { },
 
-  ipcConnect: () => {},
+  ipcConnect: () => { },
   getServerSocket: async () => {
     return worker;
   },
@@ -189,7 +212,7 @@ global.Actual = {
     window.__actionsForMenu.saveGlobalPrefs({ prefs: { theme } });
   },
 
-  moveBudgetDirectory: () => {},
+  moveBudgetDirectory: () => { },
 };
 
 function inputFocused(e) {

@@ -78,41 +78,87 @@ function getInitialMappings(transactions) {
   const transaction = stripCsvImportTransaction(transactions[0]);
   const fields = Object.entries(transaction);
 
+  // Debug: Log all available fields
+  console.log('Available XLSX fields:', fields.map(([name]) => name));
+
   function key(entry) {
     return entry ? entry[0] : null;
   }
 
   const dateField = key(
-    fields.find(([name]) => name.toLowerCase().includes('date')) ||
-      fields.find(([, value]) => String(value)?.match(/^\d+[-/]\d+[-/]\d+$/)),
+    fields.find(([name]) => {
+      const lowerName = name.toLowerCase();
+      return lowerName.includes('date') ||
+        lowerName.includes('dagsetning') || // Icelandic: Date
+        lowerName === 'dagsetning' ||
+        lowerName.includes('created at'); // Savings account: Created at
+    }) ||
+    fields.find(([, value]) => String(value)?.match(/^\d+[-/]\d+[-/]\d+$/)),
   );
 
   const amountField = key(
-    fields.find(([name]) => name.toLowerCase().includes('amount')) ||
-      fields.find(([, value]) => String(value)?.match(/^-?[.,\d]+$/)),
+    fields.find(([name]) => {
+      const lowerName = name.toLowerCase();
+      return lowerName.includes('amount') ||
+        lowerName.includes('upphæð') || // Icelandic: Amount
+        lowerName === 'upphæð' ||
+        lowerName.includes('amount (kr.)'); // Savings account: Amount (kr.)
+    }) ||
+    fields.find(([, value]) => String(value)?.match(/^-?[.,\d]+$/)),
   );
 
   const categoryField = key(
-    fields.find(([name]) => name.toLowerCase().includes('category')),
+    fields.find(([name]) => {
+      const lowerName = name.toLowerCase();
+      return lowerName.includes('category') ||
+        lowerName.includes('flokkur') || // Icelandic: Category
+        lowerName.includes('tegund') || // Icelandic: Type
+        lowerName.includes('flokkar'); // Icelandic: Categories (plural)
+    }),
   );
 
   const payeeField = key(
-    fields.find(([name]) => name.toLowerCase().includes('payee')) ||
-      fields.find(
-        ([name]) =>
-          name !== dateField && name !== amountField && name !== categoryField,
-      ),
+    fields.find(([name]) => {
+      const lowerName = name.toLowerCase();
+      const isMatch = lowerName.includes('payee') ||
+        lowerName.includes('nafn viðtakanda eða greiðanda') || // Icelandic: Name of recipient or payer (exact match)
+        lowerName.includes('nafn kennitala vidtakanda') || // Icelandic: Name/ID of Recipient
+        lowerName.includes('nafn viðtakanda') || // Icelandic: Recipient name
+        lowerName.includes('nafn greiðanda') || // Icelandic: Payer name
+        lowerName.includes('viðtakanda') || // Icelandic: Recipient
+        lowerName.includes('greiðanda') || // Icelandic: Payer
+        lowerName.includes('kennitala') || // Icelandic: ID number
+        lowerName.includes('description'); // Savings account: Description
+
+      if (isMatch) {
+        console.log('Payee field matched:', name, 'with lowercase:', lowerName);
+      }
+      return isMatch;
+    }) ||
+    fields.find(
+      ([name]) =>
+        name !== dateField && name !== amountField && name !== categoryField,
+    ),
   );
 
   const notesField = key(
-    fields.find(([name]) => name.toLowerCase().includes('notes')) ||
-      fields.find(
-        ([name]) =>
-          name !== dateField &&
-          name !== amountField &&
-          name !== categoryField &&
-          name !== payeeField,
-      ),
+    fields.find(([name]) => {
+      const lowerName = name.toLowerCase();
+      return lowerName.includes('notes') ||
+        lowerName.includes('skýring') || // Icelandic: Description/Explanation
+        lowerName === 'skýring' ||
+        lowerName.includes('texti') || // Icelandic: Text/Notes
+        lowerName === 'texti' ||
+        lowerName.includes('athugasemd') || // Icelandic: Note/Comment
+        lowerName.includes('lýsing'); // Icelandic: Description
+    }) ||
+    fields.find(
+      ([name]) =>
+        name !== dateField &&
+        name !== amountField &&
+        name !== categoryField &&
+        name !== payeeField,
+    ),
   );
 
   const inOutField = key(
@@ -121,7 +167,8 @@ function getInitialMappings(transactions) {
         name !== dateField &&
         name !== amountField &&
         name !== payeeField &&
-        name !== notesField,
+        name !== notesField &&
+        name !== categoryField,
     ),
   );
 
@@ -179,7 +226,7 @@ export function ImportTransactionsModal({
   // re-read this.
   const [delimiter, setDelimiter] = useState(
     prefs[`csv-delimiter-${accountId}`] ||
-      (filename.endsWith('.tsv') ? '\t' : ','),
+    (filename.endsWith('.tsv') ? '\t' : ','),
   );
   const [skipLines, setSkipLines] = useState(
     parseInt(prefs[`csv-skip-lines-${accountId}`], 10) || 0,
@@ -231,8 +278,7 @@ export function ImportTransactionsModal({
           : parseDate(trans.date, parseDateFormat);
         if (date == null) {
           console.log(
-            `Unable to parse date ${
-              trans.date || '(empty)'
+            `Unable to parse date ${trans.date || '(empty)'
             } with given date format`,
           );
           break;
@@ -370,14 +416,14 @@ export function ImportTransactionsModal({
         let splitMode = false;
         let parseDateFormat = null;
 
-        if (filetype === 'csv' || filetype === 'qif') {
+        if (filetype === 'csv' || filetype === 'qif' || filetype === 'xlsx') {
           flipAmount =
             String(prefs[`flip-amount-${accountId}-${filetype}`]) === 'true';
           setFlipAmount(flipAmount);
         }
 
-        if (filetype === 'csv') {
-          let mappings = prefs[`csv-mappings-${accountId}`];
+        if (filetype === 'csv' || filetype === 'xlsx') {
+          let mappings = prefs[`${filetype}-mappings-${accountId}`];
           mappings = mappings
             ? JSON.parse(mappings)
             : getInitialMappings(transactions);
@@ -468,15 +514,15 @@ export function ImportTransactionsModal({
 
     const newFieldMappings = isSplit
       ? {
-          amount: null,
-          outflow: mappings.amount,
-          inflow: null,
-        }
+        amount: null,
+        outflow: mappings.amount,
+        inflow: null,
+      }
       : {
-          amount: mappings.amount,
-          outflow: null,
-          inflow: null,
-        };
+        amount: mappings.amount,
+        outflow: null,
+        inflow: null,
+      };
     setFieldMappings({ ...fieldMappings, ...newFieldMappings });
   }
 
@@ -485,7 +531,7 @@ export function ImportTransactionsModal({
       filters: [
         {
           name: 'Financial Files',
-          extensions: ['qif', 'ofx', 'qfx', 'csv', 'tsv', 'xml'],
+          extensions: ['qif', 'ofx', 'qfx', 'csv', 'tsv', 'xml', 'xlsx'],
         },
       ],
     });
@@ -653,18 +699,20 @@ export function ImportTransactionsModal({
       });
     }
 
-    if (filetype === 'csv') {
+    if (filetype === 'csv' || filetype === 'xlsx') {
       savePrefs({
-        [`csv-mappings-${accountId}`]: JSON.stringify(fieldMappings),
+        [`${filetype}-mappings-${accountId}`]: JSON.stringify(fieldMappings),
       });
-      savePrefs({ [`csv-delimiter-${accountId}`]: delimiter });
-      savePrefs({ [`csv-has-header-${accountId}`]: String(hasHeaderRow) });
-      savePrefs({ [`csv-skip-lines-${accountId}`]: String(skipLines) });
-      savePrefs({ [`csv-in-out-mode-${accountId}`]: String(inOutMode) });
-      savePrefs({ [`csv-out-value-${accountId}`]: String(outValue) });
+      if (filetype === 'csv') {
+        savePrefs({ [`csv-delimiter-${accountId}`]: delimiter });
+        savePrefs({ [`csv-has-header-${accountId}`]: String(hasHeaderRow) });
+        savePrefs({ [`csv-skip-lines-${accountId}`]: String(skipLines) });
+        savePrefs({ [`csv-in-out-mode-${accountId}`]: String(inOutMode) });
+        savePrefs({ [`csv-out-value-${accountId}`]: String(outValue) });
+      }
     }
 
-    if (filetype === 'csv' || filetype === 'qif') {
+    if (filetype === 'csv' || filetype === 'qif' || filetype === 'xlsx') {
       savePrefs({
         [`flip-amount-${accountId}-${filetype}`]: String(flipAmount),
         [`import-notes-${accountId}-${filetype}`]: String(importNotes),
@@ -815,7 +863,7 @@ export function ImportTransactionsModal({
                   <View key={key} style={style}>
                     <Transaction
                       transaction={item}
-                      showParsed={filetype === 'csv' || filetype === 'qif'}
+                      showParsed={filetype === 'csv' || filetype === 'qif' || filetype === 'xlsx'}
                       parseDateFormat={parseDateFormat}
                       dateFormat={dateFormat}
                       fieldMappings={fieldMappings}
@@ -852,7 +900,7 @@ export function ImportTransactionsModal({
             </View>
           )}
 
-          {filetype === 'csv' && (
+          {(filetype === 'csv' || filetype === 'xlsx') && (
             <View style={{ marginTop: 10 }}>
               <FieldMappings
                 transactions={transactions}
@@ -919,7 +967,7 @@ export function ImportTransactionsModal({
           )}
 
           {/*Import Options */}
-          {(filetype === 'qif' || filetype === 'csv') && (
+          {(filetype === 'qif' || filetype === 'csv' || filetype === 'xlsx') && (
             <View style={{ marginTop: 10 }}>
               <Stack
                 direction="row"
@@ -929,7 +977,7 @@ export function ImportTransactionsModal({
               >
                 {/*Date Format */}
                 <View>
-                  {(filetype === 'qif' || filetype === 'csv') && (
+                  {(filetype === 'qif' || filetype === 'csv' || filetype === 'xlsx') && (
                     <DateFormatSelect
                       transactions={transactions}
                       fieldMappings={fieldMappings}

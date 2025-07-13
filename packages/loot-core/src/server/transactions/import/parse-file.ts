@@ -1,7 +1,9 @@
 // @ts-strict-ignore
 import { parse as csv2json } from 'csv-parse/sync';
+import * as XLSX from 'xlsx';
 
 import * as fs from '../../../platform/server/fs';
+// Force compilation refresh for XLSX multi-bank support
 import { looselyParseAmount } from '../../../shared/util';
 
 import { ofx2json } from './ofx2json';
@@ -43,6 +45,8 @@ export async function parseFile(
         return parseOFX(filepath, options);
       case '.xml':
         return parseCAMT(filepath, options);
+      case '.xlsx':
+        return parseXLSX(filepath, options);
       default:
     }
   }
@@ -184,4 +188,206 @@ async function parseCAMT(
       notes: options.importNotes ? trans.notes : null,
     })),
   };
+}
+
+async function parseXLSX(
+  filepath: string,
+  options: ParseFileOptions = {},
+): Promise<ParseFileResult> {
+  const errors = Array<ParseError>();
+
+  try {
+    // Read the file as a buffer
+    const buffer = await fs.readFile(filepath, null); // null means read as buffer
+
+    // Parse the XLSX file with cellDates option to convert Excel date numbers to JS Dates
+    const workbook = XLSX.read(buffer, {
+      type: 'buffer',
+      cellDates: true, // Convert Excel date serial numbers to JavaScript Date objects
+      cellNF: true     // Include number format information
+    });
+
+    // Get the first worksheet
+    const sheetName = workbook.SheetNames[0];
+    const worksheet = workbook.Sheets[sheetName];
+
+    // Convert to JSON with header row detection
+    const rawData = XLSX.utils.sheet_to_json(worksheet, {
+      header: 1, // Return array of arrays
+      raw: true, // Keep raw values including Date objects
+      defval: null // Use null for empty cells
+    });
+
+    if (rawData.length === 0) {
+      return { errors: [], transactions: [] };
+    }
+
+    // DEBUG: Log the first few rows to understand the structure
+    console.log('XLSX Debug - First 10 rows:', rawData.slice(0, 10));
+
+    // Look for the transaction header row - support multiple bank formats
+    let headerRowIndex = -1;
+    let dataStartIndex = -1;
+
+    // Look for headers with financial terms (supports both Icelandic and English banks)
+    for (let i = 0; i < rawData.length; i++) {
+      const row = rawData[i];
+      console.log(`XLSX Debug - Checking row ${i} for headers:`, row);
+
+      if (Array.isArray(row)) {
+        // Check each cell individually for debugging
+        row.forEach((cell, cellIndex) => {
+          if (typeof cell === 'string') {
+            const lowerCell = cell.toLowerCase();
+            console.log(`XLSX Debug - Cell ${cellIndex}: "${cell}" -> "${lowerCell}"`);
+
+            const matches = [
+              lowerCell.includes('created at') && 'created at',
+              lowerCell.includes('description') && 'description',
+              lowerCell.includes('amount') && 'amount',
+              lowerCell.includes('balance') && 'balance',
+              lowerCell.includes('type') && 'type'
+            ].filter(Boolean);
+
+            if (matches.length > 0) {
+              console.log(`XLSX Debug - Cell "${cell}" matches:`, matches);
+            }
+          }
+        });
+
+        const hasFinancialTerms = row.some(cell =>
+          typeof cell === 'string' && (
+            // Arion Banki (Icelandic) terms
+            cell.includes('Dagsetning') ||
+            cell.includes('dagsetning') ||
+            cell.includes('Texti') ||
+            cell.includes('texti') ||
+            cell.includes('Fjárhæð') ||
+            cell.includes('fjárhæð') ||
+            cell.includes('Upphæð') ||
+            cell.includes('upphæð') ||
+            cell.includes('Vaxtadagsetning') ||
+            cell.includes('vaxtadagsetning') ||
+            cell.includes('Skýring') ||
+            cell.includes('skýring') ||
+            // Savings account (English) terms - use toLowerCase for all comparisons
+            cell.toLowerCase().includes('created at') ||
+            cell.toLowerCase().includes('description') ||
+            cell.toLowerCase().includes('amount') ||
+            cell.toLowerCase().includes('balance') ||
+            cell.toLowerCase().includes('type') ||
+            // Generic financial terms
+            cell.toLowerCase().includes('date') ||
+            cell.toLowerCase().includes('transaction') ||
+            cell.toLowerCase().includes('payment') ||
+            cell.toLowerCase().includes('reference')
+          )
+        );
+
+        console.log(`XLSX Debug - Row ${i} hasFinancialTerms:`, hasFinancialTerms);
+
+        if (hasFinancialTerms) {
+          headerRowIndex = i;
+          dataStartIndex = i + 1;
+          console.log('XLSX Debug - Found header row at index:', i, 'Headers:', row);
+          break;
+        }
+      }
+    }
+
+    if (headerRowIndex === -1) {
+      // Enhanced debugging for header detection failure
+      console.log('XLSX Debug - Header detection failed. Analyzing file structure:');
+      console.log('XLSX Debug - Total rows:', rawData.length);
+
+      for (let i = 0; i < Math.min(20, rawData.length); i++) {
+        const row = rawData[i];
+        if (Array.isArray(row) && row.length > 2) {
+          console.log(`XLSX Debug - Row ${i}:`, row);
+
+          // Check each cell for header patterns
+          const hasHeaderPattern = row.some(cell => {
+            if (cell && typeof cell === 'string') {
+              const lowerCell = cell.toLowerCase();
+              const isHeader = lowerCell.includes('created at') ||
+                lowerCell.includes('description') ||
+                lowerCell.includes('amount') ||
+                lowerCell.includes('dagsetning') ||
+                lowerCell.includes('upphæð');
+              if (isHeader) {
+                console.log(`XLSX Debug - Found header pattern "${cell}" in row ${i}`);
+              }
+              return isHeader;
+            }
+            return false;
+          });
+
+          if (hasHeaderPattern) {
+            console.log(`XLSX Debug - Row ${i} has header patterns but failed main detection logic`);
+          }
+        }
+      }
+
+      errors.push({
+        message: 'Could not find transaction header row in XLSX file. Please check the file format.',
+        internal: 'Header row with date/amount columns not found',
+      });
+      return { errors, transactions: [] };
+    }
+
+    // Extract headers and data
+    const headers = rawData[headerRowIndex] as string[];
+    const dataRows = rawData.slice(dataStartIndex);
+
+    console.log('XLSX Debug - Headers found:', headers);
+    console.log('XLSX Debug - First 3 data rows:', dataRows.slice(0, 3));
+
+    // Convert to objects using headers as keys (like CSV parser does)
+    const transactions = dataRows
+      .filter((row: unknown): row is any[] =>
+        Array.isArray(row) && row.some(cell => cell !== null && cell !== ''))
+      .map((row: any[], index: number) => {
+        const transaction: any = {};
+
+        headers.forEach((header, colIndex) => {
+          if (header && header.trim()) {
+            const cellValue = row[colIndex];
+            const headerKey = header.trim();
+
+            // Handle different date formats and data types
+            if (cellValue instanceof Date) {
+              // Excel Date objects (Arion Banki) - convert to YYYY-MM-DD format
+              transaction[headerKey] = cellValue.toISOString().split('T')[0];
+            } else if (typeof cellValue === 'string' && cellValue.match(/^\d{2}\.\d{2}\.\d{4}$/)) {
+              // DD.MM.YYYY string format (Savings account) - convert to YYYY-MM-DD
+              const [day, month, year] = cellValue.split('.');
+              transaction[headerKey] = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+            } else {
+              // All other values - store as-is
+              transaction[headerKey] = cellValue;
+            }
+          }
+        });
+
+        // Debug first few transactions
+        if (index < 3) {
+          console.log(`XLSX Debug - Transaction ${index}:`, transaction);
+        }
+
+        return transaction;
+      })
+      .filter(trans => Object.keys(trans).length > 0); // Only include non-empty transactions
+
+    console.log('XLSX Debug - Total transactions parsed:', transactions.length);
+
+    return { errors, transactions };
+
+  } catch (err) {
+    console.error('XLSX Parsing Error:', err);
+    errors.push({
+      message: 'Failed parsing XLSX file: ' + err.message,
+      internal: err.stack || err.message,
+    });
+    return { errors, transactions: [] };
+  }
 }
