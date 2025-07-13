@@ -63,3 +63,14 @@ build/
 
 # .d.ts files aren't type-checked with skipLibCheck set to true
 *.d.ts
+
+# Financial Documents & Test Files
+docs/
+test-*.js
+test-*.html
+*.xlsx
+*.pdf
+*-test.html
+validate-*.js
+debug-*.js
+create-*.js
