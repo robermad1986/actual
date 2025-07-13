@@ -42,6 +42,8 @@ bundle.mobile.js.map
 
 # VSCode
 .vscode
+# Allow development documentation in .vscode
+!.vscode/DEVELOPMENT_GUIDE.md
 
 # IntelliJ IDEA
 .idea
