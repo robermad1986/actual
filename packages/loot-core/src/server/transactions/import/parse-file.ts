@@ -224,6 +224,13 @@ async function parseXLSX(
 
     // DEBUG: Log the first few rows to understand the structure
     console.log('XLSX Debug - First 10 rows:', rawData.slice(0, 10));
+    console.log('XLSX Debug - Sheet name:', sheetName);
+
+    // Detect if this is a credit card statement
+    const isCreditCardSheet = sheetName.toLowerCase().includes('kreditkort') ||
+      sheetName.toLowerCase().includes('credit');
+
+    console.log('XLSX Debug - Is Credit Card Sheet:', isCreditCardSheet);
 
     // Look for the transaction header row - support multiple bank formats
     let headerRowIndex = -1;
@@ -270,12 +277,37 @@ async function parseXLSX(
             cell.includes('vaxtadagsetning') ||
             cell.includes('Skýring') ||
             cell.includes('skýring') ||
+            cell.includes('Nafn viðtakanda eða greiðanda') ||
+            cell.includes('nafn viðtakanda eða greiðanda') ||
             // Savings account (English) terms - use toLowerCase for all comparisons
             cell.toLowerCase().includes('created at') ||
             cell.toLowerCase().includes('description') ||
             cell.toLowerCase().includes('amount') ||
             cell.toLowerCase().includes('balance') ||
             cell.toLowerCase().includes('type') ||
+            // Credit card specific terms (Icelandic)
+            cell.includes('Lýsing') ||
+            cell.includes('lýsing') ||
+            cell.includes('Innlend upphæð') ||
+            cell.includes('innlend upphæð') ||
+            cell.includes('Erlend upphæð') ||
+            cell.includes('erlend upphæð') ||
+            cell.includes('Gengi') ||
+            cell.includes('gengi') ||
+            cell.includes('Heimildarnúmer') ||
+            cell.includes('heimildarnúmer') ||
+            cell.includes('Lýsing færslu') ||
+            cell.includes('lýsing færslu') ||
+            // Credit card terms (English)
+            cell.toLowerCase().includes('merchant') ||
+            cell.toLowerCase().includes('purchase') ||
+            cell.toLowerCase().includes('card number') ||
+            cell.toLowerCase().includes('authorization') ||
+            cell.toLowerCase().includes('posting date') ||
+            cell.toLowerCase().includes('transaction date') ||
+            cell.toLowerCase().includes('charge') ||
+            cell.toLowerCase().includes('credit') ||
+            cell.toLowerCase().includes('debit') ||
             // Generic financial terms
             cell.toLowerCase().includes('date') ||
             cell.toLowerCase().includes('transaction') ||

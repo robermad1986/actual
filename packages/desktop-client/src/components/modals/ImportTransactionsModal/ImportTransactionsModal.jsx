@@ -100,9 +100,11 @@ function getInitialMappings(transactions) {
     fields.find(([name]) => {
       const lowerName = name.toLowerCase();
       return lowerName.includes('amount') ||
-        lowerName.includes('upphæð') || // Icelandic: Amount
-        lowerName === 'upphæð' ||
-        lowerName.includes('amount (kr.)'); // Savings account: Amount (kr.)
+        lowerName === 'innlend upphæð' || // Credit card: Domestic amount (exact match first)
+        lowerName.includes('innlend upphæð') || // Credit card: Domestic amount
+        lowerName.includes('amount (kr.)') || // Savings account: Amount (kr.)
+        lowerName === 'upphæð' || // Icelandic: Amount (exact match)
+        (lowerName.includes('upphæð') && !lowerName.includes('erlend')); // Icelandic: Amount (but not foreign amount)
     }) ||
     fields.find(([, value]) => String(value)?.match(/^-?[.,\d]+$/)),
   );
@@ -128,7 +130,16 @@ function getInitialMappings(transactions) {
         lowerName.includes('viðtakanda') || // Icelandic: Recipient
         lowerName.includes('greiðanda') || // Icelandic: Payer
         lowerName.includes('kennitala') || // Icelandic: ID number
-        lowerName.includes('description'); // Savings account: Description
+        lowerName.includes('description') || // Savings account: Description
+        // Credit card specific payee fields
+        lowerName.includes('merchant') ||
+        lowerName.includes('vendor') ||
+        lowerName.includes('store') ||
+        lowerName.includes('business') ||
+        lowerName.includes('establishment') ||
+        // Credit card Icelandic fields
+        (lowerName === 'lýsing' && !lowerName.includes('færslu')) || // Credit card: Description (merchant name)
+        lowerName.includes('lýsing') && !lowerName.includes('færslu'); // Credit card: Description (merchant name)
 
       if (isMatch) {
         console.log('Payee field matched:', name, 'with lowercase:', lowerName);
@@ -150,7 +161,8 @@ function getInitialMappings(transactions) {
         lowerName.includes('texti') || // Icelandic: Text/Notes
         lowerName === 'texti' ||
         lowerName.includes('athugasemd') || // Icelandic: Note/Comment
-        lowerName.includes('lýsing'); // Icelandic: Description
+        lowerName.includes('lýsing') && lowerName.includes('færslu') || // Credit card: Transaction description
+        lowerName === 'lýsing færslu'; // Credit card: Transaction description (exact match)
     }) ||
     fields.find(
       ([name]) =>
