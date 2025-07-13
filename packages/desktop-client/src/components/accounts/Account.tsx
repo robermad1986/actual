@@ -218,11 +218,11 @@ function getField(field?: string) {
 
 type AccountInternalProps = {
   accountId?:
-    | AccountEntity['id']
-    | 'onbudget'
-    | 'offbudget'
-    | 'uncategorized'
-    | undefined;
+  | AccountEntity['id']
+  | 'onbudget'
+  | 'offbudget'
+  | 'uncategorized'
+  | undefined;
   filterConditions: RuleConditionEntity[];
   showBalances?: boolean;
   setShowBalances: (newValue: boolean) => void;
@@ -596,7 +596,7 @@ class AccountInternal extends PureComponent<
         filters: [
           {
             name: t('Financial files'),
-            extensions: ['qif', 'ofx', 'qfx', 'csv', 'tsv', 'xml'],
+            extensions: ['qif', 'ofx', 'qfx', 'csv', 'tsv', 'xml', 'xlsx'],
           },
         ],
       });
@@ -1268,17 +1268,17 @@ class AccountInternal extends PureComponent<
 
     const payeeCondition = ruleTransaction.imported_payee
       ? ({
-          field: 'imported_payee',
-          op: 'is',
-          value: ruleTransaction.imported_payee,
-          type: 'string',
-        } satisfies RuleConditionEntity)
+        field: 'imported_payee',
+        op: 'is',
+        value: ruleTransaction.imported_payee,
+        type: 'string',
+      } satisfies RuleConditionEntity)
       : ({
-          field: 'payee',
-          op: 'is',
-          value: ruleTransaction.payee!,
-          type: 'id',
-        } satisfies RuleConditionEntity);
+        field: 'payee',
+        op: 'is',
+        value: ruleTransaction.payee!,
+        type: 'id',
+      } satisfies RuleConditionEntity);
     const amountCondition = {
       field: 'amount',
       op: 'isapprox',
@@ -1293,16 +1293,16 @@ class AccountInternal extends PureComponent<
       actions: [
         ...(childTransactions.length === 0
           ? [
-              {
-                op: 'set',
-                field: 'category',
-                value: ruleTransaction.category,
-                type: 'id',
-                options: {
-                  splitIndex: 0,
-                },
-              } satisfies RuleActionEntity,
-            ]
+            {
+              op: 'set',
+              field: 'category',
+              value: ruleTransaction.category,
+              type: 'id',
+              options: {
+                splitIndex: 0,
+              },
+            } satisfies RuleActionEntity,
+          ]
           : []),
         ...childTransactions.flatMap((sub, index) => [
           {
@@ -1707,8 +1707,8 @@ class AccountInternal extends PureComponent<
 
     const isNameEditable = accountId
       ? accountId !== 'onbudget' &&
-        accountId !== 'offbudget' &&
-        accountId !== 'uncategorized'
+      accountId !== 'offbudget' &&
+      accountId !== 'uncategorized'
       : false;
 
     const balanceQuery = this.getBalanceQuery(accountId);

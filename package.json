@@ -99,5 +99,8 @@
   "browserslist": [
     "electron 24.0",
     "defaults"
-  ]
+  ],
+  "dependencies": {
+    "stream-http": "^3.2.0"
+  }
 }

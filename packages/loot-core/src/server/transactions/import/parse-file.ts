@@ -1,6 +1,7 @@
 // @ts-strict-ignore
 import { parse as csv2json } from 'csv-parse/sync';
 import * as XLSX from 'xlsx';
+import * as pdfParse from 'pdf-parse';
 
 import * as fs from '../../../platform/server/fs';
 // Force compilation refresh for XLSX multi-bank support
@@ -47,6 +48,8 @@ export async function parseFile(
         return parseCAMT(filepath, options);
       case '.xlsx':
         return parseXLSX(filepath, options);
+      case '.pdf':
+        return parsePDF(filepath, options);
       default:
     }
   }
@@ -422,4 +425,187 @@ async function parseXLSX(
     });
     return { errors, transactions: [] };
   }
+}
+
+async function parsePDF(
+  filepath: string,
+  options: ParseFileOptions = {},
+): Promise<ParseFileResult> {
+  const errors = Array<ParseError>();
+
+  try {
+    console.log('PDF Debug - Starting PDF parsing for:', filepath);
+
+    // Read the PDF file as a buffer
+    const buffer = await fs.readFile(filepath, null); // null means read as buffer
+
+    // Parse the PDF to extract text
+    const data = await pdfParse(buffer);
+    const text = data.text;
+
+    console.log('PDF Debug - Extracted text length:', text.length, 'characters');
+
+    // Split into lines and clean
+    const lines = text.split('\n')
+      .map(line => line.trim())
+      .filter(line => line.length > 0);
+
+    console.log('PDF Debug - Total lines:', lines.length);
+
+    // Find the start of transactions by looking for credit card headers
+    let startIndex = -1;
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+
+      // Look for Icelandic credit card headers
+      if (line.includes('DagsetningLýsingGengiErlend upphæðInnlend upphæð') ||
+        line.includes('Kreditkortayfirlit') ||
+        (line.includes('Dagsetning') && line.includes('Lýsing') && line.includes('upphæð'))) {
+        startIndex = i + 1;
+        console.log('PDF Debug - Transaction start found at line:', i + 1);
+        break;
+      }
+    }
+
+    if (startIndex === -1) {
+      errors.push({
+        message: 'Could not find credit card transaction section in PDF. Please check if this is a valid credit card statement.',
+        internal: 'No credit card headers found in PDF text',
+      });
+      return { errors, transactions: [] };
+    }
+
+    // Parse transactions
+    const transactions = [];
+    let i = startIndex;
+
+    while (i < lines.length) {
+      const line = lines[i];
+
+      // Look for date pattern at start of line (DD.MM.YYYY)
+      const dateMatch = line.match(/^(\d{1,2}\.\d{1,2}\.\d{4})/);
+
+      if (dateMatch) {
+        const date = dateMatch[1];
+        const remainingLine = line.substring(date.length);
+
+        // Check if this is the end of transactions (summary lines)
+        if (remainingLine.includes('Samtals') ||
+          remainingLine.includes('Skuld') ||
+          remainingLine.includes('Greiðsla') ||
+          remainingLine.includes('Staða') ||
+          remainingLine.includes('Lágmarksgreiðsla')) {
+          console.log('PDF Debug - End of transactions detected at line:', i + 1);
+          break;
+        }
+
+        let merchant = '';
+        let amount = '';
+
+        // Pattern 1: Everything in one line (complete transaction)
+        // Example: "12.07.2025Gaeludyr.Is - Sölunóta-5.157 kr."
+        // Or embedded amounts: "20.05.2025Innborgun - Innborgun200.000 kr."
+        let singleLineMatch = remainingLine.match(/^(.+?)-(\d{1,3}(?:\.\d{3})*(?:,\d{2})?) kr\.?$/);
+
+        // If no match, try pattern with embedded amounts
+        if (!singleLineMatch) {
+          singleLineMatch = remainingLine.match(/^(.+?)(\d{1,3}(?:\.\d{3})*(?:,\d{2})?) kr\.?$/);
+        }
+
+        if (singleLineMatch) {
+          merchant = singleLineMatch[1].trim();
+          amount = '-' + singleLineMatch[2].replace(/\./g, '').replace(',', '.');
+
+          // Clean merchant name
+          merchant = merchant.replace(/ - Sölunóta$/, '').replace(/ -$/, '').trim();
+
+          transactions.push({
+            date: convertPDFDateFormat(date),
+            payee_name: merchant,
+            imported_payee: merchant,
+            amount: parseFloat(amount),
+            notes: 'Imported from PDF'
+          });
+
+          i++;
+        } else {
+          // Pattern 2: Multi-line format
+          // Line 1: "12.07.2025Kronan Nordurhellu -" (ends with " -")
+          // Line 2+: Continue looking for amount line
+
+          merchant = remainingLine.replace(/ -$/, '').trim();
+
+          // Look for amount in following lines (more flexible search)
+          let nextLineIndex = i + 1;
+          let foundAmount = false;
+
+          // Look for amount within next 10 lines (increased from 5)
+          while (nextLineIndex < lines.length && nextLineIndex < i + 10) {
+            const nextLine = lines[nextLineIndex];
+
+            // Check if this line contains an amount pattern
+            const amountMatch = nextLine.match(/^-(\d{1,3}(?:\.\d{3})*(?:,\d{2})?) kr\.?$/);
+            if (amountMatch) {
+              amount = '-' + amountMatch[1].replace(/\./g, '').replace(',', '.');
+
+              transactions.push({
+                date: convertPDFDateFormat(date),
+                payee_name: merchant,
+                imported_payee: merchant,
+                amount: parseFloat(amount),
+                notes: 'Imported from PDF'
+              });
+
+              foundAmount = true;
+              i = nextLineIndex + 1;
+              break;
+            }
+
+            // If this line also starts with a date, we missed the amount for previous transaction
+            // Skip this transaction and let the next iteration handle the new date line
+            if (/^\d{1,2}\.\d{1,2}\.\d{4}/.test(nextLine)) {
+              console.log('PDF Debug - Found new date before amount, skipping transaction:', line);
+              i = nextLineIndex;
+              foundAmount = true; // Set to true to exit the loop
+              break;
+            }
+
+            nextLineIndex++;
+          }
+
+          if (!foundAmount) {
+            console.log('PDF Debug - No amount found for transaction at line:', i + 1, line);
+            i++;
+          }
+        }
+      } else {
+        i++;
+      }
+    }
+
+    console.log('PDF Debug - Total transactions parsed:', transactions.length);
+
+    if (transactions.length === 0) {
+      errors.push({
+        message: 'No transactions found in PDF. Please check if this is a valid credit card statement with transaction data.',
+        internal: 'Zero transactions parsed from PDF',
+      });
+    }
+
+    return { errors, transactions };
+
+  } catch (err) {
+    console.error('PDF Parsing Error:', err);
+    errors.push({
+      message: 'Failed parsing PDF file: ' + err.message,
+      internal: err.stack || err.message,
+    });
+    return { errors, transactions: [] };
+  }
+}
+
+// Convert date from DD.MM.YYYY to YYYY-MM-DD format
+function convertPDFDateFormat(dateStr: string): string {
+  const [day, month, year] = dateStr.split('.');
+  return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
 }

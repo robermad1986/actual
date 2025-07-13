@@ -1,17 +1,15 @@
-###################################################
-# This creates and stands up the development
-# docker container. Depends on the Dockerfile and
-# docker-start.sh files.
-###################################################
-
+version: '3'
 services:
-  actual-development:
-    build: .
-    image: actual-development
-    environment:
-      - HTTPS
+  actual_server:
+    image: actualbudget/actual-server:25.7.1
     ports:
-      - '3001:3001'
+      - '5006:5006'
     volumes:
-      - '.:/app'
-    restart: 'no'
+      - ./actual-data:/data
+    healthcheck:
+      test: [ 'CMD-SHELL', 'node src/scripts/health-check.js' ]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    restart: unless-stopped

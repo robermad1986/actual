@@ -123,6 +123,7 @@ global.Actual = {
           'csv': 'text/csv',
           'tsv': 'text/tab-separated-values',
           'xml': 'application/xml',
+          'pdf': 'application/pdf',
           'qif': '.qif',
           'ofx': '.ofx',
           'qfx': '.qfx'

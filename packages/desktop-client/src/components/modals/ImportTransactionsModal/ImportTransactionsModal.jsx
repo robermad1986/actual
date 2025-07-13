@@ -428,13 +428,13 @@ export function ImportTransactionsModal({
         let splitMode = false;
         let parseDateFormat = null;
 
-        if (filetype === 'csv' || filetype === 'qif' || filetype === 'xlsx') {
+        if (filetype === 'csv' || filetype === 'qif' || filetype === 'xlsx' || filetype === 'pdf') {
           flipAmount =
             String(prefs[`flip-amount-${accountId}-${filetype}`]) === 'true';
           setFlipAmount(flipAmount);
         }
 
-        if (filetype === 'csv' || filetype === 'xlsx') {
+        if (filetype === 'csv' || filetype === 'xlsx' || filetype === 'pdf') {
           let mappings = prefs[`${filetype}-mappings-${accountId}`];
           mappings = mappings
             ? JSON.parse(mappings)
@@ -543,7 +543,7 @@ export function ImportTransactionsModal({
       filters: [
         {
           name: 'Financial Files',
-          extensions: ['qif', 'ofx', 'qfx', 'csv', 'tsv', 'xml', 'xlsx'],
+          extensions: ['qif', 'ofx', 'qfx', 'csv', 'tsv', 'xml', 'xlsx', 'pdf'],
         },
       ],
     });
@@ -711,7 +711,7 @@ export function ImportTransactionsModal({
       });
     }
 
-    if (filetype === 'csv' || filetype === 'xlsx') {
+    if (filetype === 'csv' || filetype === 'xlsx' || filetype === 'pdf') {
       savePrefs({
         [`${filetype}-mappings-${accountId}`]: JSON.stringify(fieldMappings),
       });
@@ -724,7 +724,7 @@ export function ImportTransactionsModal({
       }
     }
 
-    if (filetype === 'csv' || filetype === 'qif' || filetype === 'xlsx') {
+    if (filetype === 'csv' || filetype === 'qif' || filetype === 'xlsx' || filetype === 'pdf') {
       savePrefs({
         [`flip-amount-${accountId}-${filetype}`]: String(flipAmount),
         [`import-notes-${accountId}-${filetype}`]: String(importNotes),
@@ -875,7 +875,7 @@ export function ImportTransactionsModal({
                   <View key={key} style={style}>
                     <Transaction
                       transaction={item}
-                      showParsed={filetype === 'csv' || filetype === 'qif' || filetype === 'xlsx'}
+                      showParsed={filetype === 'csv' || filetype === 'qif' || filetype === 'xlsx' || filetype === 'pdf'}
                       parseDateFormat={parseDateFormat}
                       dateFormat={dateFormat}
                       fieldMappings={fieldMappings}
@@ -912,7 +912,7 @@ export function ImportTransactionsModal({
             </View>
           )}
 
-          {(filetype === 'csv' || filetype === 'xlsx') && (
+          {(filetype === 'csv' || filetype === 'xlsx' || filetype === 'pdf') && (
             <View style={{ marginTop: 10 }}>
               <FieldMappings
                 transactions={transactions}
@@ -979,7 +979,7 @@ export function ImportTransactionsModal({
           )}
 
           {/*Import Options */}
-          {(filetype === 'qif' || filetype === 'csv' || filetype === 'xlsx') && (
+          {(filetype === 'qif' || filetype === 'csv' || filetype === 'xlsx' || filetype === 'pdf') && (
             <View style={{ marginTop: 10 }}>
               <Stack
                 direction="row"
@@ -989,7 +989,7 @@ export function ImportTransactionsModal({
               >
                 {/*Date Format */}
                 <View>
-                  {(filetype === 'qif' || filetype === 'csv' || filetype === 'xlsx') && (
+                  {(filetype === 'qif' || filetype === 'csv' || filetype === 'xlsx' || filetype === 'pdf') && (
                     <DateFormatSelect
                       transactions={transactions}
                       fieldMappings={fieldMappings}

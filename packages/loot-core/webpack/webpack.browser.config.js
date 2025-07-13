@@ -36,6 +36,7 @@ module.exports = {
       crypto: false,
       dgram: false,
       fs: require.resolve('memfs'),
+      http: require.resolve('stream-http'),
       net: false,
       path: require.resolve('path-browserify'),
       process: require.resolve('process/browser'),
@@ -97,6 +98,8 @@ module.exports = {
       'process.env.PUBLIC_URL': JSON.stringify(process.env.PUBLIC_URL || '/'),
       'process.env.ACTUAL_DATA_DIR': JSON.stringify('/'),
       'process.env.ACTUAL_DOCUMENT_DIR': JSON.stringify('/documents'),
+      // Prevent pdf-parse from running debug code
+      'module.parent': 'true',
     }),
     new webpack.ProvidePlugin({
       Buffer: ['buffer', 'Buffer'],

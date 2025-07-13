@@ -1,0 +1,5480 @@
+[
+  {
+    "date": "2025-07-12",
+    "merchant": "Gaeludyr.Is",
+    "amount": -5157,
+    "raw": "12.07.2025Gaeludyr.Is - Sölunóta-5.157 kr."
+  },
+  {
+    "date": "2025-07-12",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1695,
+    "raw": "12.07.2025Kronan Nordurhellu - | -1.695 kr."
+  },
+  {
+    "date": "2025-07-10",
+    "merchant": "Kronan Nordurhella",
+    "amount": -403,
+    "raw": "10.07.2025Kronan Nordurhella - | -403 kr."
+  },
+  {
+    "date": "2025-07-10",
+    "merchant": "Kronan Nordurhella",
+    "amount": -672,
+    "raw": "10.07.2025Kronan Nordurhella - | -672 kr."
+  },
+  {
+    "date": "2025-07-10",
+    "merchant": "Or Vatns- Og Fraveita",
+    "amount": -15574,
+    "raw": "10.07.2025Or Vatns- Og Fraveita - | -15.574 kr."
+  },
+  {
+    "date": "2025-07-10",
+    "merchant": "Hs Veitur",
+    "amount": -2441,
+    "raw": "10.07.2025Hs Veitur - Sölunóta-2.441 kr."
+  },
+  {
+    "date": "2025-07-10",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -14889,
+    "raw": "10.07.2025Rvk -Fasteignagjold - | -14.889 kr."
+  },
+  {
+    "date": "2025-07-10",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -12611,
+    "raw": "10.07.2025Rvk -Fasteignagjold - | -12.611 kr."
+  },
+  {
+    "date": "2025-07-08",
+    "merchant": "Str*Oryggismidstodin",
+    "amount": -3090,
+    "raw": "08.07.2025Str*Oryggismidstodin - | -3.090 kr."
+  },
+  {
+    "date": "2025-07-08",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1069,
+    "raw": "08.07.2025Kronan Nordurhella - | -1.069 kr."
+  },
+  {
+    "date": "2025-07-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1456,
+    "raw": "08.07.2025Kronan Nordurhellu - | -1.456 kr."
+  },
+  {
+    "date": "2025-07-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1264,
+    "raw": "08.07.2025Kronan Nordurhellu - | -1.264 kr."
+  },
+  {
+    "date": "2025-07-07",
+    "merchant": "Vis Tryggingar Hf",
+    "amount": -14392,
+    "raw": "07.07.2025Vis Tryggingar Hf - | -14.392 kr."
+  },
+  {
+    "date": "2025-07-07",
+    "merchant": "Vis Tryggingar Hf",
+    "amount": -8899,
+    "raw": "07.07.2025Vis Tryggingar Hf - | -8.899 kr."
+  },
+  {
+    "date": "2025-07-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -474,
+    "raw": "07.07.2025Kronan Nordurhellu - | -474 kr."
+  },
+  {
+    "date": "2025-07-07",
+    "merchant": "Lyfjaval - Haedasmari",
+    "amount": -1329,
+    "raw": "07.07.2025Lyfjaval - Haedasmari - | -1.329 kr."
+  },
+  {
+    "date": "2025-07-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -94,
+    "raw": "07.07.2025Kronan Nordurhellu - | -94 kr."
+  },
+  {
+    "date": "2025-07-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -246,
+    "raw": "07.07.2025Kronan Nordurhellu - | -246 kr."
+  },
+  {
+    "date": "2025-07-06",
+    "merchant": "Nyja Vinbudin",
+    "amount": -4428,
+    "raw": "06.07.2025Nyja Vinbudin - | -4.428 kr."
+  },
+  {
+    "date": "2025-07-06",
+    "merchant": "Nyja Vinbudin",
+    "amount": -4428,
+    "raw": "06.07.2025Nyja Vinbudin - | -4.428 kr."
+  },
+  {
+    "date": "2025-07-05",
+    "merchant": "Kronan Nordurhella",
+    "amount": -5806,
+    "raw": "05.07.2025Kronan Nordurhella - | -5.806 kr."
+  },
+  {
+    "date": "2025-07-05",
+    "merchant": "Kronan Nordurhella",
+    "amount": -4340,
+    "raw": "05.07.2025Kronan Nordurhella - | -4.340 kr."
+  },
+  {
+    "date": "2025-07-05",
+    "merchant": "Orninn Hjol Ehf",
+    "amount": -4897,
+    "raw": "05.07.2025Orninn Hjol Ehf - | -4.897 kr."
+  },
+  {
+    "date": "2025-07-04",
+    "merchant": "Kronan Nordurhella",
+    "amount": -4692,
+    "raw": "04.07.2025Kronan Nordurhella - | -4.692 kr."
+  },
+  {
+    "date": "2025-07-04",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1620,
+    "raw": "04.07.2025Kronan Nordurhella - | -1.620 kr."
+  },
+  {
+    "date": "2025-07-03",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -474,
+    "raw": "03.07.2025Kronan Nordurhellu - | -474 kr."
+  },
+  {
+    "date": "2025-07-02",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1527,
+    "raw": "02.07.2025Kronan Nordurhella - | -1.527 kr."
+  },
+  {
+    "date": "2025-07-02",
+    "merchant": "Kronan Nordurhella -",
+    "amount": -816,
+    "raw": "02.07.2025Kronan Nordurhella --816 kr."
+  },
+  {
+    "date": "2025-07-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1017,
+    "raw": "02.07.2025Kronan Nordurhellu - | -1.017 kr."
+  },
+  {
+    "date": "2025-07-01",
+    "merchant": "Dalshraun",
+    "amount": -4250,
+    "raw": "01.07.2025Dalshraun - Sölunóta-4.250 kr."
+  },
+  {
+    "date": "2025-07-01",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -949,
+    "raw": "01.07.2025Kronan Nordurhellu - | -949 kr."
+  },
+  {
+    "date": "2025-07-01",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -182,
+    "raw": "01.07.2025Kronan Nordurhellu - | -182 kr."
+  },
+  {
+    "date": "2025-06-30",
+    "merchant": "Costco Iceland Fuel 401",
+    "amount": -10000,
+    "raw": "30.06.2025Costco Iceland Fuel 401 | -10.000 kr."
+  },
+  {
+    "date": "2025-06-30",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2088,
+    "raw": "30.06.2025Kronan Nordurhellu - | -2.088 kr."
+  },
+  {
+    "date": "2025-06-30",
+    "merchant": "Gaeludyr.Is",
+    "amount": -3490,
+    "raw": "30.06.2025Gaeludyr.Is - Sölunóta-3.490 kr."
+  },
+  {
+    "date": "2025-06-30",
+    "merchant": "Kronan Nordurhella",
+    "amount": -2072,
+    "raw": "30.06.2025Kronan Nordurhella - | -2.072 kr."
+  },
+  {
+    "date": "2025-06-30",
+    "merchant": "Kronan Lindir",
+    "amount": -980,
+    "raw": "30.06.2025Kronan Lindir - Sölunóta-980 kr."
+  },
+  {
+    "date": "2025-06-30",
+    "merchant": "Apotekarinn Mjodd",
+    "amount": -4162,
+    "raw": "30.06.2025Apotekarinn Mjodd - | -4.162 kr."
+  },
+  {
+    "date": "2025-06-28",
+    "merchant": "Netto Mjodd",
+    "amount": -648,
+    "raw": "28.06.2025Netto Mjodd - Sölunóta-648 kr."
+  },
+  {
+    "date": "2025-06-28",
+    "merchant": "Is-Grill",
+    "amount": -700,
+    "raw": "28.06.2025Is-Grill - Sölunóta-700 kr."
+  },
+  {
+    "date": "2025-06-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1315,
+    "raw": "27.06.2025Kronan Nordurhellu - | -1.315 kr."
+  },
+  {
+    "date": "2025-06-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -5485,
+    "raw": "27.06.2025Kronan Nordurhellu - | -5.485 kr."
+  },
+  {
+    "date": "2025-06-27",
+    "merchant": "Github, Inc. - Sölunóta125.6USD -10,00",
+    "amount": -1256,
+    "raw": "27.06.2025Github, Inc. - Sölunóta125.6USD -10,00-1.256 kr."
+  },
+  {
+    "date": "2025-06-27",
+    "merchant": "Github, Inc. - Sölunóta125.586USD -29,00",
+    "amount": -3642,
+    "raw": "27.06.2025Github, Inc. - Sölunóta125.586USD -29,00-3.642 kr."
+  },
+  {
+    "date": "2025-06-27",
+    "merchant": "Útskriftargjald",
+    "amount": -130,
+    "raw": "27.06.2025Útskriftargjald-130 kr."
+  },
+  {
+    "date": "2025-06-26",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1166,
+    "raw": "26.06.2025Kronan Nordurhella - | -1.166 kr."
+  },
+  {
+    "date": "2025-06-26",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1142,
+    "raw": "26.06.2025Kronan Nordurhella - | -1.142 kr."
+  },
+  {
+    "date": "2025-06-25",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -758,
+    "raw": "25.06.2025Kronan Nordurhellu - | -758 kr."
+  },
+  {
+    "date": "2025-06-24",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1647,
+    "raw": "24.06.2025Kronan Nordurhella - | -1.647 kr."
+  },
+  {
+    "date": "2025-06-23",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -632,
+    "raw": "23.06.2025Kronan Nordurhellu - | -632 kr."
+  },
+  {
+    "date": "2025-06-23",
+    "merchant": "Kronan Nordurhella",
+    "amount": -2028,
+    "raw": "23.06.2025Kronan Nordurhella - | -2.028 kr."
+  },
+  {
+    "date": "2025-06-21",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1834,
+    "raw": "21.06.2025Kronan Nordurhella - | -1.834 kr."
+  },
+  {
+    "date": "2025-06-21",
+    "merchant": "Netto Mjodd",
+    "amount": -1777,
+    "raw": "21.06.2025Netto Mjodd - Sölunóta-1.777 kr."
+  },
+  {
+    "date": "2025-06-21",
+    "merchant": "Mini Market",
+    "amount": -13990,
+    "raw": "21.06.2025Mini Market - Sölunóta-13.990 kr."
+  },
+  {
+    "date": "2025-06-20",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1991,
+    "raw": "20.06.2025Kronan Nordurhella - | -1.991 kr."
+  },
+  {
+    "date": "2025-06-20",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -6948,
+    "raw": "20.06.2025Costco Wholesale Icela | -6.948 kr."
+  },
+  {
+    "date": "2025-06-20",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -5561,
+    "raw": "20.06.2025Costco Wholesale Icela | -5.561 kr."
+  },
+  {
+    "date": "2025-06-20",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1594,
+    "raw": "20.06.2025Kronan Nordurhellu - | -1.594 kr."
+  },
+  {
+    "date": "2025-06-19",
+    "merchant": "Kronan Nordurhella",
+    "amount": -2364,
+    "raw": "19.06.2025Kronan Nordurhella - | -2.364 kr."
+  },
+  {
+    "date": "2025-06-19",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -264,
+    "raw": "19.06.2025Kronan Nordurhellu - | -264 kr."
+  },
+  {
+    "date": "2025-06-19",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1362,
+    "raw": "19.06.2025Kronan Nordurhellu - | -1.362 kr."
+  },
+  {
+    "date": "2025-06-18",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1166,
+    "raw": "18.06.2025Kronan Nordurhellu - | -1.166 kr."
+  },
+  {
+    "date": "2025-06-18",
+    "merchant": "Or Vatns- Og Fraveita",
+    "amount": -15574,
+    "raw": "18.06.2025Or Vatns- Og Fraveita - | -15.574 kr."
+  },
+  {
+    "date": "2025-06-18",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1141,
+    "raw": "18.06.2025Kronan Nordurhellu - | -1.141 kr."
+  },
+  {
+    "date": "2025-06-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2305,
+    "raw": "17.06.2025Kronan Nordurhellu - | -2.305 kr."
+  },
+  {
+    "date": "2025-06-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1290,
+    "raw": "17.06.2025Kronan Nordurhellu - | -1.290 kr."
+  },
+  {
+    "date": "2025-06-16",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1047,
+    "raw": "16.06.2025Kronan Nordurhella - | -1.047 kr."
+  },
+  {
+    "date": "2025-06-16",
+    "merchant": "Veitur",
+    "amount": -5529,
+    "raw": "16.06.2025Veitur - Sölunóta-5.529 kr."
+  },
+  {
+    "date": "2025-06-16",
+    "merchant": "Hringdu",
+    "amount": -1990,
+    "raw": "16.06.2025Hringdu - Sölunóta-1.990 kr."
+  },
+  {
+    "date": "2025-06-15",
+    "merchant": "Simyo - Sölunóta149.167EUR -1,20",
+    "amount": -179,
+    "raw": "15.06.2025Simyo - Sölunóta149.167EUR -1,20-179 kr."
+  },
+  {
+    "date": "2025-06-15",
+    "merchant": "Netto Mjodd",
+    "amount": -1346,
+    "raw": "15.06.2025Netto Mjodd - Sölunóta-1.346 kr."
+  },
+  {
+    "date": "2025-06-14",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4379,
+    "raw": "14.06.2025Kronan Nordurhellu - | -4.379 kr."
+  },
+  {
+    "date": "2025-06-13",
+    "merchant": "Fairvape Hverfisgata",
+    "amount": -3500,
+    "raw": "13.06.2025Fairvape Hverfisgata - | -3.500 kr."
+  },
+  {
+    "date": "2025-06-13",
+    "merchant": "Vinbudin Gardabaer",
+    "amount": -4824,
+    "raw": "13.06.2025Vinbudin Gardabaer - | -4.824 kr."
+  },
+  {
+    "date": "2025-06-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1166,
+    "raw": "13.06.2025Kronan Nordurhellu - | -1.166 kr."
+  },
+  {
+    "date": "2025-06-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -428,
+    "raw": "13.06.2025Kronan Nordurhellu - | -428 kr."
+  },
+  {
+    "date": "2025-06-12",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1166,
+    "raw": "12.06.2025Kronan Nordurhellu - | -1.166 kr."
+  },
+  {
+    "date": "2025-06-12",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -450,
+    "raw": "12.06.2025Kronan Nordurhellu - | -450 kr."
+  },
+  {
+    "date": "2025-06-12",
+    "merchant": "Kronan Nordurhella",
+    "amount": -3949,
+    "raw": "12.06.2025Kronan Nordurhella - | -3.949 kr."
+  },
+  {
+    "date": "2025-06-11",
+    "merchant": "Costco Iceland Fuel 401",
+    "amount": -9624,
+    "raw": "11.06.2025Costco Iceland Fuel 401 | -9.624 kr."
+  },
+  {
+    "date": "2025-06-11",
+    "merchant": "Kronan Nordurhella",
+    "amount": -902,
+    "raw": "11.06.2025Kronan Nordurhella - | -902 kr."
+  },
+  {
+    "date": "2025-06-11",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -264,
+    "raw": "11.06.2025Kronan Nordurhellu - | -264 kr."
+  },
+  {
+    "date": "2025-06-10",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1228,
+    "raw": "10.06.2025Kronan Nordurhella - | -1.228 kr."
+  },
+  {
+    "date": "2025-06-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1166,
+    "raw": "10.06.2025Kronan Nordurhellu - | -1.166 kr."
+  },
+  {
+    "date": "2025-06-10",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -14889,
+    "raw": "10.06.2025Rvk -Fasteignagjold - | -14.889 kr."
+  },
+  {
+    "date": "2025-06-10",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -12611,
+    "raw": "10.06.2025Rvk -Fasteignagjold - | -12.611 kr."
+  },
+  {
+    "date": "2025-06-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3577,
+    "raw": "09.06.2025Kronan Nordurhellu - | -3.577 kr."
+  },
+  {
+    "date": "2025-06-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -902,
+    "raw": "09.06.2025Kronan Nordurhellu - | -902 kr."
+  },
+  {
+    "date": "2025-06-08",
+    "merchant": "Github, Inc. - Sölunóta129.882USD -17,77",
+    "amount": -2308,
+    "raw": "08.06.2025Github, Inc. - Sölunóta129.882USD -17,77-2.308 kr."
+  },
+  {
+    "date": "2025-06-08",
+    "merchant": "Is-Grill",
+    "amount": -2150,
+    "raw": "08.06.2025Is-Grill - Sölunóta-2.150 kr."
+  },
+  {
+    "date": "2025-06-08",
+    "merchant": "Netto Mjodd",
+    "amount": -1021,
+    "raw": "08.06.2025Netto Mjodd - Sölunóta-1.021 kr."
+  },
+  {
+    "date": "2025-06-06",
+    "merchant": "Vis Tryggingar Hf",
+    "amount": -14392,
+    "raw": "06.06.2025Vis Tryggingar Hf - | -14.392 kr."
+  },
+  {
+    "date": "2025-06-06",
+    "merchant": "Vis Tryggingar Hf",
+    "amount": -8899,
+    "raw": "06.06.2025Vis Tryggingar Hf - | -8.899 kr."
+  },
+  {
+    "date": "2025-06-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1018,
+    "raw": "06.06.2025Kronan Nordurhellu - | -1.018 kr."
+  },
+  {
+    "date": "2025-06-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4964,
+    "raw": "06.06.2025Kronan Nordurhellu - | -4.964 kr."
+  },
+  {
+    "date": "2025-06-05",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1262,
+    "raw": "05.06.2025Kronan Nordurhellu - | -1.262 kr."
+  },
+  {
+    "date": "2025-06-05",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -3358,
+    "raw": "05.06.2025Costco Wholesale Icela | -3.358 kr."
+  },
+  {
+    "date": "2025-06-04",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1521,
+    "raw": "04.06.2025Kronan Nordurhellu - | -1.521 kr."
+  },
+  {
+    "date": "2025-06-04",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -474,
+    "raw": "04.06.2025Kronan Nordurhellu - | -474 kr."
+  },
+  {
+    "date": "2025-06-03",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2371,
+    "raw": "03.06.2025Kronan Nordurhellu - | -2.371 kr."
+  },
+  {
+    "date": "2025-06-03",
+    "merchant": "Kronan Nordurhella",
+    "amount": -2272,
+    "raw": "03.06.2025Kronan Nordurhella - | -2.272 kr."
+  },
+  {
+    "date": "2025-06-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -759,
+    "raw": "02.06.2025Kronan Nordurhellu - | -759 kr."
+  },
+  {
+    "date": "2025-06-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1297,
+    "raw": "02.06.2025Kronan Nordurhellu - | -1.297 kr."
+  },
+  {
+    "date": "2025-06-02",
+    "merchant": "Efling",
+    "amount": -44000,
+    "raw": "02.06.2025Efling - Sölunóta-44.000 kr."
+  },
+  {
+    "date": "2025-06-02",
+    "merchant": "Icelandair Ticket Sale",
+    "amount": -101896,
+    "raw": "02.06.2025Icelandair Ticket Sale - | -101.896 kr."
+  },
+  {
+    "date": "2025-05-31",
+    "merchant": "Dalshraun",
+    "amount": -3500,
+    "raw": "31.05.2025Dalshraun - Sölunóta-3.500 kr."
+  },
+  {
+    "date": "2025-05-31",
+    "merchant": "Gaeludyr.Is",
+    "amount": -5157,
+    "raw": "31.05.2025Gaeludyr.Is - Sölunóta-5.157 kr."
+  },
+  {
+    "date": "2025-05-31",
+    "merchant": "Vinbudin Dalvegi",
+    "amount": -4824,
+    "raw": "31.05.2025Vinbudin Dalvegi - | -4.824 kr."
+  },
+  {
+    "date": "2025-05-31",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -5669,
+    "raw": "31.05.2025Kronan Nordurhellu - | -5.669 kr."
+  },
+  {
+    "date": "2025-05-30",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1071,
+    "raw": "30.05.2025Kronan Nordurhella - | -1.071 kr."
+  },
+  {
+    "date": "2025-05-30",
+    "merchant": "Cloudflare - Sölunóta130.339USD -7,68",
+    "amount": -1001,
+    "raw": "30.05.2025Cloudflare - Sölunóta130.339USD -7,68-1.001 kr."
+  },
+  {
+    "date": "2025-05-28",
+    "merchant": "Github, Inc. - Sölunóta130.579USD -9,68",
+    "amount": -1264,
+    "raw": "28.05.2025Github, Inc. - Sölunóta130.579USD -9,68-1.264 kr."
+  },
+  {
+    "date": "2025-05-28",
+    "merchant": "Costco Iceland Fuel 401",
+    "amount": -8280,
+    "raw": "28.05.2025Costco Iceland Fuel 401 | -8.280 kr."
+  },
+  {
+    "date": "2025-05-28",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -642,
+    "raw": "28.05.2025Kronan Nordurhellu - | -642 kr."
+  },
+  {
+    "date": "2025-05-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1994,
+    "raw": "27.05.2025Kronan Nordurhellu - | -1.994 kr."
+  },
+  {
+    "date": "2025-05-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -450,
+    "raw": "27.05.2025Kronan Nordurhellu - | -450 kr."
+  },
+  {
+    "date": "2025-05-27",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1329,
+    "raw": "27.05.2025Kronan Nordurhella - | -1.329 kr."
+  },
+  {
+    "date": "2025-05-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -975,
+    "raw": "27.05.2025Kronan Nordurhellu - | -975 kr."
+  },
+  {
+    "date": "2025-05-27",
+    "merchant": "Útskriftargjald",
+    "amount": -130,
+    "raw": "27.05.2025Útskriftargjald-130 kr."
+  },
+  {
+    "date": "2025-05-26",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1658,
+    "raw": "26.05.2025Kronan Nordurhellu - | -1.658 kr."
+  },
+  {
+    "date": "2025-05-26",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1677,
+    "raw": "26.05.2025Kronan Nordurhellu - | -1.677 kr."
+  },
+  {
+    "date": "2025-05-25",
+    "merchant": "Kronan Gardabaer",
+    "amount": -1001,
+    "raw": "25.05.2025Kronan Gardabaer - | -1.001 kr."
+  },
+  {
+    "date": "2025-05-24",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -804,
+    "raw": "24.05.2025Kronan Nordurhellu - | -804 kr."
+  },
+  {
+    "date": "2025-05-24",
+    "merchant": "Elko Lindum",
+    "amount": -16200,
+    "raw": "24.05.2025Elko Lindum - Sölunóta-16.200 kr."
+  },
+  {
+    "date": "2025-05-24",
+    "merchant": "Elko Lindum",
+    "amount": -15536,
+    "raw": "24.05.2025Elko Lindum - Sölunóta-15.536 kr."
+  },
+  {
+    "date": "2025-05-23",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -908,
+    "raw": "23.05.2025Kronan Nordurhellu - | -908 kr."
+  },
+  {
+    "date": "2025-05-23",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3045,
+    "raw": "23.05.2025Kronan Nordurhellu - | -3.045 kr."
+  },
+  {
+    "date": "2025-05-22",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1048,
+    "raw": "22.05.2025Kronan Nordurhella - | -1.048 kr."
+  },
+  {
+    "date": "2025-05-22",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1004,
+    "raw": "22.05.2025Kronan Nordurhellu - | -1.004 kr."
+  },
+  {
+    "date": "2025-05-22",
+    "merchant": "Kronan Nordurhella",
+    "amount": -268,
+    "raw": "22.05.2025Kronan Nordurhella - | -268 kr."
+  },
+  {
+    "date": "2025-05-21",
+    "merchant": "Netto Mjodd",
+    "amount": -1446,
+    "raw": "21.05.2025Netto Mjodd - Sölunóta-1.446 kr."
+  },
+  {
+    "date": "2025-05-21",
+    "merchant": "Kronan Nordurhella",
+    "amount": -759,
+    "raw": "21.05.2025Kronan Nordurhella - | -759 kr."
+  },
+  {
+    "date": "2025-05-21",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1203,
+    "raw": "21.05.2025Kronan Nordurhella - | -1.203 kr."
+  },
+  {
+    "date": "2025-05-20",
+    "merchant": "Sp Big School",
+    "amount": -221300,
+    "raw": "20.05.2025Sp Big School - | -221.300 kr."
+  },
+  {
+    "date": "2025-05-20",
+    "merchant": "Sp Big School",
+    "amount": -221300,
+    "raw": "20.05.2025Sp Big School - | -221.300 kr."
+  },
+  {
+    "date": "2025-05-20",
+    "merchant": "Dalshraun",
+    "amount": -3500,
+    "raw": "20.05.2025Dalshraun - Sölunóta-3.500 kr."
+  },
+  {
+    "date": "2025-05-20",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -759,
+    "raw": "20.05.2025Kronan Nordurhellu - | -759 kr."
+  },
+  {
+    "date": "2025-05-20",
+    "merchant": "Kronan Nordurhella",
+    "amount": -921,
+    "raw": "20.05.2025Kronan Nordurhella - | -921 kr."
+  },
+  {
+    "date": "2025-05-20",
+    "merchant": "Innborgun - Innborgun200.000 kr.",
+    "amount": -1677,
+    "raw": "20.05.2025Innborgun - Innborgun200.000 kr. | -1.677 kr."
+  },
+  {
+    "date": "2025-05-17",
+    "merchant": "Vinbudin Dalvegi",
+    "amount": -4824,
+    "raw": "17.05.2025Vinbudin Dalvegi - | -4.824 kr."
+  },
+  {
+    "date": "2025-05-17",
+    "merchant": "Kronan Nordurhella",
+    "amount": -3832,
+    "raw": "17.05.2025Kronan Nordurhella - | -3.832 kr."
+  },
+  {
+    "date": "2025-05-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3295,
+    "raw": "17.05.2025Kronan Nordurhellu - | -3.295 kr."
+  },
+  {
+    "date": "2025-05-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -271,
+    "raw": "17.05.2025Kronan Nordurhellu - | -271 kr."
+  },
+  {
+    "date": "2025-05-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -188,
+    "raw": "17.05.2025Kronan Nordurhellu - | -188 kr."
+  },
+  {
+    "date": "2025-05-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -541,
+    "raw": "17.05.2025Kronan Nordurhellu - | -541 kr."
+  },
+  {
+    "date": "2025-05-16",
+    "merchant": "Is-Grill",
+    "amount": -1500,
+    "raw": "16.05.2025Is-Grill - Sölunóta-1.500 kr."
+  },
+  {
+    "date": "2025-05-16",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1557,
+    "raw": "16.05.2025Kronan Nordurhellu - | -1.557 kr."
+  },
+  {
+    "date": "2025-05-15",
+    "merchant": "Kronan Nordurhella",
+    "amount": -538,
+    "raw": "15.05.2025Kronan Nordurhella - | -538 kr."
+  },
+  {
+    "date": "2025-05-15",
+    "merchant": "Kronan Nordurhella",
+    "amount": -2156,
+    "raw": "15.05.2025Kronan Nordurhella - | -2.156 kr."
+  },
+  {
+    "date": "2025-05-15",
+    "merchant": "Veitur",
+    "amount": -5201,
+    "raw": "15.05.2025Veitur - Sölunóta-5.201 kr."
+  },
+  {
+    "date": "2025-05-15",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1165,
+    "raw": "15.05.2025Kronan Nordurhellu - | -1.165 kr."
+  },
+  {
+    "date": "2025-05-15",
+    "merchant": "Hringdu",
+    "amount": -1990,
+    "raw": "15.05.2025Hringdu - Sölunóta-1.990 kr."
+  },
+  {
+    "date": "2025-05-14",
+    "merchant": "Or Vatns- Og Fraveita",
+    "amount": -8166,
+    "raw": "14.05.2025Or Vatns- Og Fraveita - | -8.166 kr."
+  },
+  {
+    "date": "2025-05-14",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -426,
+    "raw": "14.05.2025Kronan Nordurhellu - | -426 kr."
+  },
+  {
+    "date": "2025-05-13",
+    "merchant": "Costco Iceland Fuel 401",
+    "amount": -7498,
+    "raw": "13.05.2025Costco Iceland Fuel 401 | -7.498 kr."
+  },
+  {
+    "date": "2025-05-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -695,
+    "raw": "13.05.2025Kronan Nordurhellu - | -695 kr."
+  },
+  {
+    "date": "2025-05-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1326,
+    "raw": "13.05.2025Kronan Nordurhellu - | -1.326 kr."
+  },
+  {
+    "date": "2025-05-13",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -15286,
+    "raw": "13.05.2025Costco Wholesale Icela | -15.286 kr."
+  },
+  {
+    "date": "2025-05-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -5061,
+    "raw": "13.05.2025Kronan Nordurhellu - | -5.061 kr."
+  },
+  {
+    "date": "2025-05-12",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -524,
+    "raw": "12.05.2025Kronan Nordurhellu - | -524 kr."
+  },
+  {
+    "date": "2025-05-12",
+    "merchant": "Kronan Nordurhella",
+    "amount": -2076,
+    "raw": "12.05.2025Kronan Nordurhella - | -2.076 kr."
+  },
+  {
+    "date": "2025-05-10",
+    "merchant": "Kronan Nordurhella",
+    "amount": -300,
+    "raw": "10.05.2025Kronan Nordurhella - | -300 kr."
+  },
+  {
+    "date": "2025-05-10",
+    "merchant": "Kronan Nordurhella",
+    "amount": -400,
+    "raw": "10.05.2025Kronan Nordurhella - | -400 kr."
+  },
+  {
+    "date": "2025-05-10",
+    "merchant": "Kronan Nordurhella",
+    "amount": -698,
+    "raw": "10.05.2025Kronan Nordurhella - | -698 kr."
+  },
+  {
+    "date": "2025-05-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3170,
+    "raw": "10.05.2025Kronan Nordurhellu - | -3.170 kr."
+  },
+  {
+    "date": "2025-05-09",
+    "merchant": "Kronan Nordurhella",
+    "amount": -4403,
+    "raw": "09.05.2025Kronan Nordurhella - | -4.403 kr."
+  },
+  {
+    "date": "2025-05-08",
+    "merchant": "Hagkaup Eidistorg",
+    "amount": -679,
+    "raw": "08.05.2025Hagkaup Eidistorg - | -679 kr."
+  },
+  {
+    "date": "2025-05-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -378,
+    "raw": "08.05.2025Kronan Nordurhellu - | -378 kr."
+  },
+  {
+    "date": "2025-05-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2062,
+    "raw": "07.05.2025Kronan Nordurhellu - | -2.062 kr."
+  },
+  {
+    "date": "2025-05-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -820,
+    "raw": "07.05.2025Kronan Nordurhellu - | -820 kr."
+  },
+  {
+    "date": "2025-05-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1976,
+    "raw": "07.05.2025Kronan Nordurhellu - | -1.976 kr."
+  },
+  {
+    "date": "2025-05-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2861,
+    "raw": "07.05.2025Kronan Nordurhellu - | -2.861 kr."
+  },
+  {
+    "date": "2025-05-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -747,
+    "raw": "07.05.2025Kronan Nordurhellu - | -747 kr."
+  },
+  {
+    "date": "2025-05-07",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -14889,
+    "raw": "07.05.2025Rvk -Fasteignagjold - | -14.889 kr."
+  },
+  {
+    "date": "2025-05-07",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -12611,
+    "raw": "07.05.2025Rvk -Fasteignagjold - | -12.611 kr."
+  },
+  {
+    "date": "2025-05-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1216,
+    "raw": "06.05.2025Kronan Nordurhellu - | -1.216 kr."
+  },
+  {
+    "date": "2025-05-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -218,
+    "raw": "06.05.2025Kronan Nordurhellu - | -218 kr."
+  },
+  {
+    "date": "2025-05-06",
+    "merchant": "Vis Tryggingar Hf",
+    "amount": -14392,
+    "raw": "06.05.2025Vis Tryggingar Hf - | -14.392 kr."
+  },
+  {
+    "date": "2025-05-06",
+    "merchant": "Vis Tryggingar Hf",
+    "amount": -8899,
+    "raw": "06.05.2025Vis Tryggingar Hf - | -8.899 kr."
+  },
+  {
+    "date": "2025-05-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -656,
+    "raw": "06.05.2025Kronan Nordurhellu - | -656 kr."
+  },
+  {
+    "date": "2025-05-05",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1139,
+    "raw": "05.05.2025Kronan Nordurhella - | -1.139 kr."
+  },
+  {
+    "date": "2025-05-03",
+    "merchant": "Kronan Nordurhella",
+    "amount": -4079,
+    "raw": "03.05.2025Kronan Nordurhella - | -4.079 kr."
+  },
+  {
+    "date": "2025-05-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1315,
+    "raw": "02.05.2025Kronan Nordurhellu - | -1.315 kr."
+  },
+  {
+    "date": "2025-05-02",
+    "merchant": "Costco Iceland Fuel 401",
+    "amount": -9715,
+    "raw": "02.05.2025Costco Iceland Fuel 401 | -9.715 kr."
+  },
+  {
+    "date": "2025-05-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1976,
+    "raw": "02.05.2025Kronan Nordurhellu - | -1.976 kr."
+  },
+  {
+    "date": "2025-05-01",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1070,
+    "raw": "01.05.2025Kronan Nordurhellu - | -1.070 kr."
+  },
+  {
+    "date": "2025-04-30",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -728,
+    "raw": "30.04.2025Kronan Nordurhellu - | -728 kr."
+  },
+  {
+    "date": "2025-04-29",
+    "merchant": "Kronan Jafnaseli",
+    "amount": -936,
+    "raw": "29.04.2025Kronan Jafnaseli - | -936 kr."
+  },
+  {
+    "date": "2025-04-28",
+    "merchant": "Str*Picnic",
+    "amount": -1250,
+    "raw": "28.04.2025Str*Picnic - Sölunóta-1.250 kr."
+  },
+  {
+    "date": "2025-04-28",
+    "merchant": "Str*Picnic",
+    "amount": -7250,
+    "raw": "28.04.2025Str*Picnic - Sölunóta-7.250 kr."
+  },
+  {
+    "date": "2025-04-28",
+    "merchant": "Útskriftargjald",
+    "amount": -130,
+    "raw": "28.04.2025Útskriftargjald-130 kr."
+  },
+  {
+    "date": "2025-04-27",
+    "merchant": "Netto Mjodd",
+    "amount": -3024,
+    "raw": "27.04.2025Netto Mjodd - Sölunóta-3.024 kr."
+  },
+  {
+    "date": "2025-04-27",
+    "merchant": "Netto Mjodd",
+    "amount": -364,
+    "raw": "27.04.2025Netto Mjodd - Sölunóta-364 kr."
+  },
+  {
+    "date": "2025-04-25",
+    "merchant": "Lyfjaval - Sudurfell",
+    "amount": -2498,
+    "raw": "25.04.2025Lyfjaval - Sudurfell - | -2.498 kr."
+  },
+  {
+    "date": "2025-04-25",
+    "merchant": "Kronan Jafnaseli",
+    "amount": -5715,
+    "raw": "25.04.2025Kronan Jafnaseli - | -5.715 kr."
+  },
+  {
+    "date": "2025-04-22",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -185,
+    "raw": "22.04.2025Kronan Nordurhellu - | -185 kr."
+  },
+  {
+    "date": "2025-04-22",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1070,
+    "raw": "22.04.2025Kronan Nordurhellu - | -1.070 kr."
+  },
+  {
+    "date": "2025-04-22",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -9359,
+    "raw": "22.04.2025Costco Wholesale Icela | -9.359 kr."
+  },
+  {
+    "date": "2025-04-22",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1193,
+    "raw": "22.04.2025Kronan Nordurhellu - | -1.193 kr."
+  },
+  {
+    "date": "2025-04-20",
+    "merchant": "Netto Mjodd",
+    "amount": -1316,
+    "raw": "20.04.2025Netto Mjodd - Sölunóta-1.316 kr."
+  },
+  {
+    "date": "2025-04-19",
+    "merchant": "Gaeludyr.Is",
+    "amount": -5157,
+    "raw": "19.04.2025Gaeludyr.Is - Sölunóta-5.157 kr."
+  },
+  {
+    "date": "2025-04-19",
+    "merchant": "Kronan Flatahrauni",
+    "amount": -2684,
+    "raw": "19.04.2025Kronan Flatahrauni - | -2.684 kr."
+  },
+  {
+    "date": "2025-04-19",
+    "merchant": "Kronan Nordurhella",
+    "amount": -6528,
+    "raw": "19.04.2025Kronan Nordurhella - | -6.528 kr."
+  },
+  {
+    "date": "2025-04-18",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -242,
+    "raw": "18.04.2025Kronan Nordurhellu - | -242 kr."
+  },
+  {
+    "date": "2025-04-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4666,
+    "raw": "17.04.2025Kronan Nordurhellu - | -4.666 kr."
+  },
+  {
+    "date": "2025-04-17",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -20194,
+    "raw": "17.04.2025Costco Wholesale Icela | -20.194 kr."
+  },
+  {
+    "date": "2025-04-16",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -84,
+    "raw": "16.04.2025Kronan Nordurhellu - | -84 kr."
+  },
+  {
+    "date": "2025-04-16",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -807,
+    "raw": "16.04.2025Kronan Nordurhellu - | -807 kr."
+  },
+  {
+    "date": "2025-04-16",
+    "merchant": "Or Vatns- Og Fraveita",
+    "amount": -8166,
+    "raw": "16.04.2025Or Vatns- Og Fraveita - | -8.166 kr."
+  },
+  {
+    "date": "2025-04-15",
+    "merchant": "Dalshraun",
+    "amount": -5250,
+    "raw": "15.04.2025Dalshraun - Sölunóta-5.250 kr."
+  },
+  {
+    "date": "2025-04-15",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -528,
+    "raw": "15.04.2025Kronan Nordurhellu - | -528 kr."
+  },
+  {
+    "date": "2025-04-15",
+    "merchant": "Hringdu",
+    "amount": -1990,
+    "raw": "15.04.2025Hringdu - Sölunóta-1.990 kr."
+  },
+  {
+    "date": "2025-04-15",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -240,
+    "raw": "15.04.2025Kronan Nordurhellu - | -240 kr."
+  },
+  {
+    "date": "2025-04-15",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -418,
+    "raw": "15.04.2025Kronan Nordurhellu - | -418 kr."
+  },
+  {
+    "date": "2025-04-14",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -700,
+    "raw": "14.04.2025Kronan Nordurhellu - | -700 kr."
+  },
+  {
+    "date": "2025-04-14",
+    "merchant": "Veitur.",
+    "amount": -53,
+    "raw": "14.04.2025Veitur. - Sölunóta-53 kr."
+  },
+  {
+    "date": "2025-04-13",
+    "merchant": "Elko Lindum",
+    "amount": -3120,
+    "raw": "13.04.2025Elko Lindum - Sölunóta-3.120 kr."
+  },
+  {
+    "date": "2025-04-13",
+    "merchant": "Lyfjaval - Haedasmari",
+    "amount": -1329,
+    "raw": "13.04.2025Lyfjaval - Haedasmari - | -1.329 kr."
+  },
+  {
+    "date": "2025-04-12",
+    "merchant": "Costco Iceland Fuel 401",
+    "amount": -6971,
+    "raw": "12.04.2025Costco Iceland Fuel 401 | -6.971 kr."
+  },
+  {
+    "date": "2025-04-12",
+    "merchant": "Kronan Nordurhella",
+    "amount": -5255,
+    "raw": "12.04.2025Kronan Nordurhella - | -5.255 kr."
+  },
+  {
+    "date": "2025-04-11",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1430,
+    "raw": "11.04.2025Kronan Nordurhellu - | -1.430 kr."
+  },
+  {
+    "date": "2025-04-11",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1000,
+    "raw": "11.04.2025Kronan Nordurhellu - | -1.000 kr."
+  },
+  {
+    "date": "2025-04-11",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1559,
+    "raw": "11.04.2025Kronan Nordurhella - | -1.559 kr."
+  },
+  {
+    "date": "2025-04-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -939,
+    "raw": "10.04.2025Kronan Nordurhellu - | -939 kr."
+  },
+  {
+    "date": "2025-04-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1596,
+    "raw": "10.04.2025Kronan Nordurhellu - | -1.596 kr."
+  },
+  {
+    "date": "2025-04-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -660,
+    "raw": "09.04.2025Kronan Nordurhellu - | -660 kr."
+  },
+  {
+    "date": "2025-04-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1444,
+    "raw": "09.04.2025Kronan Nordurhellu - | -1.444 kr."
+  },
+  {
+    "date": "2025-04-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -750,
+    "raw": "08.04.2025Kronan Nordurhellu - | -750 kr."
+  },
+  {
+    "date": "2025-04-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1286,
+    "raw": "08.04.2025Kronan Nordurhellu - | -1.286 kr."
+  },
+  {
+    "date": "2025-04-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -124,
+    "raw": "08.04.2025Kronan Nordurhellu - | -124 kr."
+  },
+  {
+    "date": "2025-04-08",
+    "merchant": "Is-Grill",
+    "amount": -1500,
+    "raw": "08.04.2025Is-Grill - Sölunóta-1.500 kr."
+  },
+  {
+    "date": "2025-04-08",
+    "merchant": "Apotekarinn Mjodd",
+    "amount": -1345,
+    "raw": "08.04.2025Apotekarinn Mjodd - | -1.345 kr."
+  },
+  {
+    "date": "2025-04-08",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -14889,
+    "raw": "08.04.2025Rvk -Fasteignagjold - | -14.889 kr."
+  },
+  {
+    "date": "2025-04-08",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -12611,
+    "raw": "08.04.2025Rvk -Fasteignagjold - | -12.611 kr."
+  },
+  {
+    "date": "2025-04-07",
+    "merchant": "Paypal *Itunesappst Ap",
+    "amount": -459,
+    "raw": "07.04.2025Paypal *Itunesappst Ap | -459 kr."
+  },
+  {
+    "date": "2025-04-07",
+    "merchant": "Kronan Nordurhella",
+    "amount": -800,
+    "raw": "07.04.2025Kronan Nordurhella - | -800 kr."
+  },
+  {
+    "date": "2025-04-06",
+    "merchant": "Vis Tryggingar Hf",
+    "amount": -8899,
+    "raw": "06.04.2025Vis Tryggingar Hf - | -8.899 kr."
+  },
+  {
+    "date": "2025-04-06",
+    "merchant": "Vis Tryggingar Hf",
+    "amount": -14392,
+    "raw": "06.04.2025Vis Tryggingar Hf - | -14.392 kr."
+  },
+  {
+    "date": "2025-04-05",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -94,
+    "raw": "05.04.2025Kronan Nordurhellu - | -94 kr."
+  },
+  {
+    "date": "2025-04-05",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2877,
+    "raw": "05.04.2025Kronan Nordurhellu - | -2.877 kr."
+  },
+  {
+    "date": "2025-04-05",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -188,
+    "raw": "05.04.2025Kronan Nordurhellu - | -188 kr."
+  },
+  {
+    "date": "2025-04-05",
+    "merchant": "Str*Picnic",
+    "amount": -5940,
+    "raw": "05.04.2025Str*Picnic - Sölunóta-5.940 kr."
+  },
+  {
+    "date": "2025-04-04",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -94,
+    "raw": "04.04.2025Kronan Nordurhellu - | -94 kr."
+  },
+  {
+    "date": "2025-04-04",
+    "merchant": "Kronan Nordurhella",
+    "amount": -500,
+    "raw": "04.04.2025Kronan Nordurhella - | -500 kr."
+  },
+  {
+    "date": "2025-04-04",
+    "merchant": "Lyfja Smaralind",
+    "amount": -1099,
+    "raw": "04.04.2025Lyfja Smaralind - | -1.099 kr."
+  },
+  {
+    "date": "2025-04-04",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -418,
+    "raw": "04.04.2025Kronan Nordurhellu - | -418 kr."
+  },
+  {
+    "date": "2025-04-04",
+    "merchant": "Costco Iceland Fuel 401",
+    "amount": -9337,
+    "raw": "04.04.2025Costco Iceland Fuel 401 | -9.337 kr."
+  },
+  {
+    "date": "2025-04-04",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -11278,
+    "raw": "04.04.2025Costco Wholesale Icela | -11.278 kr."
+  },
+  {
+    "date": "2025-04-03",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -188,
+    "raw": "03.04.2025Kronan Nordurhellu - | -188 kr."
+  },
+  {
+    "date": "2025-04-03",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -778,
+    "raw": "03.04.2025Kronan Nordurhellu - | -778 kr."
+  },
+  {
+    "date": "2025-04-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -835,
+    "raw": "02.04.2025Kronan Nordurhellu - | -835 kr."
+  },
+  {
+    "date": "2025-04-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1283,
+    "raw": "02.04.2025Kronan Nordurhellu - | -1.283 kr."
+  },
+  {
+    "date": "2025-04-01",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -835,
+    "raw": "01.04.2025Kronan Nordurhellu - | -835 kr."
+  },
+  {
+    "date": "2025-03-31",
+    "merchant": "Elko Lindum",
+    "amount": -31495,
+    "raw": "31.03.2025Elko Lindum - Sölunóta-31.495 kr."
+  },
+  {
+    "date": "2025-03-28",
+    "merchant": "Vinbudin Smaralind",
+    "amount": -4428,
+    "raw": "28.03.2025Vinbudin Smaralind - | -4.428 kr."
+  },
+  {
+    "date": "2025-03-28",
+    "merchant": "Lyfja Smaralind",
+    "amount": -1099,
+    "raw": "28.03.2025Lyfja Smaralind - | -1.099 kr."
+  },
+  {
+    "date": "2025-03-28",
+    "merchant": "Kronan Nordurhella",
+    "amount": -28197,
+    "raw": "28.03.2025Kronan Nordurhella - | -28.197 kr."
+  },
+  {
+    "date": "2025-03-28",
+    "merchant": "Hagkaup Smaralind",
+    "amount": -1797,
+    "raw": "28.03.2025Hagkaup Smaralind - | -1.797 kr."
+  },
+  {
+    "date": "2025-03-28",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1035,
+    "raw": "28.03.2025Kronan Nordurhellu - | -1.035 kr."
+  },
+  {
+    "date": "2025-03-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -716,
+    "raw": "27.03.2025Kronan Nordurhellu - | -716 kr."
+  },
+  {
+    "date": "2025-03-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -418,
+    "raw": "27.03.2025Kronan Nordurhellu - | -418 kr."
+  },
+  {
+    "date": "2025-03-27",
+    "merchant": "Útskriftargjald",
+    "amount": -130,
+    "raw": "27.03.2025Útskriftargjald-130 kr."
+  },
+  {
+    "date": "2025-03-26",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -790,
+    "raw": "26.03.2025Kronan Nordurhellu - | -790 kr."
+  },
+  {
+    "date": "2025-03-25",
+    "merchant": "Dalshraun",
+    "amount": -400,
+    "raw": "25.03.2025Dalshraun - Sölunóta-400 kr."
+  },
+  {
+    "date": "2025-03-25",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -878,
+    "raw": "25.03.2025Kronan Nordurhellu - | -878 kr."
+  },
+  {
+    "date": "2025-03-25",
+    "merchant": "Dalshraun",
+    "amount": -3500,
+    "raw": "25.03.2025Dalshraun - Sölunóta-3.500 kr."
+  },
+  {
+    "date": "2025-03-25",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1487,
+    "raw": "25.03.2025Kronan Nordurhella - | -1.487 kr."
+  },
+  {
+    "date": "2025-03-24",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1129,
+    "raw": "24.03.2025Kronan Nordurhella - | -1.129 kr."
+  },
+  {
+    "date": "2025-03-24",
+    "merchant": "Kronan Nordurhella",
+    "amount": -256,
+    "raw": "24.03.2025Kronan Nordurhella - | -256 kr."
+  },
+  {
+    "date": "2025-03-22",
+    "merchant": "Vinbudin Gardabaer",
+    "amount": -3499,
+    "raw": "22.03.2025Vinbudin Gardabaer - | -3.499 kr."
+  },
+  {
+    "date": "2025-03-22",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -282,
+    "raw": "22.03.2025Kronan Nordurhellu - | -282 kr."
+  },
+  {
+    "date": "2025-03-22",
+    "merchant": "Costco Iceland Fuel 401",
+    "amount": -9650,
+    "raw": "22.03.2025Costco Iceland Fuel 401 | -9.650 kr."
+  },
+  {
+    "date": "2025-03-22",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -5836,
+    "raw": "22.03.2025Costco Wholesale Icela | -5.836 kr."
+  },
+  {
+    "date": "2025-03-22",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3025,
+    "raw": "22.03.2025Kronan Nordurhellu - | -3.025 kr."
+  },
+  {
+    "date": "2025-03-21",
+    "merchant": "Kronan Nordurhella",
+    "amount": -2010,
+    "raw": "21.03.2025Kronan Nordurhella - | -2.010 kr."
+  },
+  {
+    "date": "2025-03-21",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -94,
+    "raw": "21.03.2025Kronan Nordurhellu - | -94 kr."
+  },
+  {
+    "date": "2025-03-20",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -282,
+    "raw": "20.03.2025Kronan Nordurhellu - | -282 kr."
+  },
+  {
+    "date": "2025-03-20",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3667,
+    "raw": "20.03.2025Kronan Nordurhellu - | -3.667 kr."
+  },
+  {
+    "date": "2025-03-20",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -740,
+    "raw": "20.03.2025Kronan Nordurhellu - | -740 kr."
+  },
+  {
+    "date": "2025-03-19",
+    "merchant": "Kronan Nordurhella",
+    "amount": -740,
+    "raw": "19.03.2025Kronan Nordurhella - | -740 kr."
+  },
+  {
+    "date": "2025-03-19",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -94,
+    "raw": "19.03.2025Kronan Nordurhellu - | -94 kr."
+  },
+  {
+    "date": "2025-03-18",
+    "merchant": "Priority Pass - Sölunóta137.5USD -70,00",
+    "amount": -9625,
+    "raw": "18.03.2025Priority Pass - Sölunóta137.5USD -70,00-9.625 kr."
+  },
+  {
+    "date": "2025-03-18",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -300,
+    "raw": "18.03.2025Kronan Nordurhellu - | -300 kr."
+  },
+  {
+    "date": "2025-03-18",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1671,
+    "raw": "18.03.2025Kronan Nordurhella - | -1.671 kr."
+  },
+  {
+    "date": "2025-03-18",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1268,
+    "raw": "18.03.2025Kronan Nordurhellu - | -1.268 kr."
+  },
+  {
+    "date": "2025-03-17",
+    "merchant": "Or Vatns- Og Fraveita",
+    "amount": -8166,
+    "raw": "17.03.2025Or Vatns- Og Fraveita - | -8.166 kr."
+  },
+  {
+    "date": "2025-03-17",
+    "merchant": "Hringdu",
+    "amount": -2510,
+    "raw": "17.03.2025Hringdu - Sölunóta-2.510 kr."
+  },
+  {
+    "date": "2025-03-15",
+    "merchant": "Kronan Nordurhella",
+    "amount": -8281,
+    "raw": "15.03.2025Kronan Nordurhella - | -8.281 kr."
+  },
+  {
+    "date": "2025-03-14",
+    "merchant": "Pfaff Hf - Endurgreiðsla4.500 kr.",
+    "amount": -1120,
+    "raw": "14.03.2025Pfaff Hf - Endurgreiðsla4.500 kr. | -1.120 kr."
+  },
+  {
+    "date": "2025-03-14",
+    "merchant": "Gaeludyr.Is",
+    "amount": -4490,
+    "raw": "14.03.2025Gaeludyr.Is - Sölunóta-4.490 kr."
+  },
+  {
+    "date": "2025-03-14",
+    "merchant": "Polo - Reykjavikurvegu",
+    "amount": -3500,
+    "raw": "14.03.2025Polo - Reykjavikurvegu | -3.500 kr."
+  },
+  {
+    "date": "2025-03-14",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -877,
+    "raw": "14.03.2025Costco Wholesale Icela | -877 kr."
+  },
+  {
+    "date": "2025-03-13",
+    "merchant": "Priority Pass - Sölunóta137.971USD -70,00",
+    "amount": -9658,
+    "raw": "13.03.2025Priority Pass - Sölunóta137.971USD -70,00-9.658 kr."
+  },
+  {
+    "date": "2025-03-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -528,
+    "raw": "13.03.2025Kronan Nordurhellu - | -528 kr."
+  },
+  {
+    "date": "2025-03-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1500,
+    "raw": "13.03.2025Kronan Nordurhellu - | -1.500 kr."
+  },
+  {
+    "date": "2025-03-12",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -188,
+    "raw": "12.03.2025Kronan Nordurhellu - | -188 kr."
+  },
+  {
+    "date": "2025-03-12",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -94,
+    "raw": "12.03.2025Kronan Nordurhellu - | -94 kr."
+  },
+  {
+    "date": "2025-03-11",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -485,
+    "raw": "11.03.2025Kronan Nordurhellu - | -485 kr."
+  },
+  {
+    "date": "2025-03-11",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1254,
+    "raw": "11.03.2025Kronan Nordurhellu - | -1.254 kr."
+  },
+  {
+    "date": "2025-03-10",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -14889,
+    "raw": "10.03.2025Rvk -Fasteignagjold - | -14.889 kr."
+  },
+  {
+    "date": "2025-03-10",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -12611,
+    "raw": "10.03.2025Rvk -Fasteignagjold - | -12.611 kr."
+  },
+  {
+    "date": "2025-03-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -874,
+    "raw": "10.03.2025Kronan Nordurhellu - | -874 kr."
+  },
+  {
+    "date": "2025-03-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -992,
+    "raw": "10.03.2025Kronan Nordurhellu - | -992 kr."
+  },
+  {
+    "date": "2025-03-10",
+    "merchant": "Hs Veitur",
+    "amount": -2354,
+    "raw": "10.03.2025Hs Veitur - Sölunóta-2.354 kr."
+  },
+  {
+    "date": "2025-03-10",
+    "merchant": "Hs Veitur",
+    "amount": -3823,
+    "raw": "10.03.2025Hs Veitur - Sölunóta-3.823 kr."
+  },
+  {
+    "date": "2025-03-08",
+    "merchant": "Costco Iceland Fuel 401",
+    "amount": -5903,
+    "raw": "08.03.2025Costco Iceland Fuel 401 | -5.903 kr."
+  },
+  {
+    "date": "2025-03-08",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -1321,
+    "raw": "08.03.2025Costco Wholesale Icela | -1.321 kr."
+  },
+  {
+    "date": "2025-03-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4041,
+    "raw": "08.03.2025Kronan Nordurhellu - | -4.041 kr."
+  },
+  {
+    "date": "2025-03-07",
+    "merchant": "Kronan Nordurhella",
+    "amount": -696,
+    "raw": "07.03.2025Kronan Nordurhella - | -696 kr."
+  },
+  {
+    "date": "2025-03-07",
+    "merchant": "Efling",
+    "amount": -18935,
+    "raw": "07.03.2025Efling - Sölunóta-18.935 kr."
+  },
+  {
+    "date": "2025-03-06",
+    "merchant": "Kronan Nordurhella",
+    "amount": -916,
+    "raw": "06.03.2025Kronan Nordurhella - | -916 kr."
+  },
+  {
+    "date": "2025-03-06",
+    "merchant": "Coffee And Cocktails",
+    "amount": -5780,
+    "raw": "06.03.2025Coffee And Cocktails | -5.780 kr."
+  },
+  {
+    "date": "2025-03-06",
+    "merchant": "Vis Tryggingar Hf",
+    "amount": -8892,
+    "raw": "06.03.2025Vis Tryggingar Hf - | -8.892 kr."
+  },
+  {
+    "date": "2025-03-06",
+    "merchant": "Thjodleikhusid",
+    "amount": -2600,
+    "raw": "06.03.2025Thjodleikhusid - | -2.600 kr."
+  },
+  {
+    "date": "2025-03-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -846,
+    "raw": "06.03.2025Kronan Nordurhellu - | -846 kr."
+  },
+  {
+    "date": "2025-03-06",
+    "merchant": "Vis Tryggingar Hf",
+    "amount": -14392,
+    "raw": "06.03.2025Vis Tryggingar Hf - | -14.392 kr."
+  },
+  {
+    "date": "2025-03-06",
+    "merchant": "Bilakjallari - Innborg",
+    "amount": -2985,
+    "raw": "06.03.2025Bilakjallari - Innborg - | -2.985 kr."
+  },
+  {
+    "date": "2025-03-04",
+    "merchant": "Kronan Nordurhella",
+    "amount": -94,
+    "raw": "04.03.2025Kronan Nordurhella - | -94 kr."
+  },
+  {
+    "date": "2025-03-04",
+    "merchant": "Is-Grill",
+    "amount": -1500,
+    "raw": "04.03.2025Is-Grill - Sölunóta-1.500 kr."
+  },
+  {
+    "date": "2025-03-04",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3382,
+    "raw": "04.03.2025Kronan Nordurhellu - | -3.382 kr."
+  },
+  {
+    "date": "2025-03-03",
+    "merchant": "Str*Picnic",
+    "amount": -6500,
+    "raw": "03.03.2025Str*Picnic - Sölunóta-6.500 kr."
+  },
+  {
+    "date": "2025-03-03",
+    "merchant": "Byko Breidd",
+    "amount": -15239,
+    "raw": "03.03.2025Byko Breidd - Sölunóta-15.239 kr."
+  },
+  {
+    "date": "2025-03-03",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -616,
+    "raw": "03.03.2025Kronan Nordurhellu - | -616 kr."
+  },
+  {
+    "date": "2025-03-01",
+    "merchant": "Kronan Nordurhella",
+    "amount": -94,
+    "raw": "01.03.2025Kronan Nordurhella - | -94 kr."
+  },
+  {
+    "date": "2025-03-01",
+    "merchant": "Costco Iceland Fuel 401",
+    "amount": -9615,
+    "raw": "01.03.2025Costco Iceland Fuel 401 | -9.615 kr."
+  },
+  {
+    "date": "2025-03-01",
+    "merchant": "Vinbudin Gardabaer",
+    "amount": -4824,
+    "raw": "01.03.2025Vinbudin Gardabaer - | -4.824 kr."
+  },
+  {
+    "date": "2025-03-01",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -7397,
+    "raw": "01.03.2025Costco Wholesale Icela | -7.397 kr."
+  },
+  {
+    "date": "2025-03-01",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -783,
+    "raw": "01.03.2025Costco Wholesale Icela | -783 kr."
+  },
+  {
+    "date": "2025-03-01",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1501,
+    "raw": "01.03.2025Kronan Nordurhellu - | -1.501 kr."
+  },
+  {
+    "date": "2025-03-01",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -376,
+    "raw": "01.03.2025Kronan Nordurhellu - | -376 kr."
+  },
+  {
+    "date": "2025-02-28",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1350,
+    "raw": "28.02.2025Kronan Nordurhellu - | -1.350 kr."
+  },
+  {
+    "date": "2025-02-28",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3133,
+    "raw": "28.02.2025Kronan Nordurhellu - | -3.133 kr."
+  },
+  {
+    "date": "2025-02-28",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -188,
+    "raw": "28.02.2025Kronan Nordurhellu - | -188 kr."
+  },
+  {
+    "date": "2025-02-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -473,
+    "raw": "27.02.2025Kronan Nordurhellu - | -473 kr."
+  },
+  {
+    "date": "2025-02-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -645,
+    "raw": "27.02.2025Kronan Nordurhellu - | -645 kr."
+  },
+  {
+    "date": "2025-02-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1286,
+    "raw": "27.02.2025Kronan Nordurhellu - | -1.286 kr."
+  },
+  {
+    "date": "2025-02-27",
+    "merchant": "Útskriftargjald",
+    "amount": -130,
+    "raw": "27.02.2025Útskriftargjald-130 kr."
+  },
+  {
+    "date": "2025-02-26",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1140,
+    "raw": "26.02.2025Kronan Nordurhellu - | -1.140 kr."
+  },
+  {
+    "date": "2025-02-26",
+    "merchant": "Zolo Co",
+    "amount": -3580,
+    "raw": "26.02.2025Zolo Co - Sölunóta-3.580 kr."
+  },
+  {
+    "date": "2025-02-25",
+    "merchant": "Kronan Nordurhella",
+    "amount": -775,
+    "raw": "25.02.2025Kronan Nordurhella - | -775 kr."
+  },
+  {
+    "date": "2025-02-25",
+    "merchant": "Kronan Nordurhella",
+    "amount": -763,
+    "raw": "25.02.2025Kronan Nordurhella - | -763 kr."
+  },
+  {
+    "date": "2025-02-25",
+    "merchant": "Byko Breidd",
+    "amount": -4390,
+    "raw": "25.02.2025Byko Breidd - Sölunóta-4.390 kr."
+  },
+  {
+    "date": "2025-02-24",
+    "merchant": "Pfaff Hf",
+    "amount": -8000,
+    "raw": "24.02.2025Pfaff Hf - Sölunóta-8.000 kr."
+  },
+  {
+    "date": "2025-02-24",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -529,
+    "raw": "24.02.2025Kronan Nordurhellu - | -529 kr."
+  },
+  {
+    "date": "2025-02-24",
+    "merchant": "Jysk A Islandi",
+    "amount": -29560,
+    "raw": "24.02.2025Jysk A Islandi - | -29.560 kr."
+  },
+  {
+    "date": "2025-02-23",
+    "merchant": "Bauhaus Reykjavik",
+    "amount": -1864,
+    "raw": "23.02.2025Bauhaus Reykjavik - | -1.864 kr."
+  },
+  {
+    "date": "2025-02-23",
+    "merchant": "Baejarins Bestu Pylsur",
+    "amount": -1490,
+    "raw": "23.02.2025Baejarins Bestu Pylsur - | -1.490 kr."
+  },
+  {
+    "date": "2025-02-23",
+    "merchant": "Byko Breidd",
+    "amount": -6872,
+    "raw": "23.02.2025Byko Breidd - Sölunóta-6.872 kr."
+  },
+  {
+    "date": "2025-02-22",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -7085,
+    "raw": "22.02.2025Kronan Nordurhellu - | -7.085 kr."
+  },
+  {
+    "date": "2025-02-21",
+    "merchant": "Kronan Nordurhella",
+    "amount": -349,
+    "raw": "21.02.2025Kronan Nordurhella - | -349 kr."
+  },
+  {
+    "date": "2025-02-21",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -774,
+    "raw": "21.02.2025Kronan Nordurhellu - | -774 kr."
+  },
+  {
+    "date": "2025-02-21",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1336,
+    "raw": "21.02.2025Kronan Nordurhellu - | -1.336 kr."
+  },
+  {
+    "date": "2025-02-21",
+    "merchant": "Costco Iceland Fuel 401",
+    "amount": -9509,
+    "raw": "21.02.2025Costco Iceland Fuel 401 | -9.509 kr."
+  },
+  {
+    "date": "2025-02-21",
+    "merchant": "Sorpa Bs Godi Hird",
+    "amount": -500,
+    "raw": "21.02.2025Sorpa Bs Godi Hird - | -500 kr."
+  },
+  {
+    "date": "2025-02-21",
+    "merchant": "Husasmidjan Pei",
+    "amount": -4724,
+    "raw": "21.02.2025Husasmidjan Pei - | -4.724 kr."
+  },
+  {
+    "date": "2025-02-21",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -670,
+    "raw": "21.02.2025Straeto Bs - Solunota - | -670 kr."
+  },
+  {
+    "date": "2025-02-20",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -456,
+    "raw": "20.02.2025Kronan Nordurhellu - | -456 kr."
+  },
+  {
+    "date": "2025-02-19",
+    "merchant": "Kronan Nordurhella",
+    "amount": -188,
+    "raw": "19.02.2025Kronan Nordurhella - | -188 kr."
+  },
+  {
+    "date": "2025-02-19",
+    "merchant": "Kronan Nordurhella",
+    "amount": -1358,
+    "raw": "19.02.2025Kronan Nordurhella - | -1.358 kr."
+  },
+  {
+    "date": "2025-02-18",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -783,
+    "raw": "18.02.2025Costco Wholesale Icela | -783 kr."
+  },
+  {
+    "date": "2025-02-18",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -2185,
+    "raw": "18.02.2025Costco Wholesale Icela | -2.185 kr."
+  },
+  {
+    "date": "2025-02-18",
+    "merchant": "Elko Lindum",
+    "amount": -2045,
+    "raw": "18.02.2025Elko Lindum - Sölunóta-2.045 kr."
+  },
+  {
+    "date": "2025-02-18",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1260,
+    "raw": "18.02.2025Kronan Nordurhellu - | -1.260 kr."
+  },
+  {
+    "date": "2025-02-18",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -94,
+    "raw": "18.02.2025Kronan Nordurhellu - | -94 kr."
+  },
+  {
+    "date": "2025-02-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2349,
+    "raw": "17.02.2025Kronan Nordurhellu - | -2.349 kr."
+  },
+  {
+    "date": "2025-02-17",
+    "merchant": "Or Vatns- Og Fraveita",
+    "amount": -8166,
+    "raw": "17.02.2025Or Vatns- Og Fraveita - | -8.166 kr."
+  },
+  {
+    "date": "2025-02-15",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1529,
+    "raw": "15.02.2025Kronan Nordurhellu - | -1.529 kr."
+  },
+  {
+    "date": "2025-02-14",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4926,
+    "raw": "14.02.2025Kronan Nordurhellu - | -4.926 kr."
+  },
+  {
+    "date": "2025-02-13",
+    "merchant": "Kronan Nordurhella",
+    "amount": -526,
+    "raw": "13.02.2025Kronan Nordurhella - | -526 kr."
+  },
+  {
+    "date": "2025-02-13",
+    "merchant": "Kronan Nordurhella",
+    "amount": -407,
+    "raw": "13.02.2025Kronan Nordurhella - | -407 kr."
+  },
+  {
+    "date": "2025-02-13",
+    "merchant": "Kronan Nordurhella",
+    "amount": -240,
+    "raw": "13.02.2025Kronan Nordurhella - | -240 kr."
+  },
+  {
+    "date": "2025-02-13",
+    "merchant": "Veitur.",
+    "amount": -5058,
+    "raw": "13.02.2025Veitur. - Sölunóta-5.058 kr."
+  },
+  {
+    "date": "2025-02-13",
+    "merchant": "Hringdu",
+    "amount": -1990,
+    "raw": "13.02.2025Hringdu - Sölunóta-1.990 kr."
+  },
+  {
+    "date": "2025-02-12",
+    "merchant": "Temu - Endurgreiðsla4.675 kr.",
+    "amount": -94,
+    "raw": "12.02.2025Temu - Endurgreiðsla4.675 kr. | -94 kr."
+  },
+  {
+    "date": "2025-02-12",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -965,
+    "raw": "12.02.2025Kronan Nordurhellu - | -965 kr."
+  },
+  {
+    "date": "2025-02-11",
+    "merchant": "Costco Iceland Fuel 401",
+    "amount": -10683,
+    "raw": "11.02.2025Costco Iceland Fuel 401 | -10.683 kr."
+  },
+  {
+    "date": "2025-02-11",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1060,
+    "raw": "11.02.2025Kronan Nordurhellu - | -1.060 kr."
+  },
+  {
+    "date": "2025-02-11",
+    "merchant": "Temu - Endurgreiðsla1.054 kr.",
+    "amount": -11202,
+    "raw": "11.02.2025Temu - Endurgreiðsla1.054 kr. | -11.202 kr."
+  },
+  {
+    "date": "2025-02-11",
+    "merchant": "Nova - Lagmuli",
+    "amount": -3192,
+    "raw": "11.02.2025Nova - Lagmuli - | -3.192 kr."
+  },
+  {
+    "date": "2025-02-10",
+    "merchant": "Fly Play Hf. - Sölunóta152EUR -3,00",
+    "amount": -456,
+    "raw": "10.02.2025Fly Play Hf. - Sölunóta152EUR -3,00-456 kr."
+  },
+  {
+    "date": "2025-02-10",
+    "merchant": "Fisko",
+    "amount": -5840,
+    "raw": "10.02.2025Fisko - Sölunóta-5.840 kr."
+  },
+  {
+    "date": "2025-02-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2262,
+    "raw": "10.02.2025Kronan Nordurhellu - | -2.262 kr."
+  },
+  {
+    "date": "2025-02-10",
+    "merchant": "Elko Flugstod Le",
+    "amount": -2294,
+    "raw": "10.02.2025Elko Flugstod Le - | -2.294 kr."
+  },
+  {
+    "date": "2025-02-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -872,
+    "raw": "10.02.2025Kronan Nordurhellu - | -872 kr."
+  },
+  {
+    "date": "2025-02-10",
+    "merchant": "Hs Veitur",
+    "amount": -4185,
+    "raw": "10.02.2025Hs Veitur - Sölunóta-4.185 kr."
+  },
+  {
+    "date": "2025-02-10",
+    "merchant": "Hs Veitur",
+    "amount": -2928,
+    "raw": "10.02.2025Hs Veitur - Sölunóta-2.928 kr."
+  },
+  {
+    "date": "2025-02-10",
+    "merchant": "Hs Veitur",
+    "amount": -1302,
+    "raw": "10.02.2025Hs Veitur - Sölunóta-1.302 kr."
+  },
+  {
+    "date": "2025-02-09",
+    "merchant": "Fly Play Hf. - Sölunóta152EUR -3,00",
+    "amount": -456,
+    "raw": "09.02.2025Fly Play Hf. - Sölunóta152EUR -3,00-456 kr."
+  },
+  {
+    "date": "2025-02-07",
+    "merchant": "Licencia 409 - Sölunóta151.455EUR -11,00",
+    "amount": -1666,
+    "raw": "07.02.2025Licencia 409 - Sölunóta151.455EUR -11,00-1.666 kr."
+  },
+  {
+    "date": "2025-02-06",
+    "merchant": "Frihofnin",
+    "amount": -10859,
+    "raw": "06.02.2025Frihofnin - Sölunóta-10.859 kr."
+  },
+  {
+    "date": "2025-02-06",
+    "merchant": "Fly Play Hf. - Sölunóta151.5EUR -14,00",
+    "amount": -2121,
+    "raw": "06.02.2025Fly Play Hf. - Sölunóta151.5EUR -14,00-2.121 kr."
+  },
+  {
+    "date": "2025-02-06",
+    "merchant": "Fly Play Hf. - Sölunóta151.5EUR -14,00",
+    "amount": -2121,
+    "raw": "06.02.2025Fly Play Hf. - Sölunóta151.5EUR -14,00-2.121 kr."
+  },
+  {
+    "date": "2025-02-06",
+    "merchant": "Kronan Nordurhella",
+    "amount": -321,
+    "raw": "06.02.2025Kronan Nordurhella - | -321 kr."
+  },
+  {
+    "date": "2025-02-06",
+    "merchant": "Alsa Internet - Sölunóta151.364EUR -37,38",
+    "amount": -5658,
+    "raw": "06.02.2025Alsa Internet - Sölunóta151.364EUR -37,38-5.658 kr."
+  },
+  {
+    "date": "2025-02-06",
+    "merchant": "Jomfruin Keff 5021003",
+    "amount": -1550,
+    "raw": "06.02.2025Jomfruin Keff 5021003 - | -1.550 kr."
+  },
+  {
+    "date": "2025-02-06",
+    "merchant": "Jomfruin Keff 5021003",
+    "amount": -1550,
+    "raw": "06.02.2025Jomfruin Keff 5021003 - | -1.550 kr."
+  },
+  {
+    "date": "2025-02-06",
+    "merchant": "Vis Tryggingar Hf",
+    "amount": -14392,
+    "raw": "06.02.2025Vis Tryggingar Hf - | -14.392 kr."
+  },
+  {
+    "date": "2025-02-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -313,
+    "raw": "06.02.2025Kronan Nordurhellu - | -313 kr."
+  },
+  {
+    "date": "2025-02-06",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -12615,
+    "raw": "06.02.2025Rvk -Fasteignagjold - | -12.615 kr."
+  },
+  {
+    "date": "2025-02-06",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -14895,
+    "raw": "06.02.2025Rvk -Fasteignagjold - | -14.895 kr."
+  },
+  {
+    "date": "2025-02-05",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1366,
+    "raw": "05.02.2025Kronan Nordurhellu - | -1.366 kr."
+  },
+  {
+    "date": "2025-02-05",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -8401,
+    "raw": "05.02.2025Costco Wholesale Icela | -8.401 kr."
+  },
+  {
+    "date": "2025-02-05",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -522,
+    "raw": "05.02.2025Kronan Nordurhellu - | -522 kr."
+  },
+  {
+    "date": "2025-02-04",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1308,
+    "raw": "04.02.2025Kronan Nordurhellu - | -1.308 kr."
+  },
+  {
+    "date": "2025-02-04",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1242,
+    "raw": "04.02.2025Kronan Nordurhellu - | -1.242 kr."
+  },
+  {
+    "date": "2025-02-03",
+    "merchant": "Heilsugaeslan Mjodd",
+    "amount": -500,
+    "raw": "03.02.2025Heilsugaeslan Mjodd - | -500 kr."
+  },
+  {
+    "date": "2025-02-03",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -647,
+    "raw": "03.02.2025Kronan Nordurhellu - | -647 kr."
+  },
+  {
+    "date": "2025-02-02",
+    "merchant": "Lyfjaval Haedasmara",
+    "amount": -2658,
+    "raw": "02.02.2025Lyfjaval Haedasmara - | -2.658 kr."
+  },
+  {
+    "date": "2025-02-01",
+    "merchant": "Kronan Nordurhella",
+    "amount": -531,
+    "raw": "01.02.2025Kronan Nordurhella - | -531 kr."
+  },
+  {
+    "date": "2025-02-01",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3674,
+    "raw": "01.02.2025Kronan Nordurhellu - | -3.674 kr."
+  },
+  {
+    "date": "2025-02-01",
+    "merchant": "Mini Market",
+    "amount": -898,
+    "raw": "01.02.2025Mini Market - Sölunóta-898 kr."
+  },
+  {
+    "date": "2025-02-01",
+    "merchant": "Costco",
+    "amount": -4800,
+    "raw": "01.02.2025Costco | -4.800 kr."
+  },
+  {
+    "date": "2025-01-31",
+    "merchant": "Is-Grill",
+    "amount": -900,
+    "raw": "31.01.2025Is-Grill - Sölunóta-900 kr."
+  },
+  {
+    "date": "2025-01-31",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -94,
+    "raw": "31.01.2025Kronan Nordurhellu - | -94 kr."
+  },
+  {
+    "date": "2025-01-31",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4450,
+    "raw": "31.01.2025Kronan Nordurhellu - | -4.450 kr."
+  },
+  {
+    "date": "2025-01-31",
+    "merchant": "Fyrr Bilaverkstaedi",
+    "amount": -157603,
+    "raw": "31.01.2025Fyrr Bilaverkstaedi - | -157.603 kr."
+  },
+  {
+    "date": "2025-01-30",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -815,
+    "raw": "30.01.2025Kronan Nordurhellu - | -815 kr."
+  },
+  {
+    "date": "2025-01-30",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -550,
+    "raw": "30.01.2025Kronan Nordurhellu - | -550 kr."
+  },
+  {
+    "date": "2025-01-30",
+    "merchant": "Innborgun - Innborgun5.000 kr.",
+    "amount": -565,
+    "raw": "30.01.2025Innborgun - Innborgun5.000 kr. | -565 kr."
+  },
+  {
+    "date": "2025-01-29",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3718,
+    "raw": "29.01.2025Kronan Nordurhellu - | -3.718 kr."
+  },
+  {
+    "date": "2025-01-28",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1350,
+    "raw": "28.01.2025Kronan Nordurhellu - | -1.350 kr."
+  },
+  {
+    "date": "2025-01-28",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -670,
+    "raw": "28.01.2025Straeto Bs - Solunota - | -670 kr."
+  },
+  {
+    "date": "2025-01-27",
+    "merchant": "Lyfjaval Sudurfelli",
+    "amount": -1329,
+    "raw": "27.01.2025Lyfjaval Sudurfelli - | -1.329 kr."
+  },
+  {
+    "date": "2025-01-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1119,
+    "raw": "27.01.2025Kronan Nordurhellu - | -1.119 kr."
+  },
+  {
+    "date": "2025-01-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -250,
+    "raw": "27.01.2025Kronan Nordurhellu - | -250 kr."
+  },
+  {
+    "date": "2025-01-27",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -670,
+    "raw": "27.01.2025Straeto Bs - Solunota - | -670 kr."
+  },
+  {
+    "date": "2025-01-27",
+    "merchant": "Útskriftargjald",
+    "amount": -130,
+    "raw": "27.01.2025Útskriftargjald-130 kr."
+  },
+  {
+    "date": "2025-01-25",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1910,
+    "raw": "25.01.2025Kronan Nordurhellu - | -1.910 kr."
+  },
+  {
+    "date": "2025-01-24",
+    "merchant": "Hreyfill 468",
+    "amount": -3570,
+    "raw": "24.01.2025Hreyfill 468 - Sölunóta-3.570 kr."
+  },
+  {
+    "date": "2025-01-24",
+    "merchant": "Lyfjaval Sudurfelli",
+    "amount": -1329,
+    "raw": "24.01.2025Lyfjaval Sudurfelli - | -1.329 kr."
+  },
+  {
+    "date": "2025-01-24",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2186,
+    "raw": "24.01.2025Kronan Nordurhellu - | -2.186 kr."
+  },
+  {
+    "date": "2025-01-24",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1296,
+    "raw": "24.01.2025Kronan Nordurhellu - | -1.296 kr."
+  },
+  {
+    "date": "2025-01-23",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -407,
+    "raw": "23.01.2025Kronan Nordurhellu - | -407 kr."
+  },
+  {
+    "date": "2025-01-23",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -670,
+    "raw": "23.01.2025Straeto Bs - Solunota - | -670 kr."
+  },
+  {
+    "date": "2025-01-22",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -664,
+    "raw": "22.01.2025Kronan Nordurhellu - | -664 kr."
+  },
+  {
+    "date": "2025-01-22",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -350,
+    "raw": "22.01.2025Kronan Nordurhellu - | -350 kr."
+  },
+  {
+    "date": "2025-01-22",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1679,
+    "raw": "22.01.2025Kronan Nordurhellu - | -1.679 kr."
+  },
+  {
+    "date": "2025-01-22",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -670,
+    "raw": "22.01.2025Straeto Bs - Solunota - | -670 kr."
+  },
+  {
+    "date": "2025-01-21",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -376,
+    "raw": "21.01.2025Kronan Nordurhellu - | -376 kr."
+  },
+  {
+    "date": "2025-01-21",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -94,
+    "raw": "21.01.2025Kronan Nordurhellu - | -94 kr."
+  },
+  {
+    "date": "2025-01-21",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -670,
+    "raw": "21.01.2025Straeto Bs - Solunota - | -670 kr."
+  },
+  {
+    "date": "2025-01-21",
+    "merchant": "Innborgun - Innborgun55.000 kr.",
+    "amount": -1029,
+    "raw": "21.01.2025Innborgun - Innborgun55.000 kr. | -1.029 kr."
+  },
+  {
+    "date": "2025-01-20",
+    "merchant": "Apotekarinn Mjodd",
+    "amount": -1145,
+    "raw": "20.01.2025Apotekarinn Mjodd - | -1.145 kr."
+  },
+  {
+    "date": "2025-01-20",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -698,
+    "raw": "20.01.2025Kronan Nordurhellu - | -698 kr."
+  },
+  {
+    "date": "2025-01-20",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -670,
+    "raw": "20.01.2025Straeto Bs - Solunota - | -670 kr."
+  },
+  {
+    "date": "2025-01-18",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -6977,
+    "raw": "18.01.2025Kronan Nordurhellu - | -6.977 kr."
+  },
+  {
+    "date": "2025-01-18",
+    "merchant": "Gaeludyr.Is",
+    "amount": -4034,
+    "raw": "18.01.2025Gaeludyr.Is - Sölunóta-4.034 kr."
+  },
+  {
+    "date": "2025-01-18",
+    "merchant": "Elko Lindum",
+    "amount": -3577,
+    "raw": "18.01.2025Elko Lindum - Sölunóta-3.577 kr."
+  },
+  {
+    "date": "2025-01-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1679,
+    "raw": "17.01.2025Kronan Nordurhellu - | -1.679 kr."
+  },
+  {
+    "date": "2025-01-16",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -416,
+    "raw": "16.01.2025Kronan Nordurhellu - | -416 kr."
+  },
+  {
+    "date": "2025-01-16",
+    "merchant": "Vis Tryggingar Hf",
+    "amount": -14392,
+    "raw": "16.01.2025Vis Tryggingar Hf - | -14.392 kr."
+  },
+  {
+    "date": "2025-01-16",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -758,
+    "raw": "16.01.2025Kronan Nordurhellu - | -758 kr."
+  },
+  {
+    "date": "2025-01-16",
+    "merchant": "Veitur.",
+    "amount": -4397,
+    "raw": "16.01.2025Veitur. - Sölunóta-4.397 kr."
+  },
+  {
+    "date": "2025-01-16",
+    "merchant": "Hringdu",
+    "amount": -1990,
+    "raw": "16.01.2025Hringdu - Sölunóta-1.990 kr."
+  },
+  {
+    "date": "2025-01-16",
+    "merchant": "Innborgun - Innborgun25.000 kr.",
+    "amount": -2138,
+    "raw": "16.01.2025Innborgun - Innborgun25.000 kr. | -2.138 kr."
+  },
+  {
+    "date": "2025-01-15",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -5615,
+    "raw": "15.01.2025Costco Wholesale Icela | -5.615 kr."
+  },
+  {
+    "date": "2025-01-15",
+    "merchant": "Or Vatns- Og Fraveita",
+    "amount": -8177,
+    "raw": "15.01.2025Or Vatns- Og Fraveita - | -8.177 kr."
+  },
+  {
+    "date": "2025-01-15",
+    "merchant": "Innborgun - Innborgun25.000 kr.",
+    "amount": -188,
+    "raw": "15.01.2025Innborgun - Innborgun25.000 kr. | -188 kr."
+  },
+  {
+    "date": "2025-01-14",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2453,
+    "raw": "14.01.2025Kronan Nordurhellu - | -2.453 kr."
+  },
+  {
+    "date": "2025-01-14",
+    "merchant": "Ikea Verslun",
+    "amount": -16885,
+    "raw": "14.01.2025Ikea Verslun - Sölunóta-16.885 kr."
+  },
+  {
+    "date": "2025-01-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -188,
+    "raw": "13.01.2025Kronan Nordurhellu - | -188 kr."
+  },
+  {
+    "date": "2025-01-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1641,
+    "raw": "13.01.2025Kronan Nordurhellu - | -1.641 kr."
+  },
+  {
+    "date": "2025-01-13",
+    "merchant": "Innborgun - Innborgun25.000 kr.",
+    "amount": -376,
+    "raw": "13.01.2025Innborgun - Innborgun25.000 kr. | -376 kr."
+  },
+  {
+    "date": "2025-01-11",
+    "merchant": "Costco Iceland Fuel",
+    "amount": -10872,
+    "raw": "11.01.2025Costco Iceland Fuel - | -10.872 kr."
+  },
+  {
+    "date": "2025-01-11",
+    "merchant": "Vinbudin Dalvegi",
+    "amount": -4842,
+    "raw": "11.01.2025Vinbudin Dalvegi - | -4.842 kr."
+  },
+  {
+    "date": "2025-01-11",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4945,
+    "raw": "11.01.2025Kronan Nordurhellu - | -4.945 kr."
+  },
+  {
+    "date": "2025-01-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1035,
+    "raw": "10.01.2025Kronan Nordurhellu - | -1.035 kr."
+  },
+  {
+    "date": "2025-01-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1621,
+    "raw": "10.01.2025Kronan Nordurhellu - | -1.621 kr."
+  },
+  {
+    "date": "2025-01-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -350,
+    "raw": "09.01.2025Kronan Nordurhellu - | -350 kr."
+  },
+  {
+    "date": "2025-01-09",
+    "merchant": "Hs Veitur",
+    "amount": -2422,
+    "raw": "09.01.2025Hs Veitur - Sölunóta-2.422 kr."
+  },
+  {
+    "date": "2025-01-09",
+    "merchant": "Innborgun - Innborgun40.000 kr.",
+    "amount": -586,
+    "raw": "09.01.2025Innborgun - Innborgun40.000 kr. | -586 kr."
+  },
+  {
+    "date": "2025-01-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -376,
+    "raw": "08.01.2025Kronan Nordurhellu - | -376 kr."
+  },
+  {
+    "date": "2025-01-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1123,
+    "raw": "08.01.2025Kronan Nordurhellu - | -1.123 kr."
+  },
+  {
+    "date": "2025-01-07",
+    "merchant": "Fisko",
+    "amount": -690,
+    "raw": "07.01.2025Fisko - Sölunóta-690 kr."
+  },
+  {
+    "date": "2025-01-07",
+    "merchant": "Fisko",
+    "amount": -802,
+    "raw": "07.01.2025Fisko - Sölunóta-802 kr."
+  },
+  {
+    "date": "2025-01-07",
+    "merchant": "Fisko",
+    "amount": -2490,
+    "raw": "07.01.2025Fisko - Sölunóta-2.490 kr."
+  },
+  {
+    "date": "2025-01-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -379,
+    "raw": "07.01.2025Kronan Nordurhellu - | -379 kr."
+  },
+  {
+    "date": "2025-01-07",
+    "merchant": "Fyrr Bilaverkstaedi",
+    "amount": -383367,
+    "raw": "07.01.2025Fyrr Bilaverkstaedi - | -383.367 kr."
+  },
+  {
+    "date": "2025-01-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -755,
+    "raw": "07.01.2025Kronan Nordurhellu - | -755 kr."
+  },
+  {
+    "date": "2025-01-07",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -650,
+    "raw": "07.01.2025Straeto Bs - Solunota - | -650 kr."
+  },
+  {
+    "date": "2025-01-07",
+    "merchant": "Innborgun - Innborgun5.000 kr.",
+    "amount": -376,
+    "raw": "07.01.2025Innborgun - Innborgun5.000 kr. | -376 kr."
+  },
+  {
+    "date": "2025-01-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1074,
+    "raw": "06.01.2025Kronan Nordurhellu - | -1.074 kr."
+  },
+  {
+    "date": "2025-01-06",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -650,
+    "raw": "06.01.2025Straeto Bs - Solunota - | -650 kr."
+  },
+  {
+    "date": "2025-01-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -256,
+    "raw": "06.01.2025Kronan Nordurhellu - | -256 kr."
+  },
+  {
+    "date": "2025-01-04",
+    "merchant": "Kebab Sara",
+    "amount": -3980,
+    "raw": "04.01.2025Kebab Sara - Sölunóta-3.980 kr."
+  },
+  {
+    "date": "2025-01-04",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -1152,
+    "raw": "04.01.2025Costco Wholesale Icela | -1.152 kr."
+  },
+  {
+    "date": "2025-01-04",
+    "merchant": "Elko Lindum",
+    "amount": -9895,
+    "raw": "04.01.2025Elko Lindum - Sölunóta-9.895 kr."
+  },
+  {
+    "date": "2025-01-04",
+    "merchant": "Elko Lindum",
+    "amount": -131740,
+    "raw": "04.01.2025Elko Lindum - Sölunóta-131.740 kr."
+  },
+  {
+    "date": "2025-01-04",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -5883,
+    "raw": "04.01.2025Kronan Nordurhellu - | -5.883 kr."
+  },
+  {
+    "date": "2025-01-04",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2085,
+    "raw": "04.01.2025Kronan Nordurhellu - | -2.085 kr."
+  },
+  {
+    "date": "2025-01-04",
+    "merchant": "Kronan Lindir",
+    "amount": -1899,
+    "raw": "04.01.2025Kronan Lindir - Sölunóta-1.899 kr."
+  },
+  {
+    "date": "2025-01-04",
+    "merchant": "Picnic",
+    "amount": -3200,
+    "raw": "04.01.2025Picnic - Sölunóta-3.200 kr."
+  },
+  {
+    "date": "2025-01-04",
+    "merchant": "Hreyfill 266",
+    "amount": -8044,
+    "raw": "04.01.2025Hreyfill 266 - Sölunóta-8.044 kr."
+  },
+  {
+    "date": "2025-01-03",
+    "merchant": "Netto Mjodd",
+    "amount": -1073,
+    "raw": "03.01.2025Netto Mjodd - Sölunóta-1.073 kr."
+  },
+  {
+    "date": "2025-01-03",
+    "merchant": "Str*Oryggismidstodin",
+    "amount": -2734,
+    "raw": "03.01.2025Str*Oryggismidstodin - | -2.734 kr."
+  },
+  {
+    "date": "2025-01-03",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -1300,
+    "raw": "03.01.2025Straeto Bs - Solunota - | -1.300 kr."
+  },
+  {
+    "date": "2025-01-02",
+    "merchant": "Frihofnin",
+    "amount": -16997,
+    "raw": "02.01.2025Frihofnin - Sölunóta-16.997 kr."
+  },
+  {
+    "date": "2025-01-02",
+    "merchant": "Autopay.Io",
+    "amount": -33570,
+    "raw": "02.01.2025Autopay.Io - Sölunóta-33.570 kr."
+  },
+  {
+    "date": "2025-01-02",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -650,
+    "raw": "02.01.2025Straeto Bs - Solunota - | -650 kr."
+  },
+  {
+    "date": "2024-12-27",
+    "merchant": "Útskriftargjald",
+    "amount": -130,
+    "raw": "27.12.2024Útskriftargjald-130 kr."
+  },
+  {
+    "date": "2024-12-26",
+    "merchant": "Cars On Booking",
+    "amount": -51927,
+    "raw": "26.12.2024Cars On Booking - | -51.927 kr."
+  },
+  {
+    "date": "2024-12-21",
+    "merchant": "Pizzeria 222 - Sölunóta149.414EUR -87,00",
+    "amount": -12999,
+    "raw": "21.12.2024Pizzeria 222 - Sölunóta149.414EUR -87,00-12.999 kr."
+  },
+  {
+    "date": "2024-12-20",
+    "merchant": "Bar Carlos - Sölunóta149.288EUR -52,00",
+    "amount": -7763,
+    "raw": "20.12.2024Bar Carlos - Sölunóta149.288EUR -52,00-7.763 kr."
+  },
+  {
+    "date": "2024-12-20",
+    "merchant": "Icelandair Onboard",
+    "amount": -2000,
+    "raw": "20.12.2024Icelandair Onboard - | -2.000 kr."
+  },
+  {
+    "date": "2024-12-20",
+    "merchant": "Vis.Is",
+    "amount": -7085,
+    "raw": "20.12.2024Vis.Is - Sölunóta-7.085 kr."
+  },
+  {
+    "date": "2024-12-19",
+    "merchant": "Keflavikurflugvelli",
+    "amount": -1199,
+    "raw": "19.12.2024Keflavikurflugvelli - | -1.199 kr."
+  },
+  {
+    "date": "2024-12-19",
+    "merchant": "Frihofnin",
+    "amount": -6098,
+    "raw": "19.12.2024Frihofnin - Sölunóta-6.098 kr."
+  },
+  {
+    "date": "2024-12-18",
+    "merchant": "Orkan Dalvegi",
+    "amount": -4220,
+    "raw": "18.12.2024Orkan Dalvegi - | -4.220 kr."
+  },
+  {
+    "date": "2024-12-18",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1460,
+    "raw": "18.12.2024Kronan Nordurhellu - | -1.460 kr."
+  },
+  {
+    "date": "2024-12-18",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -84,
+    "raw": "18.12.2024Kronan Nordurhellu - | -84 kr."
+  },
+  {
+    "date": "2024-12-18",
+    "merchant": "Lyfjaval Haedasmara",
+    "amount": -547,
+    "raw": "18.12.2024Lyfjaval Haedasmara - | -547 kr."
+  },
+  {
+    "date": "2024-12-18",
+    "merchant": "Costco Iceland Fuel",
+    "amount": -6601,
+    "raw": "18.12.2024Costco Iceland Fuel - | -6.601 kr."
+  },
+  {
+    "date": "2024-12-18",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -13478,
+    "raw": "18.12.2024Costco Wholesale Icela | -13.478 kr."
+  },
+  {
+    "date": "2024-12-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -250,
+    "raw": "17.12.2024Kronan Nordurhellu - | -250 kr."
+  },
+  {
+    "date": "2024-12-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -382,
+    "raw": "17.12.2024Kronan Nordurhellu - | -382 kr."
+  },
+  {
+    "date": "2024-12-16",
+    "merchant": "Netto Mjodd",
+    "amount": -3199,
+    "raw": "16.12.2024Netto Mjodd - Sölunóta-3.199 kr."
+  },
+  {
+    "date": "2024-12-16",
+    "merchant": "Heilsugaeslan Mjodd",
+    "amount": -500,
+    "raw": "16.12.2024Heilsugaeslan Mjodd - | -500 kr."
+  },
+  {
+    "date": "2024-12-16",
+    "merchant": "Netto Mjodd",
+    "amount": -3199,
+    "raw": "16.12.2024Netto Mjodd - Sölunóta-3.199 kr."
+  },
+  {
+    "date": "2024-12-16",
+    "merchant": "Veitur.",
+    "amount": -5032,
+    "raw": "16.12.2024Veitur. - Sölunóta-5.032 kr."
+  },
+  {
+    "date": "2024-12-16",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -923,
+    "raw": "16.12.2024Kronan Nordurhellu - | -923 kr."
+  },
+  {
+    "date": "2024-12-15",
+    "merchant": "Lyfjaval Haedasmara",
+    "amount": -1329,
+    "raw": "15.12.2024Lyfjaval Haedasmara - | -1.329 kr."
+  },
+  {
+    "date": "2024-12-15",
+    "merchant": "Netto Mjodd",
+    "amount": -274,
+    "raw": "15.12.2024Netto Mjodd - Sölunóta-274 kr."
+  },
+  {
+    "date": "2024-12-14",
+    "merchant": "Rentalcars.Com",
+    "amount": -21758,
+    "raw": "14.12.2024Rentalcars.Com - | -21.758 kr."
+  },
+  {
+    "date": "2024-12-14",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1053,
+    "raw": "14.12.2024Kronan Nordurhellu - | -1.053 kr."
+  },
+  {
+    "date": "2024-12-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1372,
+    "raw": "13.12.2024Kronan Nordurhellu - | -1.372 kr."
+  },
+  {
+    "date": "2024-12-13",
+    "merchant": "Tvg Zimsen",
+    "amount": -4284,
+    "raw": "13.12.2024Tvg Zimsen - Sölunóta-4.284 kr."
+  },
+  {
+    "date": "2024-12-13",
+    "merchant": "Hringdu",
+    "amount": -1990,
+    "raw": "13.12.2024Hringdu - Sölunóta-1.990 kr."
+  },
+  {
+    "date": "2024-12-12",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1614,
+    "raw": "12.12.2024Kronan Nordurhellu - | -1.614 kr."
+  },
+  {
+    "date": "2024-12-12",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -379,
+    "raw": "12.12.2024Kronan Nordurhellu - | -379 kr."
+  },
+  {
+    "date": "2024-12-12",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -284,
+    "raw": "12.12.2024Kronan Nordurhellu - | -284 kr."
+  },
+  {
+    "date": "2024-12-12",
+    "merchant": "Tvg Zimsen",
+    "amount": -4107,
+    "raw": "12.12.2024Tvg Zimsen - Sölunóta-4.107 kr."
+  },
+  {
+    "date": "2024-12-12",
+    "merchant": "Ob Aning",
+    "amount": -6069,
+    "raw": "12.12.2024Ob Aning - Sölunóta-6.069 kr."
+  },
+  {
+    "date": "2024-12-11",
+    "merchant": "Mini Market",
+    "amount": -3306,
+    "raw": "11.12.2024Mini Market - Sölunóta-3.306 kr."
+  },
+  {
+    "date": "2024-12-11",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1247,
+    "raw": "11.12.2024Kronan Nordurhellu - | -1.247 kr."
+  },
+  {
+    "date": "2024-12-10",
+    "merchant": "Posturinn Kopavogur",
+    "amount": -3584,
+    "raw": "10.12.2024Posturinn Kopavogur - | -3.584 kr."
+  },
+  {
+    "date": "2024-12-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -588,
+    "raw": "10.12.2024Kronan Nordurhellu - | -588 kr."
+  },
+  {
+    "date": "2024-12-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -94,
+    "raw": "10.12.2024Kronan Nordurhellu - | -94 kr."
+  },
+  {
+    "date": "2024-12-10",
+    "merchant": "Gaeludyr.Is",
+    "amount": -5157,
+    "raw": "10.12.2024Gaeludyr.Is - Sölunóta-5.157 kr."
+  },
+  {
+    "date": "2024-12-10",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -14471,
+    "raw": "10.12.2024Rvk -Fasteignagjold - | -14.471 kr."
+  },
+  {
+    "date": "2024-12-10",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -12527,
+    "raw": "10.12.2024Rvk -Fasteignagjold - | -12.527 kr."
+  },
+  {
+    "date": "2024-12-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1030,
+    "raw": "09.12.2024Kronan Nordurhellu - | -1.030 kr."
+  },
+  {
+    "date": "2024-12-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -282,
+    "raw": "09.12.2024Kronan Nordurhellu - | -282 kr."
+  },
+  {
+    "date": "2024-12-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -379,
+    "raw": "09.12.2024Kronan Nordurhellu - | -379 kr."
+  },
+  {
+    "date": "2024-12-09",
+    "merchant": "Hs Veitur",
+    "amount": -2776,
+    "raw": "09.12.2024Hs Veitur - Sölunóta-2.776 kr."
+  },
+  {
+    "date": "2024-12-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2405,
+    "raw": "09.12.2024Kronan Nordurhellu - | -2.405 kr."
+  },
+  {
+    "date": "2024-12-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -379,
+    "raw": "07.12.2024Kronan Nordurhellu - | -379 kr."
+  },
+  {
+    "date": "2024-12-07",
+    "merchant": "Picnic",
+    "amount": -2490,
+    "raw": "07.12.2024Picnic - Sölunóta-2.490 kr."
+  },
+  {
+    "date": "2024-12-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4599,
+    "raw": "07.12.2024Kronan Nordurhellu - | -4.599 kr."
+  },
+  {
+    "date": "2024-12-07",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -6108,
+    "raw": "07.12.2024Costco Wholesale Icela | -6.108 kr."
+  },
+  {
+    "date": "2024-12-06",
+    "merchant": "Vis.Is",
+    "amount": -14392,
+    "raw": "06.12.2024Vis.Is - Sölunóta-14.392 kr."
+  },
+  {
+    "date": "2024-12-05",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -522,
+    "raw": "05.12.2024Kronan Nordurhellu - | -522 kr."
+  },
+  {
+    "date": "2024-12-05",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -767,
+    "raw": "05.12.2024Kronan Nordurhellu - | -767 kr."
+  },
+  {
+    "date": "2024-12-04",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -372,
+    "raw": "04.12.2024Kronan Nordurhellu - | -372 kr."
+  },
+  {
+    "date": "2024-12-03",
+    "merchant": "Netto Mjodd",
+    "amount": -3199,
+    "raw": "03.12.2024Netto Mjodd - Sölunóta-3.199 kr."
+  },
+  {
+    "date": "2024-12-03",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -398,
+    "raw": "03.12.2024Kronan Nordurhellu - | -398 kr."
+  },
+  {
+    "date": "2024-12-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2417,
+    "raw": "02.12.2024Kronan Nordurhellu - | -2.417 kr."
+  },
+  {
+    "date": "2024-12-01",
+    "merchant": "Temu",
+    "amount": -11640,
+    "raw": "01.12.2024Temu - Sölunóta-11.640 kr."
+  },
+  {
+    "date": "2024-11-30",
+    "merchant": "Netto Mjodd",
+    "amount": -704,
+    "raw": "30.11.2024Netto Mjodd - Sölunóta-704 kr."
+  },
+  {
+    "date": "2024-11-30",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -949,
+    "raw": "30.11.2024Kronan Nordurhellu - | -949 kr."
+  },
+  {
+    "date": "2024-11-30",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -5546,
+    "raw": "30.11.2024Kronan Nordurhellu - | -5.546 kr."
+  },
+  {
+    "date": "2024-11-29",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1151,
+    "raw": "29.11.2024Kronan Nordurhellu - | -1.151 kr."
+  },
+  {
+    "date": "2024-11-29",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -264,
+    "raw": "29.11.2024Kronan Nordurhellu - | -264 kr."
+  },
+  {
+    "date": "2024-11-28",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -199,
+    "raw": "28.11.2024Kronan Nordurhellu - | -199 kr."
+  },
+  {
+    "date": "2024-11-28",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2510,
+    "raw": "28.11.2024Kronan Nordurhellu - | -2.510 kr."
+  },
+  {
+    "date": "2024-11-28",
+    "merchant": "Costco Iceland Fuel",
+    "amount": -4329,
+    "raw": "28.11.2024Costco Iceland Fuel - | -4.329 kr."
+  },
+  {
+    "date": "2024-11-28",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -299,
+    "raw": "28.11.2024Costco Wholesale Icela | -299 kr."
+  },
+  {
+    "date": "2024-11-28",
+    "merchant": "Costco Wholesale Icela",
+    "amount": -3396,
+    "raw": "28.11.2024Costco Wholesale Icela | -3.396 kr."
+  },
+  {
+    "date": "2024-11-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1529,
+    "raw": "27.11.2024Kronan Nordurhellu - | -1.529 kr."
+  },
+  {
+    "date": "2024-11-27",
+    "merchant": "Útskriftargjald",
+    "amount": -130,
+    "raw": "27.11.2024Útskriftargjald-130 kr."
+  },
+  {
+    "date": "2024-11-26",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3802,
+    "raw": "26.11.2024Kronan Nordurhellu - | -3.802 kr."
+  },
+  {
+    "date": "2024-11-26",
+    "merchant": "Orninn Hjol Ehf",
+    "amount": -2683,
+    "raw": "26.11.2024Orninn Hjol Ehf - | -2.683 kr."
+  },
+  {
+    "date": "2024-11-25",
+    "merchant": "Lyfjaval Sudurfelli",
+    "amount": -1329,
+    "raw": "25.11.2024Lyfjaval Sudurfelli - | -1.329 kr."
+  },
+  {
+    "date": "2024-11-25",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1443,
+    "raw": "25.11.2024Kronan Nordurhellu - | -1.443 kr."
+  },
+  {
+    "date": "2024-11-24",
+    "merchant": "Temu",
+    "amount": -10863,
+    "raw": "24.11.2024Temu - Sölunóta-10.863 kr."
+  },
+  {
+    "date": "2024-11-24",
+    "merchant": "Netto Mjodd",
+    "amount": -172,
+    "raw": "24.11.2024Netto Mjodd - Sölunóta-172 kr."
+  },
+  {
+    "date": "2024-11-24",
+    "merchant": "Braud Og Co",
+    "amount": -1550,
+    "raw": "24.11.2024Braud Og Co - | -1.550 kr."
+  },
+  {
+    "date": "2024-11-23",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3023,
+    "raw": "23.11.2024Kronan Nordurhellu - | -3.023 kr."
+  },
+  {
+    "date": "2024-11-23",
+    "merchant": "Mini Market",
+    "amount": -3346,
+    "raw": "23.11.2024Mini Market - Sölunóta-3.346 kr."
+  },
+  {
+    "date": "2024-11-22",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3957,
+    "raw": "22.11.2024Kronan Nordurhellu - | -3.957 kr."
+  },
+  {
+    "date": "2024-11-22",
+    "merchant": "Elko Lindum",
+    "amount": -2045,
+    "raw": "22.11.2024Elko Lindum - Sölunóta-2.045 kr."
+  },
+  {
+    "date": "2024-11-22",
+    "merchant": "Kronan Lindir",
+    "amount": -931,
+    "raw": "22.11.2024Kronan Lindir - Sölunóta-931 kr."
+  },
+  {
+    "date": "2024-11-22",
+    "merchant": "Ob Aning",
+    "amount": -10365,
+    "raw": "22.11.2024Ob Aning - Sölunóta-10.365 kr."
+  },
+  {
+    "date": "2024-11-21",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1058,
+    "raw": "21.11.2024Kronan Nordurhellu - | -1.058 kr."
+  },
+  {
+    "date": "2024-11-20",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -730,
+    "raw": "20.11.2024Kronan Nordurhellu - | -730 kr."
+  },
+  {
+    "date": "2024-11-20",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -593,
+    "raw": "20.11.2024Kronan Nordurhellu - | -593 kr."
+  },
+  {
+    "date": "2024-11-19",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1152,
+    "raw": "19.11.2024Kronan Nordurhellu - | -1.152 kr."
+  },
+  {
+    "date": "2024-11-19",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1307,
+    "raw": "19.11.2024Kronan Nordurhellu - | -1.307 kr."
+  },
+  {
+    "date": "2024-11-18",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2466,
+    "raw": "18.11.2024Kronan Nordurhellu - | -2.466 kr."
+  },
+  {
+    "date": "2024-11-18",
+    "merchant": "Costco Wholesale",
+    "amount": -1999,
+    "raw": "18.11.2024Costco Wholesale | -1.999 kr."
+  },
+  {
+    "date": "2024-11-18",
+    "merchant": "Costco Wholesale",
+    "amount": -5259,
+    "raw": "18.11.2024Costco Wholesale | -5.259 kr."
+  },
+  {
+    "date": "2024-11-16",
+    "merchant": "Picnic",
+    "amount": -2800,
+    "raw": "16.11.2024Picnic - Sölunóta-2.800 kr."
+  },
+  {
+    "date": "2024-11-16",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2966,
+    "raw": "16.11.2024Kronan Nordurhellu - | -2.966 kr."
+  },
+  {
+    "date": "2024-11-16",
+    "merchant": "Easypark Island Ehf",
+    "amount": -121,
+    "raw": "16.11.2024Easypark Island Ehf - | -121 kr."
+  },
+  {
+    "date": "2024-11-15",
+    "merchant": "Netto Mjodd",
+    "amount": -487,
+    "raw": "15.11.2024Netto Mjodd - Sölunóta-487 kr."
+  },
+  {
+    "date": "2024-11-15",
+    "merchant": "Apotek Landspitalans",
+    "amount": -798,
+    "raw": "15.11.2024Apotek Landspitalans - | -798 kr."
+  },
+  {
+    "date": "2024-11-15",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2536,
+    "raw": "15.11.2024Kronan Nordurhellu - | -2.536 kr."
+  },
+  {
+    "date": "2024-11-14",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4689,
+    "raw": "14.11.2024Kronan Nordurhellu - | -4.689 kr."
+  },
+  {
+    "date": "2024-11-14",
+    "merchant": "Veitur.",
+    "amount": -5134,
+    "raw": "14.11.2024Veitur. - Sölunóta-5.134 kr."
+  },
+  {
+    "date": "2024-11-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -880,
+    "raw": "13.11.2024Kronan Nordurhellu - | -880 kr."
+  },
+  {
+    "date": "2024-11-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -379,
+    "raw": "13.11.2024Kronan Nordurhellu - | -379 kr."
+  },
+  {
+    "date": "2024-11-13",
+    "merchant": "Hringdu",
+    "amount": -1990,
+    "raw": "13.11.2024Hringdu - Sölunóta-1.990 kr."
+  },
+  {
+    "date": "2024-11-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1302,
+    "raw": "13.11.2024Kronan Nordurhellu - | -1.302 kr."
+  },
+  {
+    "date": "2024-11-12",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2765,
+    "raw": "12.11.2024Kronan Nordurhellu - | -2.765 kr."
+  },
+  {
+    "date": "2024-11-11",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2479,
+    "raw": "11.11.2024Kronan Nordurhellu - | -2.479 kr."
+  },
+  {
+    "date": "2024-11-10",
+    "merchant": "Openai - Sölunóta142.581USD -6,20",
+    "amount": -884,
+    "raw": "10.11.2024Openai - Sölunóta142.581USD -6,20-884 kr."
+  },
+  {
+    "date": "2024-11-10",
+    "merchant": "Netto Mjodd",
+    "amount": -230,
+    "raw": "10.11.2024Netto Mjodd - Sölunóta-230 kr."
+  },
+  {
+    "date": "2024-11-09",
+    "merchant": "Costco Fuel Iceland Eh",
+    "amount": -9607,
+    "raw": "09.11.2024Costco Fuel Iceland Eh | -9.607 kr."
+  },
+  {
+    "date": "2024-11-09",
+    "merchant": "Ikea Verslun",
+    "amount": -995,
+    "raw": "09.11.2024Ikea Verslun - Sölunóta-995 kr."
+  },
+  {
+    "date": "2024-11-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4135,
+    "raw": "09.11.2024Kronan Nordurhellu - | -4.135 kr."
+  },
+  {
+    "date": "2024-11-08",
+    "merchant": "Picnic",
+    "amount": -6330,
+    "raw": "08.11.2024Picnic - Sölunóta-6.330 kr."
+  },
+  {
+    "date": "2024-11-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4301,
+    "raw": "08.11.2024Kronan Nordurhellu - | -4.301 kr."
+  },
+  {
+    "date": "2024-11-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -94,
+    "raw": "08.11.2024Kronan Nordurhellu - | -94 kr."
+  },
+  {
+    "date": "2024-11-07",
+    "merchant": "Elko Lindum",
+    "amount": -3595,
+    "raw": "07.11.2024Elko Lindum - Sölunóta-3.595 kr."
+  },
+  {
+    "date": "2024-11-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -729,
+    "raw": "07.11.2024Kronan Nordurhellu - | -729 kr."
+  },
+  {
+    "date": "2024-11-07",
+    "merchant": "Hs Veitur",
+    "amount": -2414,
+    "raw": "07.11.2024Hs Veitur - Sölunóta-2.414 kr."
+  },
+  {
+    "date": "2024-11-07",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -14472,
+    "raw": "07.11.2024Rvk -Fasteignagjold - | -14.472 kr."
+  },
+  {
+    "date": "2024-11-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2033,
+    "raw": "06.11.2024Kronan Nordurhellu - | -2.033 kr."
+  },
+  {
+    "date": "2024-11-06",
+    "merchant": "Vis.Is",
+    "amount": -14392,
+    "raw": "06.11.2024Vis.Is - Sölunóta-14.392 kr."
+  },
+  {
+    "date": "2024-11-05",
+    "merchant": "Parka - Endurgreiðsla1.526 kr.",
+    "amount": -3226,
+    "raw": "05.11.2024Parka - Endurgreiðsla1.526 kr. | -3.226 kr."
+  },
+  {
+    "date": "2024-11-05",
+    "merchant": "Árgjald Korts",
+    "amount": -41900,
+    "raw": "05.11.2024Árgjald Korts-41.900 kr."
+  },
+  {
+    "date": "2024-11-04",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -379,
+    "raw": "04.11.2024Kronan Nordurhellu - | -379 kr."
+  },
+  {
+    "date": "2024-11-04",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -908,
+    "raw": "04.11.2024Kronan Nordurhellu - | -908 kr."
+  },
+  {
+    "date": "2024-11-04",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2667,
+    "raw": "04.11.2024Kronan Nordurhellu - | -2.667 kr."
+  },
+  {
+    "date": "2024-11-03",
+    "merchant": "Kh Veitingar",
+    "amount": -3200,
+    "raw": "03.11.2024Kh Veitingar - Sölunóta-3.200 kr."
+  },
+  {
+    "date": "2024-11-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -379,
+    "raw": "02.11.2024Kronan Nordurhellu - | -379 kr."
+  },
+  {
+    "date": "2024-11-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -6120,
+    "raw": "02.11.2024Kronan Nordurhellu - | -6.120 kr."
+  },
+  {
+    "date": "2024-11-02",
+    "merchant": "Parka",
+    "amount": -1526,
+    "raw": "02.11.2024Parka - Sölunóta-1.526 kr."
+  },
+  {
+    "date": "2024-11-02",
+    "merchant": "Parka",
+    "amount": -1526,
+    "raw": "02.11.2024Parka - Sölunóta-1.526 kr."
+  },
+  {
+    "date": "2024-11-02",
+    "merchant": "Lyfjaval Haedasmara",
+    "amount": -1329,
+    "raw": "02.11.2024Lyfjaval Haedasmara - | -1.329 kr."
+  },
+  {
+    "date": "2024-11-02",
+    "merchant": "Kh Veitingar",
+    "amount": -5400,
+    "raw": "02.11.2024Kh Veitingar - Sölunóta-5.400 kr."
+  },
+  {
+    "date": "2024-11-01",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -866,
+    "raw": "01.11.2024Kronan Nordurhellu - | -866 kr."
+  },
+  {
+    "date": "2024-11-01",
+    "merchant": "Parka",
+    "amount": -1526,
+    "raw": "01.11.2024Parka - Sölunóta-1.526 kr."
+  },
+  {
+    "date": "2024-11-01",
+    "merchant": "Parka",
+    "amount": -1526,
+    "raw": "01.11.2024Parka - Sölunóta-1.526 kr."
+  },
+  {
+    "date": "2024-10-31",
+    "merchant": "Netto Mjodd",
+    "amount": -479,
+    "raw": "31.10.2024Netto Mjodd - Sölunóta-479 kr."
+  },
+  {
+    "date": "2024-10-31",
+    "merchant": "Netto Mjodd",
+    "amount": -360,
+    "raw": "31.10.2024Netto Mjodd - Sölunóta-360 kr."
+  },
+  {
+    "date": "2024-10-31",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -667,
+    "raw": "31.10.2024Kronan Nordurhellu - | -667 kr."
+  },
+  {
+    "date": "2024-10-31",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3770,
+    "raw": "31.10.2024Kronan Nordurhellu - | -3.770 kr."
+  },
+  {
+    "date": "2024-10-30",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1367,
+    "raw": "30.10.2024Kronan Nordurhellu - | -1.367 kr."
+  },
+  {
+    "date": "2024-10-30",
+    "merchant": "Costco Fuel Iceland Eh",
+    "amount": -8494,
+    "raw": "30.10.2024Costco Fuel Iceland Eh | -8.494 kr."
+  },
+  {
+    "date": "2024-10-29",
+    "merchant": "Netto Mjodd",
+    "amount": -462,
+    "raw": "29.10.2024Netto Mjodd - Sölunóta-462 kr."
+  },
+  {
+    "date": "2024-10-29",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -406,
+    "raw": "29.10.2024Kronan Nordurhellu - | -406 kr."
+  },
+  {
+    "date": "2024-10-29",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1025,
+    "raw": "29.10.2024Kronan Nordurhellu - | -1.025 kr."
+  },
+  {
+    "date": "2024-10-28",
+    "merchant": "Heilsugaeslan Mjodd",
+    "amount": -500,
+    "raw": "28.10.2024Heilsugaeslan Mjodd - | -500 kr."
+  },
+  {
+    "date": "2024-10-28",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2756,
+    "raw": "28.10.2024Kronan Nordurhellu - | -2.756 kr."
+  },
+  {
+    "date": "2024-10-28",
+    "merchant": "Gaeludyr.Is",
+    "amount": -5157,
+    "raw": "28.10.2024Gaeludyr.Is - Sölunóta-5.157 kr."
+  },
+  {
+    "date": "2024-10-28",
+    "merchant": "Costco Wholesale",
+    "amount": -13502,
+    "raw": "28.10.2024Costco Wholesale | -13.502 kr."
+  },
+  {
+    "date": "2024-10-28",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -759,
+    "raw": "28.10.2024Kronan Nordurhellu - | -759 kr."
+  },
+  {
+    "date": "2024-10-28",
+    "merchant": "Útskriftargjald",
+    "amount": -130,
+    "raw": "28.10.2024Útskriftargjald-130 kr."
+  },
+  {
+    "date": "2024-10-26",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -378,
+    "raw": "26.10.2024Kronan Nordurhellu - | -378 kr."
+  },
+  {
+    "date": "2024-10-26",
+    "merchant": "Is-Grill",
+    "amount": -300,
+    "raw": "26.10.2024Is-Grill - Sölunóta-300 kr."
+  },
+  {
+    "date": "2024-10-26",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -9168,
+    "raw": "26.10.2024Kronan Nordurhellu - | -9.168 kr."
+  },
+  {
+    "date": "2024-10-25",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -549,
+    "raw": "25.10.2024Kronan Nordurhellu - | -549 kr."
+  },
+  {
+    "date": "2024-10-24",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -731,
+    "raw": "24.10.2024Kronan Nordurhellu - | -731 kr."
+  },
+  {
+    "date": "2024-10-24",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -378,
+    "raw": "24.10.2024Kronan Nordurhellu - | -378 kr."
+  },
+  {
+    "date": "2024-10-23",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -99,
+    "raw": "23.10.2024Kronan Nordurhellu - | -99 kr."
+  },
+  {
+    "date": "2024-10-23",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -378,
+    "raw": "23.10.2024Kronan Nordurhellu - | -378 kr."
+  },
+  {
+    "date": "2024-10-23",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -5946,
+    "raw": "23.10.2024Kronan Nordurhellu - | -5.946 kr."
+  },
+  {
+    "date": "2024-10-21",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1154,
+    "raw": "21.10.2024Kronan Nordurhellu - | -1.154 kr."
+  },
+  {
+    "date": "2024-10-20",
+    "merchant": "Blahornid",
+    "amount": -940,
+    "raw": "20.10.2024Blahornid - Sölunóta-940 kr."
+  },
+  {
+    "date": "2024-10-20",
+    "merchant": "Netto Mjodd",
+    "amount": -269,
+    "raw": "20.10.2024Netto Mjodd - Sölunóta-269 kr."
+  },
+  {
+    "date": "2024-10-20",
+    "merchant": "Ok Market - Laugarvegu",
+    "amount": -998,
+    "raw": "20.10.2024Ok Market - Laugarvegu | -998 kr."
+  },
+  {
+    "date": "2024-10-20",
+    "merchant": "Ok Market - Laugarvegu",
+    "amount": -249,
+    "raw": "20.10.2024Ok Market - Laugarvegu | -249 kr."
+  },
+  {
+    "date": "2024-10-20",
+    "merchant": "Corner Shop",
+    "amount": -3542,
+    "raw": "20.10.2024Corner Shop | -3.542 kr."
+  },
+  {
+    "date": "2024-10-20",
+    "merchant": "Parka",
+    "amount": -1066,
+    "raw": "20.10.2024Parka - Sölunóta-1.066 kr."
+  },
+  {
+    "date": "2024-10-20",
+    "merchant": "Hopp* Scooter",
+    "amount": -1168,
+    "raw": "20.10.2024Hopp* Scooter - | -1.168 kr."
+  },
+  {
+    "date": "2024-10-20",
+    "merchant": "Hopp* Scooter",
+    "amount": -310,
+    "raw": "20.10.2024Hopp* Scooter - | -310 kr."
+  },
+  {
+    "date": "2024-10-20",
+    "merchant": "Hopp* Scooter",
+    "amount": -156,
+    "raw": "20.10.2024Hopp* Scooter - | -156 kr."
+  },
+  {
+    "date": "2024-10-20",
+    "merchant": "Hopp* Scooter",
+    "amount": -564,
+    "raw": "20.10.2024Hopp* Scooter - | -564 kr."
+  },
+  {
+    "date": "2024-10-19",
+    "merchant": "Costco Fuel Iceland Eh",
+    "amount": -10270,
+    "raw": "19.10.2024Costco Fuel Iceland Eh | -10.270 kr."
+  },
+  {
+    "date": "2024-10-19",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -379,
+    "raw": "19.10.2024Kronan Nordurhellu - | -379 kr."
+  },
+  {
+    "date": "2024-10-19",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -5670,
+    "raw": "19.10.2024Kronan Nordurhellu - | -5.670 kr."
+  },
+  {
+    "date": "2024-10-18",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -5012,
+    "raw": "18.10.2024Kronan Nordurhellu - | -5.012 kr."
+  },
+  {
+    "date": "2024-10-18",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -379,
+    "raw": "18.10.2024Kronan Nordurhellu - | -379 kr."
+  },
+  {
+    "date": "2024-10-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -656,
+    "raw": "17.10.2024Kronan Nordurhellu - | -656 kr."
+  },
+  {
+    "date": "2024-10-16",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -379,
+    "raw": "16.10.2024Kronan Nordurhellu - | -379 kr."
+  },
+  {
+    "date": "2024-10-16",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1263,
+    "raw": "16.10.2024Kronan Nordurhellu - | -1.263 kr."
+  },
+  {
+    "date": "2024-10-16",
+    "merchant": "Apotekarinn Mjodd",
+    "amount": -1345,
+    "raw": "16.10.2024Apotekarinn Mjodd - | -1.345 kr."
+  },
+  {
+    "date": "2024-10-15",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -767,
+    "raw": "15.10.2024Kronan Nordurhellu - | -767 kr."
+  },
+  {
+    "date": "2024-10-15",
+    "merchant": "Posturinn.Is Minn",
+    "amount": -4774,
+    "raw": "15.10.2024Posturinn.Is Minn | -4.774 kr."
+  },
+  {
+    "date": "2024-10-15",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -450,
+    "raw": "15.10.2024Kronan Nordurhellu - | -450 kr."
+  },
+  {
+    "date": "2024-10-14",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -132,
+    "raw": "14.10.2024Kronan Nordurhellu - | -132 kr."
+  },
+  {
+    "date": "2024-10-14",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1961,
+    "raw": "14.10.2024Kronan Nordurhellu - | -1.961 kr."
+  },
+  {
+    "date": "2024-10-14",
+    "merchant": "Hs Veitur",
+    "amount": -2501,
+    "raw": "14.10.2024Hs Veitur - Sölunóta-2.501 kr."
+  },
+  {
+    "date": "2024-10-14",
+    "merchant": "Veitur.",
+    "amount": -4973,
+    "raw": "14.10.2024Veitur. - Sölunóta-4.973 kr."
+  },
+  {
+    "date": "2024-10-14",
+    "merchant": "Hringdu",
+    "amount": -1990,
+    "raw": "14.10.2024Hringdu - Sölunóta-1.990 kr."
+  },
+  {
+    "date": "2024-10-13",
+    "merchant": "Orkan Sudurfelli",
+    "amount": -5009,
+    "raw": "13.10.2024Orkan Sudurfelli - | -5.009 kr."
+  },
+  {
+    "date": "2024-10-13",
+    "merchant": "Kronan Jafnaseli",
+    "amount": -893,
+    "raw": "13.10.2024Kronan Jafnaseli - | -893 kr."
+  },
+  {
+    "date": "2024-10-12",
+    "merchant": "Picnic",
+    "amount": -600,
+    "raw": "12.10.2024Picnic - Sölunóta-600 kr."
+  },
+  {
+    "date": "2024-10-12",
+    "merchant": "Picnic",
+    "amount": -7470,
+    "raw": "12.10.2024Picnic - Sölunóta-7.470 kr."
+  },
+  {
+    "date": "2024-10-12",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1832,
+    "raw": "12.10.2024Kronan Nordurhellu - | -1.832 kr."
+  },
+  {
+    "date": "2024-10-12",
+    "merchant": "Vinbudin Heidrun",
+    "amount": -5139,
+    "raw": "12.10.2024Vinbudin Heidrun - | -5.139 kr."
+  },
+  {
+    "date": "2024-10-11",
+    "merchant": "Easypark Island Ehf",
+    "amount": -684,
+    "raw": "11.10.2024Easypark Island Ehf - | -684 kr."
+  },
+  {
+    "date": "2024-10-11",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4425,
+    "raw": "11.10.2024Kronan Nordurhellu - | -4.425 kr."
+  },
+  {
+    "date": "2024-10-11",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -132,
+    "raw": "11.10.2024Kronan Nordurhellu - | -132 kr."
+  },
+  {
+    "date": "2024-10-10",
+    "merchant": "Easypark Island Ehf",
+    "amount": -520,
+    "raw": "10.10.2024Easypark Island Ehf - | -520 kr."
+  },
+  {
+    "date": "2024-10-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -553,
+    "raw": "10.10.2024Kronan Nordurhellu - | -553 kr."
+  },
+  {
+    "date": "2024-10-09",
+    "merchant": "Einstok Bar",
+    "amount": -1900,
+    "raw": "09.10.2024Einstok Bar - Sölunóta-1.900 kr."
+  },
+  {
+    "date": "2024-10-09",
+    "merchant": "Einstok Bar",
+    "amount": -1900,
+    "raw": "09.10.2024Einstok Bar - Sölunóta-1.900 kr."
+  },
+  {
+    "date": "2024-10-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -910,
+    "raw": "09.10.2024Kronan Nordurhellu - | -910 kr."
+  },
+  {
+    "date": "2024-10-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -293,
+    "raw": "08.10.2024Kronan Nordurhellu - | -293 kr."
+  },
+  {
+    "date": "2024-10-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -883,
+    "raw": "08.10.2024Kronan Nordurhellu - | -883 kr."
+  },
+  {
+    "date": "2024-10-08",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -15070,
+    "raw": "08.10.2024Rvk -Fasteignagjold - | -15.070 kr."
+  },
+  {
+    "date": "2024-10-08",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -650,
+    "raw": "08.10.2024Straeto Bs - Solunota - | -650 kr."
+  },
+  {
+    "date": "2024-10-08",
+    "merchant": "Hopp* Scooter",
+    "amount": -271,
+    "raw": "08.10.2024Hopp* Scooter - | -271 kr."
+  },
+  {
+    "date": "2024-10-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1883,
+    "raw": "07.10.2024Kronan Nordurhellu - | -1.883 kr."
+  },
+  {
+    "date": "2024-10-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1182,
+    "raw": "07.10.2024Kronan Nordurhellu - | -1.182 kr."
+  },
+  {
+    "date": "2024-10-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1345,
+    "raw": "07.10.2024Kronan Nordurhellu - | -1.345 kr."
+  },
+  {
+    "date": "2024-10-07",
+    "merchant": "Vis.Is",
+    "amount": -14392,
+    "raw": "07.10.2024Vis.Is - Sölunóta-14.392 kr."
+  },
+  {
+    "date": "2024-10-06",
+    "merchant": "Hradlestin.Is",
+    "amount": -7780,
+    "raw": "06.10.2024Hradlestin.Is - Sölunóta-7.780 kr."
+  },
+  {
+    "date": "2024-10-05",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -7181,
+    "raw": "05.10.2024Kronan Nordurhellu - | -7.181 kr."
+  },
+  {
+    "date": "2024-10-05",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -455,
+    "raw": "05.10.2024Kronan Nordurhellu - | -455 kr."
+  },
+  {
+    "date": "2024-10-03",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1167,
+    "raw": "03.10.2024Kronan Nordurhellu - | -1.167 kr."
+  },
+  {
+    "date": "2024-10-02",
+    "merchant": "Costco Wholesale",
+    "amount": -9511,
+    "raw": "02.10.2024Costco Wholesale | -9.511 kr."
+  },
+  {
+    "date": "2024-10-02",
+    "merchant": "Costco Wholesale",
+    "amount": -8748,
+    "raw": "02.10.2024Costco Wholesale | -8.748 kr."
+  },
+  {
+    "date": "2024-10-02",
+    "merchant": "Costco Fuel Iceland Eh",
+    "amount": -4784,
+    "raw": "02.10.2024Costco Fuel Iceland Eh | -4.784 kr."
+  },
+  {
+    "date": "2024-10-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -342,
+    "raw": "02.10.2024Kronan Nordurhellu - | -342 kr."
+  },
+  {
+    "date": "2024-10-01",
+    "merchant": "Picnic",
+    "amount": -5490,
+    "raw": "01.10.2024Picnic - Sölunóta-5.490 kr."
+  },
+  {
+    "date": "2024-10-01",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -906,
+    "raw": "01.10.2024Kronan Nordurhellu - | -906 kr."
+  },
+  {
+    "date": "2024-10-01",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -949,
+    "raw": "01.10.2024Kronan Nordurhellu - | -949 kr."
+  },
+  {
+    "date": "2024-10-01",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1390,
+    "raw": "01.10.2024Kronan Nordurhellu - | -1.390 kr."
+  },
+  {
+    "date": "2024-09-30",
+    "merchant": "Heilsugaeslan Mjodd",
+    "amount": -500,
+    "raw": "30.09.2024Heilsugaeslan Mjodd - | -500 kr."
+  },
+  {
+    "date": "2024-09-30",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -94,
+    "raw": "30.09.2024Kronan Nordurhellu - | -94 kr."
+  },
+  {
+    "date": "2024-09-30",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -398,
+    "raw": "30.09.2024Kronan Nordurhellu - | -398 kr."
+  },
+  {
+    "date": "2024-09-30",
+    "merchant": "Apotekarinn Mjodd",
+    "amount": -4948,
+    "raw": "30.09.2024Apotekarinn Mjodd - | -4.948 kr."
+  },
+  {
+    "date": "2024-09-29",
+    "merchant": "Kronan Jafnaseli",
+    "amount": -555,
+    "raw": "29.09.2024Kronan Jafnaseli - | -555 kr."
+  },
+  {
+    "date": "2024-09-28",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1462,
+    "raw": "28.09.2024Kronan Nordurhellu - | -1.462 kr."
+  },
+  {
+    "date": "2024-09-28",
+    "merchant": "Netto Mjodd",
+    "amount": -299,
+    "raw": "28.09.2024Netto Mjodd - Sölunóta-299 kr."
+  },
+  {
+    "date": "2024-09-28",
+    "merchant": "Is-Grill",
+    "amount": -150,
+    "raw": "28.09.2024Is-Grill - Sölunóta-150 kr."
+  },
+  {
+    "date": "2024-09-28",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1804,
+    "raw": "28.09.2024Kronan Nordurhellu - | -1.804 kr."
+  },
+  {
+    "date": "2024-09-27",
+    "merchant": "Oryggismidstodin",
+    "amount": -2929,
+    "raw": "27.09.2024Oryggismidstodin - | -2.929 kr."
+  },
+  {
+    "date": "2024-09-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1400,
+    "raw": "27.09.2024Kronan Nordurhellu - | -1.400 kr."
+  },
+  {
+    "date": "2024-09-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2137,
+    "raw": "27.09.2024Kronan Nordurhellu - | -2.137 kr."
+  },
+  {
+    "date": "2024-09-27",
+    "merchant": "Útskriftargjald",
+    "amount": -130,
+    "raw": "27.09.2024Útskriftargjald-130 kr."
+  },
+  {
+    "date": "2024-09-26",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -650,
+    "raw": "26.09.2024Kronan Nordurhellu - | -650 kr."
+  },
+  {
+    "date": "2024-09-26",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4503,
+    "raw": "26.09.2024Kronan Nordurhellu - | -4.503 kr."
+  },
+  {
+    "date": "2024-09-26",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -168,
+    "raw": "26.09.2024Kronan Nordurhellu - | -168 kr."
+  },
+  {
+    "date": "2024-09-26",
+    "merchant": "Costco Fuel Iceland Eh",
+    "amount": -10451,
+    "raw": "26.09.2024Costco Fuel Iceland Eh | -10.451 kr."
+  },
+  {
+    "date": "2024-09-25",
+    "merchant": "Lyfjaval Haedasmara",
+    "amount": -1389,
+    "raw": "25.09.2024Lyfjaval Haedasmara - | -1.389 kr."
+  },
+  {
+    "date": "2024-09-25",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -750,
+    "raw": "25.09.2024Kronan Nordurhellu - | -750 kr."
+  },
+  {
+    "date": "2024-09-25",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -250,
+    "raw": "25.09.2024Kronan Nordurhellu - | -250 kr."
+  },
+  {
+    "date": "2024-09-25",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -504,
+    "raw": "25.09.2024Kronan Nordurhellu - | -504 kr."
+  },
+  {
+    "date": "2024-09-24",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -759,
+    "raw": "24.09.2024Kronan Nordurhellu - | -759 kr."
+  },
+  {
+    "date": "2024-09-24",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1081,
+    "raw": "24.09.2024Kronan Nordurhellu - | -1.081 kr."
+  },
+  {
+    "date": "2024-09-24",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -759,
+    "raw": "24.09.2024Kronan Nordurhellu - | -759 kr."
+  },
+  {
+    "date": "2024-09-23",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -400,
+    "raw": "23.09.2024Kronan Nordurhellu - | -400 kr."
+  },
+  {
+    "date": "2024-09-22",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2997,
+    "raw": "22.09.2024Kronan Nordurhellu - | -2.997 kr."
+  },
+  {
+    "date": "2024-09-21",
+    "merchant": "Pris",
+    "amount": -1187,
+    "raw": "21.09.2024Pris - Sölunóta-1.187 kr."
+  },
+  {
+    "date": "2024-09-21",
+    "merchant": "Gaeludyr.Is",
+    "amount": -5157,
+    "raw": "21.09.2024Gaeludyr.Is - Sölunóta-5.157 kr."
+  },
+  {
+    "date": "2024-09-21",
+    "merchant": "Picnic",
+    "amount": -300,
+    "raw": "21.09.2024Picnic - Sölunóta-300 kr."
+  },
+  {
+    "date": "2024-09-20",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4029,
+    "raw": "20.09.2024Kronan Nordurhellu - | -4.029 kr."
+  },
+  {
+    "date": "2024-09-19",
+    "merchant": "Elko Lindum",
+    "amount": -2045,
+    "raw": "19.09.2024Elko Lindum - Sölunóta-2.045 kr."
+  },
+  {
+    "date": "2024-09-19",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -379,
+    "raw": "19.09.2024Kronan Nordurhellu - | -379 kr."
+  },
+  {
+    "date": "2024-09-19",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -53,
+    "raw": "19.09.2024Kronan Nordurhellu - | -53 kr."
+  },
+  {
+    "date": "2024-09-18",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2390,
+    "raw": "18.09.2024Kronan Nordurhellu - | -2.390 kr."
+  },
+  {
+    "date": "2024-09-18",
+    "merchant": "Costco Fuel Iceland Eh",
+    "amount": -6594,
+    "raw": "18.09.2024Costco Fuel Iceland Eh | -6.594 kr."
+  },
+  {
+    "date": "2024-09-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1200,
+    "raw": "17.09.2024Kronan Nordurhellu - | -1.200 kr."
+  },
+  {
+    "date": "2024-09-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -492,
+    "raw": "17.09.2024Kronan Nordurhellu - | -492 kr."
+  },
+  {
+    "date": "2024-09-17",
+    "merchant": "Picnic",
+    "amount": -8280,
+    "raw": "17.09.2024Picnic - Sölunóta-8.280 kr."
+  },
+  {
+    "date": "2024-09-16",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2114,
+    "raw": "16.09.2024Kronan Nordurhellu - | -2.114 kr."
+  },
+  {
+    "date": "2024-09-16",
+    "merchant": "Veitur.",
+    "amount": -5092,
+    "raw": "16.09.2024Veitur. - Sölunóta-5.092 kr."
+  },
+  {
+    "date": "2024-09-16",
+    "merchant": "Hringdu",
+    "amount": -1990,
+    "raw": "16.09.2024Hringdu - Sölunóta-1.990 kr."
+  },
+  {
+    "date": "2024-09-15",
+    "merchant": "Netto Mjodd",
+    "amount": -919,
+    "raw": "15.09.2024Netto Mjodd - Sölunóta-919 kr."
+  },
+  {
+    "date": "2024-09-14",
+    "merchant": "Costco Wholesale",
+    "amount": -299,
+    "raw": "14.09.2024Costco Wholesale | -299 kr."
+  },
+  {
+    "date": "2024-09-14",
+    "merchant": "Fisko",
+    "amount": -8880,
+    "raw": "14.09.2024Fisko - Sölunóta-8.880 kr."
+  },
+  {
+    "date": "2024-09-14",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2807,
+    "raw": "14.09.2024Kronan Nordurhellu - | -2.807 kr."
+  },
+  {
+    "date": "2024-09-14",
+    "merchant": "Costco Wholesale",
+    "amount": -5453,
+    "raw": "14.09.2024Costco Wholesale | -5.453 kr."
+  },
+  {
+    "date": "2024-09-13",
+    "merchant": "Byko Breidd",
+    "amount": -440,
+    "raw": "13.09.2024Byko Breidd - Sölunóta-440 kr."
+  },
+  {
+    "date": "2024-09-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2276,
+    "raw": "13.09.2024Kronan Nordurhellu - | -2.276 kr."
+  },
+  {
+    "date": "2024-09-12",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3318,
+    "raw": "12.09.2024Kronan Nordurhellu - | -3.318 kr."
+  },
+  {
+    "date": "2024-09-12",
+    "merchant": "Or Vatns- Og Fraveita",
+    "amount": -7878,
+    "raw": "12.09.2024Or Vatns- Og Fraveita - | -7.878 kr."
+  },
+  {
+    "date": "2024-09-11",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1422,
+    "raw": "11.09.2024Kronan Nordurhellu - | -1.422 kr."
+  },
+  {
+    "date": "2024-09-11",
+    "merchant": "Hs Veitur",
+    "amount": -1967,
+    "raw": "11.09.2024Hs Veitur - Sölunóta-1.967 kr."
+  },
+  {
+    "date": "2024-09-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -935,
+    "raw": "10.09.2024Kronan Nordurhellu - | -935 kr."
+  },
+  {
+    "date": "2024-09-10",
+    "merchant": "Posturinn.Is Minn",
+    "amount": -1598,
+    "raw": "10.09.2024Posturinn.Is Minn | -1.598 kr."
+  },
+  {
+    "date": "2024-09-10",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4358,
+    "raw": "10.09.2024Kronan Nordurhellu - | -4.358 kr."
+  },
+  {
+    "date": "2024-09-10",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -15070,
+    "raw": "10.09.2024Rvk -Fasteignagjold - | -15.070 kr."
+  },
+  {
+    "date": "2024-09-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -238,
+    "raw": "09.09.2024Kronan Nordurhellu - | -238 kr."
+  },
+  {
+    "date": "2024-09-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2097,
+    "raw": "09.09.2024Kronan Nordurhellu - | -2.097 kr."
+  },
+  {
+    "date": "2024-09-07",
+    "merchant": "Bonus Kauptuni",
+    "amount": -458,
+    "raw": "07.09.2024Bonus Kauptuni - | -458 kr."
+  },
+  {
+    "date": "2024-09-07",
+    "merchant": "Vinbudin Gardabae",
+    "amount": -2064,
+    "raw": "07.09.2024Vinbudin Gardabae - | -2.064 kr."
+  },
+  {
+    "date": "2024-09-07",
+    "merchant": "Costco Wholesale",
+    "amount": -4848,
+    "raw": "07.09.2024Costco Wholesale | -4.848 kr."
+  },
+  {
+    "date": "2024-09-07",
+    "merchant": "Costco Fuel Iceland Eh",
+    "amount": -5006,
+    "raw": "07.09.2024Costco Fuel Iceland Eh | -5.006 kr."
+  },
+  {
+    "date": "2024-09-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2383,
+    "raw": "07.09.2024Kronan Nordurhellu - | -2.383 kr."
+  },
+  {
+    "date": "2024-09-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3202,
+    "raw": "06.09.2024Kronan Nordurhellu - | -3.202 kr."
+  },
+  {
+    "date": "2024-09-06",
+    "merchant": "Vis.Is",
+    "amount": -14392,
+    "raw": "06.09.2024Vis.Is - Sölunóta-14.392 kr."
+  },
+  {
+    "date": "2024-09-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -188,
+    "raw": "06.09.2024Kronan Nordurhellu - | -188 kr."
+  },
+  {
+    "date": "2024-09-05",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -718,
+    "raw": "05.09.2024Kronan Nordurhellu - | -718 kr."
+  },
+  {
+    "date": "2024-09-05",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -935,
+    "raw": "05.09.2024Kronan Nordurhellu - | -935 kr."
+  },
+  {
+    "date": "2024-09-05",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -188,
+    "raw": "05.09.2024Kronan Nordurhellu - | -188 kr."
+  },
+  {
+    "date": "2024-09-05",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2327,
+    "raw": "05.09.2024Kronan Nordurhellu - | -2.327 kr."
+  },
+  {
+    "date": "2024-09-04",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1238,
+    "raw": "04.09.2024Kronan Nordurhellu - | -1.238 kr."
+  },
+  {
+    "date": "2024-09-04",
+    "merchant": "Icelandair Ticket Sales",
+    "amount": -20714,
+    "raw": "04.09.2024Icelandair Ticket Sales - | -20.714 kr."
+  },
+  {
+    "date": "2024-09-03",
+    "merchant": "Apotekarinn Mjodd",
+    "amount": -3406,
+    "raw": "03.09.2024Apotekarinn Mjodd - | -3.406 kr."
+  },
+  {
+    "date": "2024-09-03",
+    "merchant": "Vr",
+    "amount": -69000,
+    "raw": "03.09.2024Vr - Sölunóta-69.000 kr."
+  },
+  {
+    "date": "2024-09-03",
+    "merchant": "Easypark Island Ehf",
+    "amount": -195,
+    "raw": "03.09.2024Easypark Island Ehf - | -195 kr."
+  },
+  {
+    "date": "2024-09-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1301,
+    "raw": "02.09.2024Kronan Nordurhellu - | -1.301 kr."
+  },
+  {
+    "date": "2024-09-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -176,
+    "raw": "02.09.2024Kronan Nordurhellu - | -176 kr."
+  },
+  {
+    "date": "2024-09-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -949,
+    "raw": "02.09.2024Kronan Nordurhellu - | -949 kr."
+  },
+  {
+    "date": "2024-09-01",
+    "merchant": "Efling",
+    "amount": -20000,
+    "raw": "01.09.2024Efling - Sölunóta-20.000 kr."
+  },
+  {
+    "date": "2024-08-31",
+    "merchant": "Netto Mjodd",
+    "amount": -2172,
+    "raw": "31.08.2024Netto Mjodd - Sölunóta-2.172 kr."
+  },
+  {
+    "date": "2024-08-31",
+    "merchant": "Costco Wholesale",
+    "amount": -299,
+    "raw": "31.08.2024Costco Wholesale | -299 kr."
+  },
+  {
+    "date": "2024-08-31",
+    "merchant": "Costco Wholesale",
+    "amount": -11569,
+    "raw": "31.08.2024Costco Wholesale | -11.569 kr."
+  },
+  {
+    "date": "2024-08-31",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -6222,
+    "raw": "31.08.2024Kronan Nordurhellu - | -6.222 kr."
+  },
+  {
+    "date": "2024-08-30",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -626,
+    "raw": "30.08.2024Kronan Nordurhellu - | -626 kr."
+  },
+  {
+    "date": "2024-08-30",
+    "merchant": "Picnic",
+    "amount": -4200,
+    "raw": "30.08.2024Picnic - Sölunóta-4.200 kr."
+  },
+  {
+    "date": "2024-08-30",
+    "merchant": "Picnic",
+    "amount": -3990,
+    "raw": "30.08.2024Picnic - Sölunóta-3.990 kr."
+  },
+  {
+    "date": "2024-08-30",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2646,
+    "raw": "30.08.2024Kronan Nordurhellu - | -2.646 kr."
+  },
+  {
+    "date": "2024-08-29",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -900,
+    "raw": "29.08.2024Kronan Nordurhellu - | -900 kr."
+  },
+  {
+    "date": "2024-08-29",
+    "merchant": "Elko Lindum",
+    "amount": -28881,
+    "raw": "29.08.2024Elko Lindum - Sölunóta-28.881 kr."
+  },
+  {
+    "date": "2024-08-29",
+    "merchant": "Netto Mjodd",
+    "amount": -607,
+    "raw": "29.08.2024Netto Mjodd - Sölunóta-607 kr."
+  },
+  {
+    "date": "2024-08-28",
+    "merchant": "Easypark Island Ehf",
+    "amount": -915,
+    "raw": "28.08.2024Easypark Island Ehf - | -915 kr."
+  },
+  {
+    "date": "2024-08-27",
+    "merchant": "Fjallkonan",
+    "amount": -3260,
+    "raw": "27.08.2024Fjallkonan - Sölunóta-3.260 kr."
+  },
+  {
+    "date": "2024-08-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1138,
+    "raw": "27.08.2024Kronan Nordurhellu - | -1.138 kr."
+  },
+  {
+    "date": "2024-08-27",
+    "merchant": "Tekkland",
+    "amount": -12821,
+    "raw": "27.08.2024Tekkland | -12.821 kr."
+  },
+  {
+    "date": "2024-08-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1269,
+    "raw": "27.08.2024Kronan Nordurhellu - | -1.269 kr."
+  },
+  {
+    "date": "2024-08-27",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -650,
+    "raw": "27.08.2024Straeto Bs - Solunota - | -650 kr."
+  },
+  {
+    "date": "2024-08-27",
+    "merchant": "Costco Fuel Iceland Eh",
+    "amount": -9996,
+    "raw": "27.08.2024Costco Fuel Iceland Eh | -9.996 kr."
+  },
+  {
+    "date": "2024-08-27",
+    "merchant": "Útskriftargjald",
+    "amount": -130,
+    "raw": "27.08.2024Útskriftargjald-130 kr."
+  },
+  {
+    "date": "2024-08-26",
+    "merchant": "Netto Mjodd",
+    "amount": -420,
+    "raw": "26.08.2024Netto Mjodd - Sölunóta-420 kr."
+  },
+  {
+    "date": "2024-08-26",
+    "merchant": "Bilanaust - Motormax",
+    "amount": -5294,
+    "raw": "26.08.2024Bilanaust - Motormax - | -5.294 kr."
+  },
+  {
+    "date": "2024-08-26",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -650,
+    "raw": "26.08.2024Straeto Bs - Solunota - | -650 kr."
+  },
+  {
+    "date": "2024-08-26",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -650,
+    "raw": "26.08.2024Straeto Bs - Solunota - | -650 kr."
+  },
+  {
+    "date": "2024-08-24",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -7085,
+    "raw": "24.08.2024Kronan Nordurhellu - | -7.085 kr."
+  },
+  {
+    "date": "2024-08-23",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -915,
+    "raw": "23.08.2024Kronan Nordurhellu - | -915 kr."
+  },
+  {
+    "date": "2024-08-23",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -887,
+    "raw": "23.08.2024Kronan Nordurhellu - | -887 kr."
+  },
+  {
+    "date": "2024-08-22",
+    "merchant": "Easypark Island Ehf",
+    "amount": -110,
+    "raw": "22.08.2024Easypark Island Ehf - | -110 kr."
+  },
+  {
+    "date": "2024-08-22",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2388,
+    "raw": "22.08.2024Kronan Nordurhellu - | -2.388 kr."
+  },
+  {
+    "date": "2024-08-22",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -949,
+    "raw": "22.08.2024Kronan Nordurhellu - | -949 kr."
+  },
+  {
+    "date": "2024-08-22",
+    "merchant": "Bilanaust Baejarhraun",
+    "amount": -558,
+    "raw": "22.08.2024Bilanaust Baejarhraun | -558 kr."
+  },
+  {
+    "date": "2024-08-21",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1547,
+    "raw": "21.08.2024Kronan Nordurhellu - | -1.547 kr."
+  },
+  {
+    "date": "2024-08-21",
+    "merchant": "Costco Wholesale",
+    "amount": -19197,
+    "raw": "21.08.2024Costco Wholesale | -19.197 kr."
+  },
+  {
+    "date": "2024-08-21",
+    "merchant": "Costco Wholesale",
+    "amount": -3206,
+    "raw": "21.08.2024Costco Wholesale | -3.206 kr."
+  },
+  {
+    "date": "2024-08-21",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -650,
+    "raw": "21.08.2024Straeto Bs - Solunota - | -650 kr."
+  },
+  {
+    "date": "2024-08-21",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -650,
+    "raw": "21.08.2024Straeto Bs - Solunota - | -650 kr."
+  },
+  {
+    "date": "2024-08-20",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -820,
+    "raw": "20.08.2024Kronan Nordurhellu - | -820 kr."
+  },
+  {
+    "date": "2024-08-20",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -303,
+    "raw": "20.08.2024Kronan Nordurhellu - | -303 kr."
+  },
+  {
+    "date": "2024-08-19",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -4285,
+    "raw": "19.08.2024Kronan Nordurhellu - | -4.285 kr."
+  },
+  {
+    "date": "2024-08-19",
+    "merchant": "Heilsugaeslan Mjodd",
+    "amount": -500,
+    "raw": "19.08.2024Heilsugaeslan Mjodd - | -500 kr."
+  },
+  {
+    "date": "2024-08-19",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -175,
+    "raw": "19.08.2024Kronan Nordurhellu - | -175 kr."
+  },
+  {
+    "date": "2024-08-18",
+    "merchant": "Kronan Jafnaseli",
+    "amount": -465,
+    "raw": "18.08.2024Kronan Jafnaseli - | -465 kr."
+  },
+  {
+    "date": "2024-08-17",
+    "merchant": "Vinbudin Dalvegi",
+    "amount": -2580,
+    "raw": "17.08.2024Vinbudin Dalvegi - | -2.580 kr."
+  },
+  {
+    "date": "2024-08-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -474,
+    "raw": "17.08.2024Kronan Nordurhellu - | -474 kr."
+  },
+  {
+    "date": "2024-08-17",
+    "merchant": "Gaeludyr.Is",
+    "amount": -5157,
+    "raw": "17.08.2024Gaeludyr.Is - Sölunóta-5.157 kr."
+  },
+  {
+    "date": "2024-08-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -11005,
+    "raw": "17.08.2024Kronan Nordurhellu - | -11.005 kr."
+  },
+  {
+    "date": "2024-08-17",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -188,
+    "raw": "17.08.2024Kronan Nordurhellu - | -188 kr."
+  },
+  {
+    "date": "2024-08-16",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1670,
+    "raw": "16.08.2024Kronan Nordurhellu - | -1.670 kr."
+  },
+  {
+    "date": "2024-08-16",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -908,
+    "raw": "16.08.2024Kronan Nordurhellu - | -908 kr."
+  },
+  {
+    "date": "2024-08-15",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1192,
+    "raw": "15.08.2024Kronan Nordurhellu - | -1.192 kr."
+  },
+  {
+    "date": "2024-08-15",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1110,
+    "raw": "15.08.2024Kronan Nordurhellu - | -1.110 kr."
+  },
+  {
+    "date": "2024-08-15",
+    "merchant": "Veitur.",
+    "amount": -4587,
+    "raw": "15.08.2024Veitur. - Sölunóta-4.587 kr."
+  },
+  {
+    "date": "2024-08-15",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -650,
+    "raw": "15.08.2024Straeto Bs - Solunota - | -650 kr."
+  },
+  {
+    "date": "2024-08-15",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -650,
+    "raw": "15.08.2024Straeto Bs - Solunota - | -650 kr."
+  },
+  {
+    "date": "2024-08-14",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -398,
+    "raw": "14.08.2024Kronan Nordurhellu - | -398 kr."
+  },
+  {
+    "date": "2024-08-14",
+    "merchant": "Apotek Hafnarfjardar",
+    "amount": -1045,
+    "raw": "14.08.2024Apotek Hafnarfjardar - | -1.045 kr."
+  },
+  {
+    "date": "2024-08-14",
+    "merchant": "Hringdu",
+    "amount": -1990,
+    "raw": "14.08.2024Hringdu - Sölunóta-1.990 kr."
+  },
+  {
+    "date": "2024-08-14",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -907,
+    "raw": "14.08.2024Kronan Nordurhellu - | -907 kr."
+  },
+  {
+    "date": "2024-08-14",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -650,
+    "raw": "14.08.2024Straeto Bs - Solunota - | -650 kr."
+  },
+  {
+    "date": "2024-08-14",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -650,
+    "raw": "14.08.2024Straeto Bs - Solunota - | -650 kr."
+  },
+  {
+    "date": "2024-08-13",
+    "merchant": "Olgerdin Sjalfsalar",
+    "amount": -210,
+    "raw": "13.08.2024Olgerdin Sjalfsalar - | -210 kr."
+  },
+  {
+    "date": "2024-08-13",
+    "merchant": "Landspitali",
+    "amount": -8692,
+    "raw": "13.08.2024Landspitali - Sölunóta-8.692 kr."
+  },
+  {
+    "date": "2024-08-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1423,
+    "raw": "13.08.2024Kronan Nordurhellu - | -1.423 kr."
+  },
+  {
+    "date": "2024-08-13",
+    "merchant": "Hs Veitur",
+    "amount": -2740,
+    "raw": "13.08.2024Hs Veitur - Sölunóta-2.740 kr."
+  },
+  {
+    "date": "2024-08-13",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -725,
+    "raw": "13.08.2024Kronan Nordurhellu - | -725 kr."
+  },
+  {
+    "date": "2024-08-13",
+    "merchant": "Straeto Bs - Solunota",
+    "amount": -650,
+    "raw": "13.08.2024Straeto Bs - Solunota - | -650 kr."
+  },
+  {
+    "date": "2024-08-12",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2463,
+    "raw": "12.08.2024Kronan Nordurhellu - | -2.463 kr."
+  },
+  {
+    "date": "2024-08-11",
+    "merchant": "Kronan Jafnaseli",
+    "amount": -283,
+    "raw": "11.08.2024Kronan Jafnaseli - | -283 kr."
+  },
+  {
+    "date": "2024-08-10",
+    "merchant": "Laeknavaktin Ehf",
+    "amount": -3100,
+    "raw": "10.08.2024Laeknavaktin Ehf - | -3.100 kr."
+  },
+  {
+    "date": "2024-08-10",
+    "merchant": "Bonus Kauptuni",
+    "amount": -1344,
+    "raw": "10.08.2024Bonus Kauptuni - | -1.344 kr."
+  },
+  {
+    "date": "2024-08-10",
+    "merchant": "Laeknavaktin Ehf",
+    "amount": -1141,
+    "raw": "10.08.2024Laeknavaktin Ehf - | -1.141 kr."
+  },
+  {
+    "date": "2024-08-10",
+    "merchant": "Apotekarinn Austurver",
+    "amount": -3406,
+    "raw": "10.08.2024Apotekarinn Austurver - | -3.406 kr."
+  },
+  {
+    "date": "2024-08-10",
+    "merchant": "Costco Wholesale",
+    "amount": -69999,
+    "raw": "10.08.2024Costco Wholesale | -69.999 kr."
+  },
+  {
+    "date": "2024-08-10",
+    "merchant": "Costco Fuel Iceland Eh",
+    "amount": -10335,
+    "raw": "10.08.2024Costco Fuel Iceland Eh | -10.335 kr."
+  },
+  {
+    "date": "2024-08-09",
+    "merchant": "Olgerdin Sjalfsalar",
+    "amount": -350,
+    "raw": "09.08.2024Olgerdin Sjalfsalar - | -350 kr."
+  },
+  {
+    "date": "2024-08-09",
+    "merchant": "Rvk -Fasteignagjold",
+    "amount": -15070,
+    "raw": "09.08.2024Rvk -Fasteignagjold - | -15.070 kr."
+  },
+  {
+    "date": "2024-08-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -731,
+    "raw": "09.08.2024Kronan Nordurhellu - | -731 kr."
+  },
+  {
+    "date": "2024-08-09",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1110,
+    "raw": "09.08.2024Kronan Nordurhellu - | -1.110 kr."
+  },
+  {
+    "date": "2024-08-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1851,
+    "raw": "08.08.2024Kronan Nordurhellu - | -1.851 kr."
+  },
+  {
+    "date": "2024-08-08",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1347,
+    "raw": "08.08.2024Kronan Nordurhellu - | -1.347 kr."
+  },
+  {
+    "date": "2024-08-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1340,
+    "raw": "07.08.2024Kronan Nordurhellu - | -1.340 kr."
+  },
+  {
+    "date": "2024-08-07",
+    "merchant": "Or Vatns- Og Fraveita",
+    "amount": -7878,
+    "raw": "07.08.2024Or Vatns- Og Fraveita - | -7.878 kr."
+  },
+  {
+    "date": "2024-08-07",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -955,
+    "raw": "07.08.2024Kronan Nordurhellu - | -955 kr."
+  },
+  {
+    "date": "2024-08-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -3207,
+    "raw": "06.08.2024Kronan Nordurhellu - | -3.207 kr."
+  },
+  {
+    "date": "2024-08-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -908,
+    "raw": "06.08.2024Kronan Nordurhellu - | -908 kr."
+  },
+  {
+    "date": "2024-08-06",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -731,
+    "raw": "06.08.2024Kronan Nordurhellu - | -731 kr."
+  },
+  {
+    "date": "2024-08-06",
+    "merchant": "Costco Wholesale",
+    "amount": -11957,
+    "raw": "06.08.2024Costco Wholesale | -11.957 kr."
+  },
+  {
+    "date": "2024-08-06",
+    "merchant": "Vis.Is",
+    "amount": -14390,
+    "raw": "06.08.2024Vis.Is - Sölunóta-14.390 kr."
+  },
+  {
+    "date": "2024-08-05",
+    "merchant": "Kronan Jafnaseli",
+    "amount": -199,
+    "raw": "05.08.2024Kronan Jafnaseli - | -199 kr."
+  },
+  {
+    "date": "2024-08-03",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -8724,
+    "raw": "03.08.2024Kronan Nordurhellu - | -8.724 kr."
+  },
+  {
+    "date": "2024-08-02",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -969,
+    "raw": "02.08.2024Kronan Nordurhellu - | -969 kr."
+  },
+  {
+    "date": "2024-08-01",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -200,
+    "raw": "01.08.2024Kronan Nordurhellu - | -200 kr."
+  },
+  {
+    "date": "2024-08-01",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -177,
+    "raw": "01.08.2024Kronan Nordurhellu - | -177 kr."
+  },
+  {
+    "date": "2024-07-31",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -398,
+    "raw": "31.07.2024Kronan Nordurhellu - | -398 kr."
+  },
+  {
+    "date": "2024-07-31",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -683,
+    "raw": "31.07.2024Kronan Nordurhellu - | -683 kr."
+  },
+  {
+    "date": "2024-07-31",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -177,
+    "raw": "31.07.2024Kronan Nordurhellu - | -177 kr."
+  },
+  {
+    "date": "2024-07-30",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -731,
+    "raw": "30.07.2024Kronan Nordurhellu - | -731 kr."
+  },
+  {
+    "date": "2024-07-30",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2751,
+    "raw": "30.07.2024Kronan Nordurhellu - | -2.751 kr."
+  },
+  {
+    "date": "2024-07-29",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1110,
+    "raw": "29.07.2024Kronan Nordurhellu - | -1.110 kr."
+  },
+  {
+    "date": "2024-07-29",
+    "merchant": "Útskriftargjald",
+    "amount": -130,
+    "raw": "29.07.2024Útskriftargjald-130 kr."
+  },
+  {
+    "date": "2024-07-28",
+    "merchant": "Kronan Jafnaseli",
+    "amount": -1869,
+    "raw": "28.07.2024Kronan Jafnaseli - | -1.869 kr."
+  },
+  {
+    "date": "2024-07-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -2518,
+    "raw": "27.07.2024Kronan Nordurhellu - | -2.518 kr."
+  },
+  {
+    "date": "2024-07-27",
+    "merchant": "Picnic",
+    "amount": -10150,
+    "raw": "27.07.2024Picnic - Sölunóta-10.150 kr."
+  },
+  {
+    "date": "2024-07-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -177,
+    "raw": "27.07.2024Kronan Nordurhellu - | -177 kr."
+  },
+  {
+    "date": "2024-07-27",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -778,
+    "raw": "27.07.2024Kronan Nordurhellu - | -778 kr."
+  },
+  {
+    "date": "2024-07-26",
+    "merchant": "Heilsugaeslan Mjodd",
+    "amount": -500,
+    "raw": "26.07.2024Heilsugaeslan Mjodd - | -500 kr."
+  },
+  {
+    "date": "2024-07-26",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -635,
+    "raw": "26.07.2024Kronan Nordurhellu - | -635 kr."
+  },
+  {
+    "date": "2024-07-26",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -341,
+    "raw": "26.07.2024Kronan Nordurhellu - | -341 kr."
+  },
+  {
+    "date": "2024-07-26",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1604,
+    "raw": "26.07.2024Kronan Nordurhellu - | -1.604 kr."
+  },
+  {
+    "date": "2024-07-26",
+    "merchant": "Apotekarinn Mjodd",
+    "amount": -2917,
+    "raw": "26.07.2024Apotekarinn Mjodd - | -2.917 kr."
+  },
+  {
+    "date": "2024-07-26",
+    "merchant": "Kronan Gardabaer",
+    "amount": -3310,
+    "raw": "26.07.2024Kronan Gardabaer - | -3.310 kr."
+  },
+  {
+    "date": "2024-07-25",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1952,
+    "raw": "25.07.2024Kronan Nordurhellu - | -1.952 kr."
+  },
+  {
+    "date": "2024-07-24",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -332,
+    "raw": "24.07.2024Kronan Nordurhellu - | -332 kr."
+  },
+  {
+    "date": "2024-07-24",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -731,
+    "raw": "24.07.2024Kronan Nordurhellu - | -731 kr."
+  },
+  {
+    "date": "2024-07-24",
+    "merchant": "Kronan Nordurhellu",
+    "amount": -1186,
+    "raw": "24.07.2024Kronan Nordurhellu - | -1.186 kr."
+  }
+]
