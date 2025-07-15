@@ -100,6 +100,9 @@ export default pluginTypescript.config(
       'packages/sync-server/build/',
       '.yarn/*',
       '.github/*',
+      '.specstory/*',
+      'CHAT_*.md',
+      'FINANCIAL_*.md',
     ],
   },
   {

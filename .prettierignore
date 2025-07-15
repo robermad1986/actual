@@ -25,3 +25,13 @@ packages/loot-core/**/lib-dist/*
 packages/loot-core/**/proto/*
 .yarn/*
 upcoming-release-notes/*
+.specstory/*
+.venv/*
+.github/chatmodes/*
+analyze-pdf*.js
+CHAT_*.md
+FINANCIAL_*.md
+CREDIT_CARD_GUIDE.md
+DEVELOPMENT_GUIDE.md
+packages/crdt/coverage/*
+packages/eslint-plugin-actual/coverage/*
