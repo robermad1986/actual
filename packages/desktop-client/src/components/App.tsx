@@ -19,6 +19,7 @@ import * as Platform from 'loot-core/shared/platform';
 
 import { AppBackground } from './AppBackground';
 import { BudgetMonthCountProvider } from './budget/BudgetMonthCountContext';
+import { ChatProvider } from './chat/ChatProvider';
 import { DevelopmentTopBar } from './DevelopmentTopBar';
 import { FatalError } from './FatalError';
 import { FinancesApp } from './FinancesApp';
@@ -215,36 +216,37 @@ export function App() {
       <HotkeysProvider initiallyActiveScopes={['*']}>
         <SpreadsheetProvider>
           <SidebarProvider>
-            <BudgetMonthCountProvider>
-              <DndProvider backend={HTML5Backend}>
-                <View
-                  data-theme={theme}
-                  style={{
-                    height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}
-                >
+            <ChatProvider>
+              <BudgetMonthCountProvider>
+                <DndProvider backend={HTML5Backend}>
                   <View
-                    key={hiddenScrollbars ? 'hidden-scrollbars' : 'scrollbars'}
+                    data-theme={theme}
                     style={{
-                      flexGrow: 1,
-                      overflow: 'hidden',
-                      ...styles.lightScrollbar,
+                      height: '100%',
+                      display: 'flex',
+                      flexDirection: 'column',
                     }}
                   >
-                    <ErrorBoundary FallbackComponent={ErrorFallback}>
-                      {process.env.REACT_APP_REVIEW_ID &&
-                        !Platform.isPlaywright && <DevelopmentTopBar />}
-                      <AppInner />
-                    </ErrorBoundary>
-                    <ThemeStyle />
-                    <Modals />
-                    <UpdateNotification />
+                    <View
+                      key={hiddenScrollbars ? 'hidden-scrollbars' : 'scrollbars'}
+                      style={{
+                        flexGrow: 1,
+                        overflow: 'hidden',
+                        ...styles.lightScrollbar,
+                      }}
+                    >
+                      <ErrorBoundary FallbackComponent={ErrorFallback}>
+                        {process.env.REACT_APP_REVIEW_ID &&
+                          !Platform.isPlaywright && <DevelopmentTopBar />}
+                        <AppInner />
+                      </ErrorBoundary>
+                      <ThemeStyle />
+                      <Modals />
+                      <UpdateNotification />
+                    </View>
                   </View>
-                </View>
-              </DndProvider>
-            </BudgetMonthCountProvider>
+                </DndProvider>              </BudgetMonthCountProvider>
+            </ChatProvider>
           </SidebarProvider>
         </SpreadsheetProvider>
       </HotkeysProvider>

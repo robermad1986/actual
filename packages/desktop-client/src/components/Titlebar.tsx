@@ -29,6 +29,7 @@ import * as Platform from 'loot-core/shared/platform';
 import { AccountSyncCheck } from './accounts/AccountSyncCheck';
 import { AnimatedRefresh } from './AnimatedRefresh';
 import { MonthCountSelector } from './budget/MonthCountSelector';
+import { ChatButton } from './ChatButton';
 import { Link } from './common/Link';
 import { HelpMenu } from './HelpMenu';
 import { LoggedInUser } from './LoggedInUser';
@@ -157,30 +158,30 @@ function SyncButton({ style, isMobile = false }: SyncButtonProps) {
     syncState === 'error'
       ? theme.errorText
       : syncState === 'disabled' ||
-          syncState === 'offline' ||
-          syncState === 'local'
+        syncState === 'offline' ||
+        syncState === 'local'
         ? theme.mobileHeaderTextSubdued
         : theme.mobileHeaderText;
   const desktopColor =
     syncState === 'error'
       ? theme.errorTextDark
       : syncState === 'disabled' ||
-          syncState === 'offline' ||
-          syncState === 'local'
+        syncState === 'offline' ||
+        syncState === 'local'
         ? theme.tableTextLight
         : 'inherit';
 
   const activeStyle = isMobile
     ? {
-        color: mobileColor,
-      }
+      color: mobileColor,
+    }
     : {};
 
   const hoveredStyle = isMobile
     ? {
-        color: mobileColor,
-        background: theme.mobileHeaderTextHover,
-      }
+      color: mobileColor,
+      background: theme.mobileHeaderTextHover,
+    }
     : {};
 
   const mobileIconStyle = {
@@ -218,15 +219,15 @@ function SyncButton({ style, isMobile = false }: SyncButtonProps) {
       className={css({
         ...(isMobile
           ? {
-              ...style,
-              WebkitAppRegion: 'none',
-              ...mobileIconStyle,
-            }
+            ...style,
+            WebkitAppRegion: 'none',
+            ...mobileIconStyle,
+          }
           : {
-              ...style,
-              WebkitAppRegion: 'none',
-              color: desktopColor,
-            }),
+            ...style,
+            WebkitAppRegion: 'none',
+            color: desktopColor,
+          }),
         '&[data-hovered]': hoveredStyle,
         '&[data-pressed]': activeStyle,
       })}
@@ -346,6 +347,7 @@ export function Titlebar({ style }: TitlebarProps) {
       <View style={{ flex: 1 }} />
       <SpaceBetween gap={10}>
         <UncategorizedButton />
+        <ChatButton />
         {isDevelopmentEnvironment() && !Platform.isPlaywright && (
           <ThemeSelector />
         )}

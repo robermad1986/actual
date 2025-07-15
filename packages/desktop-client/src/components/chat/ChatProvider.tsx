@@ -47,7 +47,10 @@ export const ChatProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/ai/chat', {
+      // URL del servidor de chat - configurable por entorno
+      const chatUrl = process.env.REACT_APP_CHAT_URL || 'http://localhost:3000';
+
+      const response = await fetch(`${chatUrl}/api/ai/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -60,6 +63,10 @@ export const ChatProvider: React.FC<{ children: React.ReactNode }> = ({ children
         })
       });
 
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const data = await response.json();
 
       setMessages(prev => [...prev,
@@ -68,6 +75,23 @@ export const ChatProvider: React.FC<{ children: React.ReactNode }> = ({ children
       ]);
     } catch (error) {
       console.error('Chat error:', error);
+
+      // Mensaje de error amigable para el usuario
+      const errorMessage = error instanceof Error
+        ? error.message.includes('fetch')
+          ? 'No se pudo conectar con el servidor de chat. Verifica que esté ejecutándose.'
+          : error.message
+        : 'Error desconocido al procesar el mensaje.';
+
+      setMessages(prev => [...prev,
+      { id: Date.now().toString(), content: message, role: 'user', timestamp: new Date() },
+      {
+        id: (Date.now() + 1).toString(),
+        content: `❌ Error: ${errorMessage}`,
+        role: 'assistant',
+        timestamp: new Date()
+      }
+      ]);
     } finally {
       setIsLoading(false);
     }

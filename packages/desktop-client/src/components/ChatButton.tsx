@@ -1,49 +1,45 @@
-import React from 'react';
-import { useDispatch } from '../redux';
+import React, { useState } from 'react';
+import { Button } from '@actual-app/components/button';
+import { ChatProvider } from './chat/ChatProvider';
+import { ChatSidebar } from './ChatSidebar';
 
 interface ChatButtonProps {
-  className?: string;
   variant?: 'icon' | 'button';
+  style?: React.CSSProperties;
 }
 
-export function ChatButton({ className, variant = 'icon' }: ChatButtonProps) {
-  const dispatch = useDispatch();
+export function ChatButton({ variant = 'icon', style }: ChatButtonProps) {
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   const handleClick = () => {
-    // @ts-ignore - Type assertion for custom modal
-    dispatch({ type: 'MODAL_PUSH', modal: { name: 'financial-chat' } });
+    setIsChatOpen(!isChatOpen);
   };
 
-  if (variant === 'button') {
-    return (
-      <button
-        className={`button ${className || ''}`}
-        onClick={handleClick}
-        title="Financial Assistant"
-      >
-        💬 Financial Assistant
-      </button>
-    );
-  }
-
   return (
-    <button
-      className={`bare ${className || ''}`}
-      onClick={handleClick}
-      title="Open Financial Assistant"
-      style={{
-        background: 'none',
-        border: 'none',
-        cursor: 'pointer',
-        padding: 8,
-        borderRadius: 4,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        fontSize: 20,
-      }}
-    >
-      💬
-    </button>
+    <>
+      <Button
+        variant="bare"
+        aria-label="Open Financial Assistant"
+        onPress={handleClick}
+        style={{
+          padding: 8,
+          borderRadius: 4,
+          ...style,
+        }}
+      >
+        {variant === 'button' ? (
+          <>💬 Financial Assistant</>
+        ) : (
+          <span style={{ fontSize: 16 }}>💬</span>
+        )}
+      </Button>
+
+      <ChatProvider>
+        <ChatSidebar
+          isOpen={isChatOpen}
+          onClose={() => setIsChatOpen(false)}
+        />
+      </ChatProvider>
+    </>
   );
 }
