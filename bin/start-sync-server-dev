@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#####################################################
+# Script específico para iniciar el sync server en desarrollo
+# con el puerto correcto
+#####################################################
+
+set -e
+
+echo "🔄 Iniciando sync server en puerto ${ACTUAL_PORT:-5006}..."
+
+# Guardar PORT original para el frontend
+FRONTEND_PORT=${PORT}
+
+# Configurar el puerto del sync server
+if [ -n "${ACTUAL_PORT}" ]; then
+    export PORT=${ACTUAL_PORT}
+else
+    export PORT=5006
+fi
+
+# Ejecutar el sync server
+cd packages/sync-server
+exec yarn start-monitor

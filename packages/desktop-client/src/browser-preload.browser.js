@@ -87,9 +87,9 @@ global.Actual = {
       });
   },
 
-  startSyncServer: () => { },
+  startSyncServer: () => {},
 
-  stopSyncServer: () => { },
+  stopSyncServer: () => {},
 
   isSyncServerRunning: () => false,
 
@@ -97,9 +97,11 @@ global.Actual = {
     return '';
   },
 
-  restartElectronServer: () => { },
+  restartElectronServer: () => {},
 
   openFileDialog: async ({ filters = [] }) => {
+    console.error('� openFileDialog llamado con filtros:', filters);
+
     return new Promise(resolve => {
       let createdElement = false;
       // Attempt to reuse an already-created file input.
@@ -117,54 +119,92 @@ global.Actual = {
 
       const filter = filters.find(filter => filter.extensions);
       if (filter) {
-        // Map extensions to both file extensions and MIME types for better browser compatibility
-        const extensionToMimeType = {
-          'xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-          'csv': 'text/csv',
-          'tsv': 'text/tab-separated-values',
-          'xml': 'application/xml',
-          'pdf': 'application/pdf',
-          'qif': '.qif',
-          'ofx': '.ofx',
-          'qfx': '.qfx'
-        };
+        console.error('� Extensiones solicitadas:', filter.extensions);
 
-        const acceptValues = [];
-        filter.extensions.forEach(ext => {
-          acceptValues.push('.' + ext);
-          if (extensionToMimeType[ext] && !extensionToMimeType[ext].startsWith('.')) {
-            acceptValues.push(extensionToMimeType[ext]);
+        // Detectar tipos problemáticos que necesitan tratamiento especial
+        const hasXLSX = filter.extensions.includes('xlsx');
+        const hasPDF = filter.extensions.includes('pdf');
+        const needsSpecialHandling = hasXLSX || hasPDF;
+
+        console.error('📊 XLSX detectado:', hasXLSX);
+        console.error('📄 PDF detectado:', hasPDF);
+        console.error('🔧 Necesita manejo especial:', needsSpecialHandling);
+
+        if (needsSpecialHandling) {
+          // CONFIGURACIÓN INTELIGENTE para tipos problemáticos
+          const acceptValues = [];
+
+          // Añadir extensiones normales (que ya funcionaban)
+          const normalExtensions = filter.extensions.filter(
+            ext => !['xlsx', 'pdf'].includes(ext),
+          );
+          normalExtensions.forEach(ext => {
+            acceptValues.push('.' + ext);
+          });
+
+          // Para XLSX y PDF, usar múltiples enfoques
+          if (hasXLSX) {
+            acceptValues.push('.xlsx');
+            acceptValues.push(
+              'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            );
           }
-        });
 
-        input.accept = acceptValues.join(',');
-        console.log('File dialog accept attribute set to:', input.accept);
+          if (hasPDF) {
+            acceptValues.push('.pdf');
+            acceptValues.push('application/pdf');
+          }
+
+          input.accept = acceptValues.join(',');
+          console.error('✅ Configuración inteligente aplicada:', input.accept);
+        } else {
+          // Configuración normal para archivos que ya funcionaban bien
+          input.accept = filter.extensions.map(ext => '.' + ext).join(',');
+          console.error('⚙️ Configuración estándar:', input.accept);
+        }
+      } else {
+        console.error('❌ No se encontró filtro con extensiones');
       }
 
       input.style.position = 'absolute';
       input.style.top = '0px';
       input.style.left = '0px';
       input.style.display = 'none';
-
       input.onchange = e => {
-        console.log('File dialog onchange triggered, files:', e.target.files);
-        const file = e.target.files[0];
-        const filename = file.name.replace(/.*(\.[^.]*)/, 'file$1');
+        const fileCount = e.target.files.length;
+        console.error(`📁 Archivo(s) seleccionado(s): ${fileCount}`);
 
-        if (file) {
-          console.log('Selected file:', file.name, 'type:', file.type, 'size:', file.size);
+        if (fileCount > 0) {
+          const file = e.target.files[0];
+          const filename = file.name.replace(/.*(\.[^.]*)/, 'file$1');
+          const isXLSX = file.name.toLowerCase().endsWith('.xlsx');
+          const isPDF = file.name.toLowerCase().endsWith('.pdf');
+
+          console.error(
+            `✅ Archivo: ${file.name} (${file.type || 'sin tipo MIME'}) - ${file.size} bytes`,
+          );
+          if (isXLSX) console.error('📊 Tipo: XLSX detectado');
+          if (isPDF) console.error('📄 Tipo: PDF detectado');
+
           const reader = new FileReader();
           reader.readAsArrayBuffer(file);
           reader.onload = async function (ev) {
             const filepath = `/uploads/${filename}`;
+            console.error('📤 Subiendo archivo:', filepath);
 
             window.__actionsForMenu
               .uploadFile(filename, ev.target.result)
-              .then(() => resolve([filepath]));
+              .then(() => {
+                console.error('🏆 Subida exitosa para:', file.name);
+                resolve([filepath]);
+              });
           };
           reader.onerror = function () {
-            alert('Error reading file');
+            console.error('❌ Error leyendo archivo:', file.name);
           };
+        } else {
+          console.error('❌ No se seleccionó ningún archivo');
+          resolve([]);
         }
       };
 
@@ -172,9 +212,10 @@ global.Actual = {
       // reliably fire.
       if (createdElement) {
         document.body.appendChild(input);
+        console.error('📎 Input añadido al DOM');
       }
 
-      console.log('Opening file dialog with accept:', input.accept);
+      console.error('🚀 Abriendo diálogo con accept:', input.accept);
       input.click();
     });
   },
@@ -193,18 +234,18 @@ global.Actual = {
   openURLInBrowser: url => {
     window.open(url, '_blank');
   },
-  onEventFromMain: () => { },
+  onEventFromMain: () => {},
   isUpdateReadyForDownload: () => isUpdateReadyForDownload,
   waitForUpdateReadyForDownload: () => isUpdateReadyForDownloadPromise,
   applyAppUpdate: async () => {
     updateSW();
 
     // Wait for the app to reload
-    await new Promise(() => { });
+    await new Promise(() => {});
   },
-  updateAppMenu: () => { },
+  updateAppMenu: () => {},
 
-  ipcConnect: () => { },
+  ipcConnect: () => {},
   getServerSocket: async () => {
     return worker;
   },
@@ -213,7 +254,7 @@ global.Actual = {
     window.__actionsForMenu.saveGlobalPrefs({ prefs: { theme } });
   },
 
-  moveBudgetDirectory: () => { },
+  moveBudgetDirectory: () => {},
 };
 
 function inputFocused(e) {

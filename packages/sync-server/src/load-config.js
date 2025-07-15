@@ -66,7 +66,11 @@ const configSchema = convict({
   port: {
     doc: 'Port to run the server on.',
     format: 'port',
-    default: process.env.PORT ? process.env.PORT : 5006,
+    default: process.env.ACTUAL_PORT
+      ? process.env.ACTUAL_PORT
+      : process.env.PORT
+        ? process.env.PORT
+        : 5006,
     env: 'ACTUAL_PORT',
   },
   hostname: {

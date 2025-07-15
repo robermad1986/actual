@@ -1,0 +1,159 @@
+version: '3.8'
+
+services:
+  # ==========================================
+  # ACTUAL BUDGET DEVELOPMENT
+  # ==========================================
+  actual-dev:
+    container_name: actual-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3001:3001' # Frontend development
+      - '5006:5006' # Backend API
+      - '9229:9229' # Node.js debug port
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - ./actual-data:/data
+    environment:
+      - NODE_ENV=development
+      - ACTUAL_PORT=5006
+      - ACTUAL_HOSTNAME=0.0.0.0
+      - ACTUAL_HTTPS=false
+    networks:
+      - actual-network
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:5006/health']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  # ==========================================
+  # ACTUAL AI - CATEGORIZACIÓN AUTOMÁTICA
+  # ==========================================
+  actual-ai:
+    image: docker.io/sakowicz/actual-ai:latest
+    container_name: actual-ai
+    restart: unless-stopped
+    depends_on:
+      actual-dev:
+        condition: service_healthy
+    env_file:
+      - .env.ai
+    environment:
+      # Conexión interna entre contenedores
+      ACTUAL_SERVER_URL: http://actual-dev:5006
+
+      # Features por defecto (puedes modificar en .env.ai)
+      FEATURES: >
+        [
+          "dryRun",
+          "classifyOnStartup", 
+          "syncAccountsBeforeClassify",
+          "freeWebSearch",
+          "suggestNewCategories"
+        ]
+    volumes:
+      # Datos temporales de actual-ai
+      - actual-ai-data:/tmp/actual-ai
+      # Logs persistentes
+      - ./logs/actual-ai:/var/log/actual-ai
+    networks:
+      - actual-network
+    healthcheck:
+      test: ['CMD', 'node', '-e', "console.log('AI service ready')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    labels:
+      - 'actual.service=ai'
+      - 'actual.description=Automatic transaction categorization using AI'
+
+  # ==========================================
+  # REDIS (OPCIONAL - Para cache de IA)
+  # ==========================================
+  redis:
+    image: redis:7-alpine
+    container_name: actual-redis
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis-data:/data
+    networks:
+      - actual-network
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    profiles:
+      - with-cache
+
+  # ==========================================
+  # POSTGRES (OPCIONAL - Para analytics)
+  # ==========================================
+  postgres:
+    image: postgres:15-alpine
+    container_name: actual-postgres
+    environment:
+      POSTGRES_DB: actual_analytics
+      POSTGRES_USER: actual
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-actual123}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - '5432:5432'
+    networks:
+      - actual-network
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U actual']
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    profiles:
+      - with-analytics
+
+  # ==========================================
+  # OLLAMA (OPCIONAL - IA Local)
+  # ==========================================
+  ollama:
+    image: ollama/ollama:latest
+    container_name: actual-ollama
+    ports:
+      - '11434:11434'
+    volumes:
+      - ollama-data:/root/.ollama
+    networks:
+      - actual-network
+    environment:
+      - OLLAMA_ORIGINS=*
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:11434/api/version']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    profiles:
+      - with-local-ai
+
+volumes:
+  actual-ai-data:
+    driver: local
+  redis-data:
+    driver: local
+  postgres-data:
+    driver: local
+  ollama-data:
+    driver: local
+
+networks:
+  actual-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

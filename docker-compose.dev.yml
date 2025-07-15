@@ -1,0 +1,89 @@
+###################################################
+# Docker Compose para desarrollo full-stack
+# de Actual Budget Fork
+#
+# Este archivo configura un entorno completo de desarrollo
+# con hot-reload tanto para frontend como backend
+###################################################
+
+services:
+  # Desarrollo principal de Actual (Frontend + Backend integrado)
+  actual-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: actual-dev
+    container_name: actual-dev
+    environment:
+      - NODE_ENV=development
+      - BROWSER=0
+      - CHOKIDAR_USEPOLLING=true
+      # - HTTPS=false  # Comentado para usar HTTP en lugar de HTTPS
+      - PORT=3001 # Puerto para Vite frontend
+      - ACTUAL_PORT=5006 # Puerto específico para sync server
+      - HOST=0.0.0.0
+    ports:
+      - '3001:3001' # Frontend development server integrado con backend
+      - '5006:5006' # Sync server para datos
+      - '9229:9229' # Node.js debugging port
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+      - '/app/packages/*/node_modules'
+      - actual_data:/app/actual-data
+    command: yarn start:server-dev
+    restart: unless-stopped
+    networks:
+      - actual-network
+
+  # Base de datos PostgreSQL (opcional para desarrollo avanzado)
+  postgres:
+    image: postgres:15-alpine
+    container_name: actual-postgres
+    environment:
+      - POSTGRES_DB=actual_dev
+      - POSTGRES_USER=actual
+      - POSTGRES_PASSWORD=actual123
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - './init-scripts:/docker-entrypoint-initdb.d'
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U actual -d actual_dev']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - actual-network
+    profiles:
+      - postgres
+
+  # Redis para caching (opcional)
+  redis:
+    image: redis:7-alpine
+    container_name: actual-redis
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - actual-network
+    profiles:
+      - redis
+
+volumes:
+  postgres_data:
+  redis_data:
+  actual_data:
+
+networks:
+  actual-network:
+    driver: bridge

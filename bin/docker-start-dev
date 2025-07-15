@@ -1,0 +1,74 @@
+#!/bin/bash
+
+#####################################################
+# Script de inicio para desarrollo Docker full-stack
+# Incluye instalación automática y configuración de desarrollo
+#####################################################
+
+set -e
+
+echo "🚀 Iniciando entorno de desarrollo Actual Budget..."
+
+# Función para manejar señales de terminación
+cleanup() {
+    echo "🛑 Cerrando procesos de desarrollo..."
+    kill $(jobs -p) 2>/dev/null || true
+    exit 0
+}
+
+trap cleanup SIGTERM SIGINT
+
+# Verificar si node_modules existe y está poblado
+if [ ! -d "node_modules" ] || [ "$(ls -A node_modules 2>/dev/null | wc -l)" -eq 0 ]; then
+    echo "📦 Instalando dependencias..."
+    yarn install --immutable
+fi
+
+# Verificar si los workspaces tienen sus dependencias
+echo "🔍 Verificando dependencias de workspaces..."
+for package in packages/*/package.json; do
+    if [ -f "$package" ]; then
+        package_dir=$(dirname "$package")
+        if [ ! -d "$package_dir/node_modules" ] || [ "$(ls -A "$package_dir/node_modules" 2>/dev/null | wc -l)" -eq 0 ]; then
+            echo "📦 Instalando dependencias para $package_dir..."
+            (cd "$package_dir" && yarn install) || true
+        fi
+    fi
+done
+
+# Crear directorio de datos si no existe
+mkdir -p actual-data/server-files
+mkdir -p actual-data/user-files
+
+# Configurar permisos
+chmod -R 755 actual-data/
+
+# Esperar a que el servidor de sync esté disponible (opcional)
+if [ "${WAIT_FOR_SYNC_SERVER:-false}" = "true" ]; then
+    echo "⏳ Esperando servidor de sincronización..."
+    while ! curl -f "${ACTUAL_SERVER_URL:-http://actual-server:5006}/health" >/dev/null 2>&1; do
+        sleep 2
+        echo "⏳ Esperando servidor de sincronización..."
+    done
+    echo "✅ Servidor de sincronización disponible"
+fi
+
+# Configurar modo de desarrollo
+export NODE_ENV=development
+export BROWSER=0
+export CHOKIDAR_USEPOLLING=true
+
+# Asegurar que el sync server use el puerto correcto
+if [ -z "${ACTUAL_PORT}" ]; then
+    export ACTUAL_PORT=5006
+fi
+
+echo "🎯 Iniciando servidor de desarrollo..."
+echo "🌐 Frontend estará disponible en: http://localhost:${PORT:-3001}"
+echo "🔄 Sync server estará disponible en: http://localhost:${ACTUAL_PORT}"
+if [ "${ACTUAL_SERVER_URL}" ]; then
+    echo "🔄 Servidor de sincronización externo: ${ACTUAL_SERVER_URL}"
+fi
+
+# Iniciar el servidor de desarrollo con manejo de errores
+exec yarn start:server-dev

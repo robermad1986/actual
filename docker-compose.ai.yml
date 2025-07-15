@@ -1,0 +1,100 @@
+version: '3.8'
+
+services:
+  # Servicio Actual Budget existente (referencia)
+  actual-dev:
+    container_name: actual-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3001:3001' # Frontend
+      - '5006:5006' # Backend API
+      - '9229:9229' # Debug port
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - ./actual-data:/data
+    environment:
+      - NODE_ENV=development
+      - ACTUAL_PORT=5006
+      - ACTUAL_HOSTNAME=0.0.0.0
+      - ACTUAL_HTTPS=false
+    networks:
+      - actual-network
+
+  # Nuevo servicio: Actual AI
+  actual-ai:
+    image: docker.io/sakowicz/actual-ai:latest
+    container_name: actual-ai
+    restart: unless-stopped
+    depends_on:
+      - actual-dev
+    environment:
+      # Conexión a Actual Budget
+      ACTUAL_SERVER_URL: http://actual-dev:5006
+      ACTUAL_PASSWORD: ${ACTUAL_PASSWORD:-your_password_here}
+      ACTUAL_BUDGET_ID: ${ACTUAL_BUDGET_ID:-your_budget_id_here}
+
+      # Configuración de IA (OpenAI por defecto)
+      LLM_PROVIDER: ${LLM_PROVIDER:-openai}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+
+      # Configuración de Claude (alternativo)
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-3-5-sonnet-latest}
+
+      # Configuración de Google Gemini (alternativo)
+      GOOGLE_GENERATIVE_AI_API_KEY: ${GOOGLE_GENERATIVE_AI_API_KEY:-}
+      GOOGLE_GENERATIVE_AI_MODEL: ${GOOGLE_GENERATIVE_AI_MODEL:-gemini-1.5-flash}
+
+      # Configuración de Ollama (local, opcional)
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434/api}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.1}
+
+      # Configuración de Groq (alternativo)
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      GROQ_MODEL: ${GROQ_MODEL:-mixtral-8x7b-32768}
+
+      # Programación automática (cada 4 horas)
+      CLASSIFICATION_SCHEDULE_CRON: ${CLASSIFICATION_SCHEDULE_CRON:-0 */4 * * *}
+
+      # Features habilitadas
+      FEATURES: >
+        [
+          "dryRun",
+          "classifyOnStartup",
+          "syncAccountsBeforeClassify",
+          "freeWebSearch",
+          "suggestNewCategories",
+          "rerunMissedTransactions"
+        ]
+
+      # API Keys opcionales para web search
+      VALUESERP_API_KEY: ${VALUESERP_API_KEY:-}
+
+      # Tags de seguimiento
+      GUESSED_TAG: ${GUESSED_TAG:-#actual-ai}
+      NOT_GUESSED_TAG: ${NOT_GUESSED_TAG:-#actual-ai-miss}
+
+      # Configuración de seguridad
+      NODE_TLS_REJECT_UNAUTHORIZED: ${NODE_TLS_REJECT_UNAUTHORIZED:-1}
+
+    volumes:
+      # Directorio para datos temporales de actual-ai
+      - actual-ai-data:/tmp/actual-ai
+    networks:
+      - actual-network
+    healthcheck:
+      test: ['CMD', 'node', '-e', "console.log('AI service healthy')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  actual-ai-data:
+
+networks:
+  actual-network:
+    driver: bridge

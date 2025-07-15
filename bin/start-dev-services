@@ -1,0 +1,61 @@
+#!/bin/bash
+
+#####################################################
+# Script mejorado para desarrollo con puertos correctos
+#####################################################
+
+set -e
+
+echo "🚀 Iniciando entorno de desarrollo Actual Budget..."
+echo "🌐 Frontend: http://localhost:${PORT:-3001}"
+echo "🔄 Sync Server: http://localhost:${ACTUAL_PORT:-5006}"
+
+# Función para ejecutar sync server con puerto correcto
+start_sync_server() {
+    echo "🔄 Iniciando sync server en puerto ${ACTUAL_PORT:-5006}..."
+    
+    # Configurar puerto específico para sync server
+    if [ -n "${ACTUAL_PORT}" ]; then
+        SYNC_PORT=${ACTUAL_PORT}
+    else
+        SYNC_PORT=5006
+    fi
+    
+    cd packages/sync-server
+    PORT=${SYNC_PORT} yarn start-monitor &
+    SYNC_PID=$!
+    cd ../..
+    
+    return 0
+}
+
+# Función para ejecutar frontend
+start_frontend() {
+    echo "🌐 Iniciando frontend en puerto ${PORT:-3001}..."
+    yarn start &
+    FRONTEND_PID=$!
+    
+    return 0
+}
+
+# Iniciar servicios en paralelo
+start_sync_server
+start_frontend
+
+# Función de cleanup
+cleanup() {
+    echo "🛑 Deteniendo servicios..."
+    if [ ! -z "${SYNC_PID}" ]; then
+        kill $SYNC_PID 2>/dev/null || true
+    fi
+    if [ ! -z "${FRONTEND_PID}" ]; then
+        kill $FRONTEND_PID 2>/dev/null || true
+    fi
+    exit 0
+}
+
+# Configurar trap para cleanup
+trap cleanup SIGTERM SIGINT
+
+# Esperar a los procesos
+wait $SYNC_PID $FRONTEND_PID

@@ -1,0 +1,77 @@
+###################################################
+# Dockerfile para desarrollo de Actual Budget Fork
+# Optimizado para hot-reload y debugging
+###################################################
+
+FROM node:20-bullseye as development
+
+# Instalar dependencias del sistema
+RUN apt-get update -y && \
+    apt-get upgrade -y && \
+    apt-get install -y \
+    openssl \
+    git \
+    curl \
+    wget \
+    vim \
+    htop \
+    python3 \
+    python3-pip \
+    build-essential && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Configurar yarn
+RUN corepack enable && \
+    corepack prepare yarn@4.9.1 --activate
+
+# Crear usuario no-root para desarrollo
+RUN groupadd -r actual && \
+    useradd -r -g actual -d /app -s /bin/bash actual
+
+# Configurar directorio de trabajo
+WORKDIR /app
+
+# Copiar archivos de configuración de package managers
+COPY package.json yarn.lock .yarnrc.yml ./
+COPY .yarn/ ./.yarn/
+
+# Crear directorios de packages y copiar package.json files individualmente
+RUN mkdir -p packages/api packages/component-library packages/crdt packages/desktop-client packages/desktop-electron packages/eslint-plugin-actual packages/loot-core packages/sync-server
+
+COPY packages/api/package.json ./packages/api/
+COPY packages/component-library/package.json ./packages/component-library/
+COPY packages/crdt/package.json ./packages/crdt/
+COPY packages/desktop-client/package.json ./packages/desktop-client/
+COPY packages/desktop-electron/package.json ./packages/desktop-electron/
+COPY packages/eslint-plugin-actual/package.json ./packages/eslint-plugin-actual/
+COPY packages/loot-core/package.json ./packages/loot-core/
+COPY packages/sync-server/package.json ./packages/sync-server/
+
+# Cambiar propietario de archivos
+RUN chown -R actual:actual /app
+
+# Cambiar a usuario no-root
+USER actual
+
+# Instalar dependencias
+RUN yarn install --immutable
+
+# Copiar el resto del código fuente
+COPY --chown=actual:actual . .
+
+# Configurar Git para desarrollo (opcional)
+RUN git config --global --add safe.directory /app
+
+# Exponer puertos
+EXPOSE 3001 5006 9229
+
+# Variables de entorno por defecto
+ENV NODE_ENV=development
+ENV BROWSER=0
+ENV CHOKIDAR_USEPOLLING=true
+ENV HOST=0.0.0.0
+ENV PORT=3001
+
+# Script de inicio para desarrollo
+CMD ["./bin/docker-start-dev"]

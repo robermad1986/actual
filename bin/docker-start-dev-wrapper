@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#####################################################
+# Script wrapper para ejecutar yarn start:server-dev
+# con configuración de puertos correcta
+#####################################################
+
+set -e
+
+echo "🚀 Iniciando entorno de desarrollo Actual Budget..."
+
+# Crear directorios si no existen
+mkdir -p actual-data/server-files
+mkdir -p actual-data/user-files
+chmod -R 755 actual-data/
+
+# Configurar variables de entorno
+export NODE_ENV=development
+export BROWSER=0
+export CHOKIDAR_USEPOLLING=true
+
+echo "🌐 Frontend estará disponible en: http://localhost:${PORT:-3001}"
+echo "🔄 Sync server estará disponible en: http://localhost:5006"
+
+# Ejecutar el comando original pero with a custom approach
+# Usar un proceso hijo que modifica temporalmente las variables de entorno
+(
+    # Para el sync server, usar puerto 5006
+    # El npm-run-all ejecutará tanto start:server-monitor como start
+    # start:server-monitor ejecuta el sync server
+    # start ejecuta el frontend
+
+    # Crear un wrapper temporal para start:server-monitor que use puerto 5006
+    export ACTUAL_SYNC_PORT=5006
+    
+    # Ejecutar el comando original
+    exec yarn start:server-dev
+)
