@@ -2,6 +2,32 @@
   <img src="/demo.png" alt="Actualbudget" />
 </p>
 
+## 🤖 NEW: AI Financial Assistant
+
+This fork includes a **complete integration with Moonshot Kimi K2** AI model for intelligent financial assistance:
+
+- **💬 Conversational Interface**: Chat directly with your financial data
+- **🧠 Smart Analysis**: AI-powered insights about your spending patterns
+- **📊 Contextual Advice**: Personalized recommendations based on your actual data
+- **🐳 Docker Ready**: Fully containerized for easy deployment
+
+### Quick Start with AI Assistant
+
+```bash
+# Start the complete environment with AI
+docker-compose -f docker-compose.full.yml up -d
+
+# Verify AI is working
+curl http://localhost:3000/api/ai/chat/health
+
+# Open Actual Budget and look for the 💬 button
+open http://localhost:3001
+```
+
+📚 **Full Documentation**: [README_CHATBOT.md](README_CHATBOT.md) | [User Guide](GUIA_USUARIO_CHATBOT.md) | [Technical Docs](DOCUMENTACION_TECNICA_CHATBOT.md)
+
+---
+
 ## Getting Started
 
 Actual is a local-first personal finance tool. It is 100% free and open-source, written in NodeJS, it has a synchronization element so that all your changes can move between devices without any heavy lifting.

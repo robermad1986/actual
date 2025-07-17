@@ -12,6 +12,7 @@ services:
     ports:
       - '3001:3001' # Frontend development
       - '5006:5006' # Backend API
+      - '3000:3000' # AI Chat API
       - '9229:9229' # Node.js debug port
     volumes:
       - .:/app
