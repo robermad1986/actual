@@ -22,8 +22,10 @@ services:
       - PORT=3001 # Puerto para Vite frontend
       - ACTUAL_PORT=5006 # Puerto específico para sync server
       - HOST=0.0.0.0
+      - REACT_APP_CHAT_URL=http://localhost:3002 # URL del servidor de chat AI
     ports:
       - '3001:3001' # Frontend development server integrado con backend
+      - '3002:3002' # AI Chat server
       - '5006:5006' # Sync server para datos
       - '9229:9229' # Node.js debugging port
     volumes:
