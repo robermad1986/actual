@@ -7,15 +7,18 @@ Actual-*
 **/xcuserdata/*
 export-2020-01-10.csv
 
+# Database files (may contain personal data)
+*.sqlite
+*.db
+default-db.sqlite
+
 # Secrets
 .secret-tokens
-
-# Environment files with sensitive data
 .env.ai
-.env.local
-.env.development.local
-.env.production.local
+.env.development
 .env.production
+.env.local
+.env
 
 # MacOS
 .DS_Store
@@ -83,3 +86,18 @@ test-*.html
 validate-*.js
 debug-*.js
 create-*.js
+
+# AI Chat & Development Files (may contain personal data)
+chat-*.log
+server.log
+sync-server.log
+*-debug.log
+*.json.backup
+pdf-*.json
+pdf-*.txt
+
+# NPM cache
+.npm/
+
+# Docker development files
+bin/docker-*

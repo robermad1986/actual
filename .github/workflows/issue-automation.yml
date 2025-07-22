@@ -1,0 +1,570 @@
+name: 📋 Issue Templates Automation
+
+on:
+  issues:
+    types: [opened, labeled, assigned]
+  pull_request:
+    types: [opened, ready_for_review]
+  schedule:
+    # Weekly cleanup of stale issues
+    - cron: '0 10 * * 1' # Every Monday at 10 AM UTC
+
+env:
+  DOCUMENTATION_PATH: '.github'
+
+jobs:
+  auto-categorize-issues:
+    name: 🏷️ Auto-Categorize Issues
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && github.event.action == 'opened'
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🤖 Analyze and categorize issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const title = issue.title.toLowerCase();
+            const body = issue.body ? issue.body.toLowerCase() : '';
+
+            console.log(`Analyzing issue #${issue.number}: ${issue.title}`);
+
+            const labels = [];
+
+            // Chatbot-related issues
+            if (title.includes('chatbot') || title.includes('chat') || title.includes('ai') || title.includes('assistant')) {
+              labels.push('chatbot');
+              console.log('🤖 Detected: Chatbot-related issue');
+            }
+
+            // API-related issues
+            if (title.includes('api') || body.includes('endpoint') || body.includes('rest api')) {
+              labels.push('api');
+              console.log('🔌 Detected: API-related issue');
+            }
+
+            // Documentation issues
+            if (title.includes('doc') || title.includes('guide') || title.includes('readme')) {
+              labels.push('documentation');
+              console.log('📚 Detected: Documentation issue');
+            }
+
+            // Bug reports
+            if (title.includes('bug') || title.includes('error') || title.includes('issue') || title.includes('problem')) {
+              labels.push('bug');
+              console.log('🐛 Detected: Bug report');
+            }
+
+            // Feature requests
+            if (title.includes('feature') || title.includes('enhancement') || title.includes('improvement')) {
+              labels.push('enhancement');
+              console.log('✨ Detected: Feature request');
+            }
+
+            // Priority detection
+            if (title.includes('urgent') || title.includes('critical') || title.includes('high priority')) {
+              labels.push('priority: high');
+              console.log('🚨 Detected: High priority');
+            } else if (title.includes('low priority') || title.includes('minor')) {
+              labels.push('priority: low');
+              console.log('📝 Detected: Low priority');
+            } else {
+              labels.push('priority: medium');
+              console.log('📋 Default: Medium priority');
+            }
+
+            // Apply labels
+            if (labels.length > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels: labels
+              });
+              
+              console.log(`Applied labels: ${labels.join(', ')}`);
+            }
+
+            // Add helpful comment for specific types
+            let comment = '';
+
+            if (labels.includes('chatbot')) {
+              comment = `## 🤖 Chatbot Issue Detected
+              
+              Thank you for reporting a chatbot-related issue! To help us resolve this faster, please make sure you've included:
+              
+              - [ ] **Specific chatbot functionality affected** (e.g., transaction processing, budget analysis)
+              - [ ] **Steps to reproduce** the issue
+              - [ ] **Expected vs actual behavior**
+              - [ ] **Browser/environment details** if applicable
+              
+              ### 📚 Helpful Resources
+              - [Chatbot Documentation](.github/ACTUAL_BUDGET_API_MASTER_PLAN.md)
+              - [API Implementation Guide](.github/PLAN_IMPLEMENTACION_API_FUNCIONALIDADES.md)
+              - [Troubleshooting Guide](.github/PLAN_AUTOMATIZACION_INTELIGENTE.md)
+              
+              Our team will review this shortly! 🚀`;
+            } else if (labels.includes('api')) {
+              comment = `## 🔌 API Issue Detected
+              
+              Thank you for reporting an API-related issue! Please ensure you've provided:
+              
+              - [ ] **Specific API endpoint** affected
+              - [ ] **Request/response examples** 
+              - [ ] **Error messages** or unexpected responses
+              - [ ] **API version** or commit hash
+              
+              ### 📚 Helpful Resources
+              - [API Endpoints Guide](.github/GUIA_ENDPOINTS_API_ACTUAL_BUDGET.md)
+              - [API Master Plan](.github/ACTUAL_BUDGET_API_MASTER_PLAN.md)
+              
+              We'll investigate this API issue promptly! 🔍`;
+            } else if (labels.includes('documentation')) {
+              comment = `## 📚 Documentation Issue Detected
+              
+              Thank you for helping improve our documentation! Please specify:
+              
+              - [ ] **Which document** needs attention
+              - [ ] **Specific section** or topic
+              - [ ] **Type of improvement** needed (clarification, correction, addition)
+              - [ ] **Suggested changes** if you have any
+              
+              ### 📋 Our Documentation
+              - [Master Plan](.github/ACTUAL_BUDGET_API_MASTER_PLAN.md)
+              - [Implementation Guide](.github/PLAN_IMPLEMENTACION_API_FUNCIONALIDADES.md)
+              - [Advanced Features Roadmap](.github/ROADMAP_FUNCIONALIDADES_AVANZADAS.md)
+              
+              Documentation improvements are always welcome! ✏️`;
+            }
+
+            if (comment) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: comment
+              });
+              
+              console.log('Added helpful comment to issue');
+            }
+
+  assign-reviewers:
+    name: 👥 Auto-Assign Reviewers
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.action == 'opened'
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🎯 Assign reviewers based on changes
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+
+            // Get list of changed files
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number
+            });
+
+            const changedFiles = files.map(file => file.filename);
+            console.log('Changed files:', changedFiles);
+
+            const reviewers = [];
+            const labels = [];
+
+            // Determine reviewers based on file changes
+            if (changedFiles.some(file => file.includes('chatbot') || file.includes('chat'))) {
+              labels.push('chatbot', 'needs-review');
+              console.log('🤖 Chatbot changes detected');
+            }
+
+            if (changedFiles.some(file => file.includes('api') || file.includes('server'))) {
+              labels.push('api', 'needs-review');
+              console.log('🔌 API changes detected');
+            }
+
+            if (changedFiles.some(file => file.includes('.github') && file.endsWith('.md'))) {
+              labels.push('documentation', 'needs-review');
+              console.log('📚 Documentation changes detected');
+            }
+
+            if (changedFiles.some(file => file.includes('.github/workflows'))) {
+              labels.push('ci/cd', 'needs-review');
+              console.log('🔧 CI/CD changes detected');
+            }
+
+            // Apply labels
+            if (labels.length > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                labels: labels
+              });
+              
+              console.log(`Applied labels: ${labels.join(', ')}`);
+            }
+
+            // Add PR template comment
+            const prComment = `## 🔍 Automated PR Analysis
+
+            **Changed Components:** ${labels.filter(l => !['needs-review'].includes(l)).join(', ') || 'General'}
+
+            ### ✅ Review Checklist
+            - [ ] **Code Quality:** Changes follow project conventions
+            - [ ] **Testing:** Adequate test coverage for changes
+            - [ ] **Documentation:** Updated if necessary
+            - [ ] **Security:** No security implications
+            - [ ] **Performance:** No negative performance impact
+
+            ${labels.includes('chatbot') ? `
+            ### 🤖 Chatbot Specific Checks
+            - [ ] **API Integration:** Chatbot API calls work correctly
+            - [ ] **NLP Processing:** Natural language processing functions properly
+            - [ ] **User Experience:** Conversational flow is intuitive
+            - [ ] **Error Handling:** Graceful error responses
+            ` : ''}
+
+            ${labels.includes('api') ? `
+            ### 🔌 API Specific Checks
+            - [ ] **Endpoint Testing:** All endpoints respond correctly
+            - [ ] **Data Validation:** Input validation is robust
+            - [ ] **Security:** Authentication/authorization intact
+            - [ ] **Backward Compatibility:** No breaking changes
+            ` : ''}
+
+            ${labels.includes('documentation') ? `
+            ### 📚 Documentation Specific Checks
+            - [ ] **Accuracy:** Information is correct and up-to-date
+            - [ ] **Completeness:** All necessary topics covered
+            - [ ] **Clarity:** Easy to understand and follow
+            - [ ] **Links:** All internal links work correctly
+            ` : ''}
+
+            ---
+            *This analysis was generated automatically by GitHub Actions* 🤖`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              body: prComment
+            });
+
+            console.log('Added PR analysis comment');
+
+  cleanup-stale-issues:
+    name: 🧹 Cleanup Stale Issues
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🔍 Find and manage stale issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              sort: 'updated',
+              direction: 'asc',
+              per_page: 100
+            });
+
+            const now = new Date();
+            const thirtyDaysAgo = new Date(now.getTime() - (30 * 24 * 60 * 60 * 1000));
+            const sevenDaysAgo = new Date(now.getTime() - (7 * 24 * 60 * 60 * 1000));
+
+            console.log(`Checking ${issues.length} open issues for staleness...`);
+
+            for (const issue of issues) {
+              const updatedAt = new Date(issue.updated_at);
+              const labels = issue.labels.map(label => label.name);
+              
+              // Skip issues with certain labels
+              if (labels.includes('pinned') || labels.includes('long-term') || labels.includes('epic')) {
+                continue;
+              }
+              
+              // Handle very stale issues (30+ days)
+              if (updatedAt < thirtyDaysAgo) {
+                console.log(`Issue #${issue.number} is very stale (${Math.floor((now - updatedAt) / (24 * 60 * 60 * 1000))} days)`);
+                
+                if (!labels.includes('stale')) {
+                  await github.rest.issues.addLabels({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issue.number,
+                    labels: ['stale']
+                  });
+                  
+                  await github.rest.issues.createComment({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issue.number,
+                    body: `## 🕒 Stale Issue Notice
+                    
+                    This issue has been automatically marked as stale because it hasn't had activity for 30 days.
+                    
+                    **What happens next:**
+                    - If there's no activity in the next 7 days, this issue will be automatically closed
+                    - To keep this issue open, simply add a comment or update the issue
+                    - If you believe this was marked incorrectly, please let us know!
+                    
+                    ### 📋 Related Resources
+                    - [Current Roadmap](.github/ROADMAP_FUNCIONALIDADES_AVANZADAS.md)
+                    - [Implementation Status](.github/PLAN_IMPLEMENTACION_API_FUNCIONALIDADES.md)
+                    
+                    Thank you for your contribution! 🙏`
+                  });
+                  
+                  console.log(`Marked issue #${issue.number} as stale`);
+                }
+              }
+              
+              // Auto-close issues stale for 37+ days
+              if (updatedAt < new Date(now.getTime() - (37 * 24 * 60 * 60 * 1000)) && labels.includes('stale')) {
+                console.log(`Auto-closing very stale issue #${issue.number}`);
+                
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  body: `## 🔒 Auto-Closing Stale Issue
+                  
+                  This issue has been automatically closed because it has been stale for over 37 days with no activity.
+                  
+                  **Can this be reopened?**
+                  - Yes! If this issue is still relevant, please reopen it or create a new issue
+                  - Include updated information about the current state of the problem
+                  - Reference this issue number for context
+                  
+                  Thank you for your understanding! 🙏`
+                });
+                
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  state: 'closed',
+                  state_reason: 'not_planned'
+                });
+                
+                console.log(`Closed stale issue #${issue.number}`);
+              }
+              
+              // Add needs-info label for issues without recent activity
+              if (updatedAt < sevenDaysAgo && !labels.includes('needs-info') && !labels.includes('stale')) {
+                const hasRecentComment = issue.comments > 0;
+                
+                if (!hasRecentComment && (labels.includes('bug') || labels.includes('help wanted'))) {
+                  await github.rest.issues.addLabels({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issue.number,
+                    labels: ['needs-info']
+                  });
+                  
+                  console.log(`Added needs-info label to issue #${issue.number}`);
+                }
+              }
+            }
+
+            console.log('Stale issue cleanup completed');
+
+  generate-issue-metrics:
+    name: 📊 Generate Issue Metrics
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 📊 Generate metrics report
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Get all issues (open and closed)
+            const { data: openIssues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100
+            });
+
+            const { data: closedIssues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'closed',
+              per_page: 100,
+              since: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString() // Last 30 days
+            });
+
+            // Categorize issues
+            const categorizeIssues = (issues) => {
+              const categories = {
+                chatbot: 0,
+                api: 0,
+                documentation: 0,
+                bug: 0,
+                enhancement: 0,
+                other: 0
+              };
+              
+              issues.forEach(issue => {
+                const labels = issue.labels.map(label => label.name);
+                
+                if (labels.includes('chatbot')) categories.chatbot++;
+                else if (labels.includes('api')) categories.api++;
+                else if (labels.includes('documentation')) categories.documentation++;
+                else if (labels.includes('bug')) categories.bug++;
+                else if (labels.includes('enhancement')) categories.enhancement++;
+                else categories.other++;
+              });
+              
+              return categories;
+            };
+
+            const openCategories = categorizeIssues(openIssues);
+            const closedCategories = categorizeIssues(closedIssues);
+
+            // Generate report
+            const report = `# 📊 MÉTRICAS DE ISSUES - REPORTE SEMANAL
+
+            **Fecha:** ${new Date().toLocaleDateString('es-ES', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            })}
+            **Generado:** ${new Date().toLocaleTimeString('es-ES')} UTC
+
+            ## 📈 Resumen General
+
+            - **Issues Abiertas:** ${openIssues.length}
+            - **Issues Cerradas (últimos 30 días):** ${closedIssues.length}
+            - **Ratio de Resolución:** ${closedIssues.length > 0 ? Math.round((closedIssues.length / (openIssues.length + closedIssues.length)) * 100) : 0}%
+
+            ## 🏷️ Issues Abiertas por Categoría
+
+            | Categoría | Cantidad | Porcentaje |
+            |-----------|----------|------------|
+            | 🤖 Chatbot | ${openCategories.chatbot} | ${Math.round((openCategories.chatbot / openIssues.length) * 100)}% |
+            | 🔌 API | ${openCategories.api} | ${Math.round((openCategories.api / openIssues.length) * 100)}% |
+            | 📚 Documentation | ${openCategories.documentation} | ${Math.round((openCategories.documentation / openIssues.length) * 100)}% |
+            | 🐛 Bugs | ${openCategories.bug} | ${Math.round((openCategories.bug / openIssues.length) * 100)}% |
+            | ✨ Enhancements | ${openCategories.enhancement} | ${Math.round((openCategories.enhancement / openIssues.length) * 100)}% |
+            | 📋 Other | ${openCategories.other} | ${Math.round((openCategories.other / openIssues.length) * 100)}% |
+
+            ## ✅ Issues Cerradas (Últimos 30 días)
+
+            | Categoría | Cantidad | Porcentaje |
+            |-----------|----------|------------|
+            | 🤖 Chatbot | ${closedCategories.chatbot} | ${Math.round((closedCategories.chatbot / Math.max(closedIssues.length, 1)) * 100)}% |
+            | 🔌 API | ${closedCategories.api} | ${Math.round((closedCategories.api / Math.max(closedIssues.length, 1)) * 100)}% |
+            | 📚 Documentation | ${closedCategories.documentation} | ${Math.round((closedCategories.documentation / Math.max(closedIssues.length, 1)) * 100)}% |
+            | 🐛 Bugs | ${closedCategories.bug} | ${Math.round((closedCategories.bug / Math.max(closedIssues.length, 1)) * 100)}% |
+            | ✨ Enhancements | ${closedCategories.enhancement} | ${Math.round((closedCategories.enhancement / Math.max(closedIssues.length, 1)) * 100)}% |
+            | 📋 Other | ${closedCategories.other} | ${Math.round((closedCategories.other / Math.max(closedIssues.length, 1)) * 100)}% |
+
+            ## 🎯 Insights y Tendencias
+
+            ${openCategories.chatbot > 0 ? `- **Chatbot:** ${openCategories.chatbot} issues abiertas - Área activa de desarrollo` : ''}
+            ${openCategories.api > 0 ? `- **API:** ${openCategories.api} issues abiertas - Posibles mejoras de integración` : ''}
+            ${openCategories.bug > openCategories.enhancement ? '- **Foco en Bugs:** Más bugs que enhancements - Priorizar estabilidad' : '- **Foco en Features:** Más enhancements que bugs - Desarrollo activo'}
+            ${openCategories.documentation > 0 ? `- **Documentación:** ${openCategories.documentation} issues - Oportunidades de mejora` : ''}
+
+            ## 📋 Acciones Recomendadas
+
+            ${openCategories.chatbot > 3 ? '- 🤖 **Chatbot:** Considerar sprint dedicado para resolver issues de chatbot' : ''}
+            ${openCategories.bug > 5 ? '- 🐛 **Bugs:** Alta cantidad de bugs - priorizar resolución' : ''}
+            ${openCategories.documentation > 2 ? '- 📚 **Docs:** Actualizar documentación basada en feedback' : ''}
+            ${openIssues.length > 20 ? '- 📊 **Backlog:** Revisar y priorizar backlog de issues' : ''}
+
+            ---
+
+            **Próximo Reporte:** ${new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleDateString('es-ES')}  
+            **Generado automáticamente por GitHub Actions** 🤖`;
+
+            // Save report to file
+            const fs = require('fs');
+            const path = require('path');
+
+            const reportPath = path.join('.github', 'ISSUE_METRICS_REPORT.md');
+            fs.writeFileSync(reportPath, report);
+
+            console.log('Issue metrics report generated successfully');
+
+      - name: 💾 Commit metrics report
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          if ! git diff --quiet; then
+            git add ${{ env.DOCUMENTATION_PATH }}/ISSUE_METRICS_REPORT.md
+            git commit -m "📊 Weekly issue metrics report
+            
+            - Generated automated issue statistics
+            - Categorized open and closed issues
+            - Provided actionable insights
+            - Updated: $(date '+%Y-%m-%d %H:%M UTC')"
+            git push
+            
+            echo "Issue metrics report committed successfully"
+          else
+            echo "No changes to metrics report"
+          fi
+
+  notify-completion:
+    name: 📢 Notify Automation Completion
+    runs-on: ubuntu-latest
+    needs:
+      [
+        auto-categorize-issues,
+        assign-reviewers,
+        cleanup-stale-issues,
+        generate-issue-metrics,
+      ]
+    if: always()
+
+    steps:
+      - name: 📊 Automation summary
+        run: |
+          echo "## 📋 Issue Management Automation Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🤖 Automated Actions Completed" >> $GITHUB_STEP_SUMMARY
+          echo "- **Issue Categorization:** ${{ needs.auto-categorize-issues.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **PR Reviewer Assignment:** ${{ needs.assign-reviewers.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Stale Issue Cleanup:** ${{ needs.cleanup-stale-issues.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Metrics Generation:** ${{ needs.generate-issue-metrics.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📈 Benefits" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Automatic issue categorization and labeling" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Smart reviewer assignment for PRs" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Proactive stale issue management" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Weekly insights and metrics tracking" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🎯 Impact" >> $GITHUB_STEP_SUMMARY
+          echo "- **Improved triage speed** for new issues" >> $GITHUB_STEP_SUMMARY
+          echo "- **Better PR review process** with smart assignments" >> $GITHUB_STEP_SUMMARY
+          echo "- **Cleaner issue backlog** with automated cleanup" >> $GITHUB_STEP_SUMMARY
+          echo "- **Data-driven insights** for project management" >> $GITHUB_STEP_SUMMARY
+
+      - name: ✅ Mark automation complete
+        run: |
+          echo "🎉 Issue management automation completed successfully!"
+          echo "📊 All automated workflows are functioning properly."
+          echo "🔄 Continuous improvement of project management processes."

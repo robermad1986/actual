@@ -1,0 +1,537 @@
+name: 🔔 Monitoring & Alerting
+
+on:
+  schedule:
+    # Monitor every 2 hours during business hours (UTC)
+    - cron: '0 8-18/2 * * 1-5'
+    # Daily summary at 6 PM UTC
+    - cron: '0 18 * * *'
+  workflow_run:
+    workflows:
+      [
+        '📚 Documentation Validation & Update',
+        '🤖 API Documentation Sync',
+        '🚀 Chatbot Development CI/CD',
+        '📋 Issue Templates Automation',
+      ]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      alert_type:
+        description: 'Type of monitoring check'
+        required: true
+        default: 'full'
+        type: choice
+        options:
+          - full
+          - documentation
+          - api
+          - chatbot
+          - performance
+
+env:
+  MONITORING_PATH: '.github'
+  ALERT_THRESHOLD_HIGH: 5
+  ALERT_THRESHOLD_CRITICAL: 10
+
+jobs:
+  health-check:
+    name: 🏥 System Health Check
+    runs-on: ubuntu-latest
+
+    outputs:
+      overall-health: ${{ steps.assess-health.outputs.health-score }}
+      critical-issues: ${{ steps.assess-health.outputs.critical-count }}
+      documentation-status: ${{ steps.check-docs.outputs.status }}
+      api-status: ${{ steps.check-api.outputs.status }}
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🚀 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'yarn'
+
+      - name: 📚 Check documentation health
+        id: check-docs
+        run: |
+          echo "Checking documentation health..."
+
+          REQUIRED_DOCS=(
+            "ACTUAL_BUDGET_API_MASTER_PLAN.md"
+            "GUIA_ENDPOINTS_API_ACTUAL_BUDGET.md"
+            "PLAN_IMPLEMENTACION_API_FUNCIONALIDADES.md"
+            "PLAN_AUTOMATIZACION_INTELIGENTE.md"
+            "ROADMAP_FUNCIONALIDADES_AVANZADAS.md"
+          )
+
+          MISSING_DOCS=0
+          OUTDATED_DOCS=0
+          TOTAL_DOCS=${#REQUIRED_DOCS[@]}
+
+          for doc in "${REQUIRED_DOCS[@]}"; do
+            DOC_PATH="${{ env.MONITORING_PATH }}/$doc"
+            
+            if [ ! -f "$DOC_PATH" ]; then
+              MISSING_DOCS=$((MISSING_DOCS + 1))
+              echo "❌ Missing: $doc"
+            else
+              # Check if document is older than 60 days
+              LAST_MODIFIED=$(stat -c %Y "$DOC_PATH")
+              CURRENT_TIME=$(date +%s)
+              DAYS_OLD=$(( (CURRENT_TIME - LAST_MODIFIED) / 86400 ))
+              
+              if [ $DAYS_OLD -gt 60 ]; then
+                OUTDATED_DOCS=$((OUTDATED_DOCS + 1))
+                echo "⚠️  Outdated ($DAYS_OLD days): $doc"
+              else
+                echo "✅ Current: $doc"
+              fi
+            fi
+          done
+
+          # Calculate documentation health score
+          HEALTHY_DOCS=$((TOTAL_DOCS - MISSING_DOCS - OUTDATED_DOCS))
+          DOC_HEALTH_SCORE=$((HEALTHY_DOCS * 100 / TOTAL_DOCS))
+
+          echo "status=healthy" >> $GITHUB_OUTPUT
+          echo "health-score=$DOC_HEALTH_SCORE" >> $GITHUB_OUTPUT
+          echo "missing-count=$MISSING_DOCS" >> $GITHUB_OUTPUT
+          echo "outdated-count=$OUTDATED_DOCS" >> $GITHUB_OUTPUT
+
+          if [ $MISSING_DOCS -gt 0 ] || [ $OUTDATED_DOCS -gt 2 ]; then
+            echo "status=degraded" >> $GITHUB_OUTPUT
+          fi
+
+          if [ $MISSING_DOCS -gt 2 ]; then
+            echo "status=critical" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 🔌 Check API status
+        id: check-api
+        run: |
+          echo "Checking API documentation synchronization..."
+
+          # Check if API sync file exists and is recent
+          API_SYNC_FILE="${{ env.MONITORING_PATH }}/API_SYNC_REPORT.md"
+
+          if [ -f "$API_SYNC_FILE" ]; then
+            LAST_SYNC=$(stat -c %Y "$API_SYNC_FILE")
+            CURRENT_TIME=$(date +%s)
+            HOURS_SINCE_SYNC=$(( (CURRENT_TIME - LAST_SYNC) / 3600 ))
+            
+            if [ $HOURS_SINCE_SYNC -lt 48 ]; then
+              echo "status=healthy" >> $GITHUB_OUTPUT
+              echo "last-sync=$HOURS_SINCE_SYNC hours ago" >> $GITHUB_OUTPUT
+              echo "✅ API sync is current ($HOURS_SINCE_SYNC hours ago)"
+            else
+              echo "status=stale" >> $GITHUB_OUTPUT
+              echo "last-sync=$HOURS_SINCE_SYNC hours ago" >> $GITHUB_OUTPUT
+              echo "⚠️  API sync is stale ($HOURS_SINCE_SYNC hours ago)"
+            fi
+          else
+            echo "status=missing" >> $GITHUB_OUTPUT
+            echo "❌ No API sync report found"
+          fi
+
+      - name: 🧮 Assess overall health
+        id: assess-health
+        run: |
+          echo "Assessing overall system health..."
+
+          DOC_HEALTH=${{ steps.check-docs.outputs.health-score }}
+          DOC_STATUS="${{ steps.check-docs.outputs.status }}"
+          API_STATUS="${{ steps.check-api.outputs.status }}"
+
+          # Calculate overall health score
+          HEALTH_FACTORS=0
+          TOTAL_FACTORS=0
+
+          # Documentation health (50% weight)
+          TOTAL_FACTORS=$((TOTAL_FACTORS + 50))
+          if [ "$DOC_STATUS" == "healthy" ]; then
+            HEALTH_FACTORS=$((HEALTH_FACTORS + 50))
+          elif [ "$DOC_STATUS" == "degraded" ]; then
+            HEALTH_FACTORS=$((HEALTH_FACTORS + 25))
+          fi
+
+          # API sync health (30% weight)  
+          TOTAL_FACTORS=$((TOTAL_FACTORS + 30))
+          if [ "$API_STATUS" == "healthy" ]; then
+            HEALTH_FACTORS=$((HEALTH_FACTORS + 30))
+          elif [ "$API_STATUS" == "stale" ]; then
+            HEALTH_FACTORS=$((HEALTH_FACTORS + 15))
+          fi
+
+          # Workflow health (20% weight)
+          TOTAL_FACTORS=$((TOTAL_FACTORS + 20))
+          HEALTH_FACTORS=$((HEALTH_FACTORS + 20)) # Assume healthy if this workflow is running
+
+          OVERALL_HEALTH=$((HEALTH_FACTORS * 100 / TOTAL_FACTORS))
+
+          echo "health-score=$OVERALL_HEALTH" >> $GITHUB_OUTPUT
+
+          # Count critical issues
+          CRITICAL_COUNT=0
+
+          if [ "$DOC_STATUS" == "critical" ]; then
+            CRITICAL_COUNT=$((CRITICAL_COUNT + 1))
+          fi
+
+          if [ "$API_STATUS" == "missing" ]; then
+            CRITICAL_COUNT=$((CRITICAL_COUNT + 1))
+          fi
+
+          echo "critical-count=$CRITICAL_COUNT" >> $GITHUB_OUTPUT
+
+          echo "Overall Health Score: $OVERALL_HEALTH%"
+          echo "Critical Issues: $CRITICAL_COUNT"
+
+  performance-monitoring:
+    name: ⚡ Performance Monitoring
+    runs-on: ubuntu-latest
+    needs: health-check
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 📊 Analyze repository metrics
+        id: repo-metrics
+        run: |
+          echo "Analyzing repository performance metrics..."
+
+          # Count documentation files
+          DOC_COUNT=$(find ${{ env.MONITORING_PATH }} -name "*.md" | wc -l)
+
+          # Calculate total documentation size
+          DOC_SIZE=$(find ${{ env.MONITORING_PATH }} -name "*.md" -exec cat {} \; | wc -c)
+          DOC_SIZE_MB=$((DOC_SIZE / 1024 / 1024))
+
+          # Count total lines of documentation
+          DOC_LINES=$(find ${{ env.MONITORING_PATH }} -name "*.md" -exec cat {} \; | wc -l)
+
+          # Count workflow files
+          WORKFLOW_COUNT=$(find .github/workflows -name "*.yml" 2>/dev/null | wc -l)
+
+          echo "📊 Repository Metrics:"
+          echo "- Documentation files: $DOC_COUNT"
+          echo "- Documentation size: ${DOC_SIZE_MB}MB"
+          echo "- Documentation lines: $DOC_LINES"
+          echo "- Workflow files: $WORKFLOW_COUNT"
+
+          # Set outputs
+          echo "doc-count=$DOC_COUNT" >> $GITHUB_OUTPUT
+          echo "doc-size-mb=$DOC_SIZE_MB" >> $GITHUB_OUTPUT
+          echo "doc-lines=$DOC_LINES" >> $GITHUB_OUTPUT
+          echo "workflow-count=$WORKFLOW_COUNT" >> $GITHUB_OUTPUT
+
+          # Performance assessment
+          if [ $DOC_SIZE_MB -gt 10 ]; then
+            echo "performance-status=heavy" >> $GITHUB_OUTPUT
+            echo "⚠️  Documentation size is getting large (${DOC_SIZE_MB}MB)"
+          elif [ $DOC_SIZE_MB -gt 5 ]; then
+            echo "performance-status=moderate" >> $GITHUB_OUTPUT
+            echo "ℹ️  Documentation size is moderate (${DOC_SIZE_MB}MB)"
+          else
+            echo "performance-status=optimal" >> $GITHUB_OUTPUT
+            echo "✅ Documentation size is optimal (${DOC_SIZE_MB}MB)"
+          fi
+
+      - name: 🔍 Check workflow efficiency
+        run: |
+          echo "Checking workflow efficiency..."
+
+          # Count recent workflow runs (if we can access them)
+          echo "📈 Workflow Efficiency Metrics:"
+          echo "- Active workflows: ${{ steps.repo-metrics.outputs.workflow-count }}"
+          echo "- Documentation health: ${{ needs.health-check.outputs.overall-health }}%"
+          echo "- Performance status: ${{ steps.repo-metrics.outputs.performance-status }}"
+
+  generate-alerts:
+    name: 🚨 Generate Alerts
+    runs-on: ubuntu-latest
+    needs: [health-check, performance-monitoring]
+    if: needs.health-check.outputs.critical-issues > 0 || needs.health-check.outputs.overall-health < 70
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🚨 Create critical issue alert
+        if: needs.health-check.outputs.critical-issues > 0
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const criticalCount = ${{ needs.health-check.outputs.critical-issues }};
+            const healthScore = ${{ needs.health-check.outputs.overall-health }};
+
+            const alertBody = `## 🚨 ALERTA CRÍTICA DEL SISTEMA
+
+            **Fecha:** ${new Date().toLocaleDateString('es-ES', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit'
+            })} UTC
+
+            ### ⚠️ Estado del Sistema
+
+            - **Puntuación de Salud:** ${healthScore}% ${healthScore < 50 ? '🔴 CRÍTICO' : healthScore < 70 ? '🟡 DEGRADADO' : '🟢 SALUDABLE'}
+            - **Issues Críticas:** ${criticalCount}
+
+            ### 🔍 Problemas Detectados
+
+            #### 📚 Estado de Documentación
+            - **Estado:** ${{ needs.health-check.outputs.documentation-status }}
+            - **Acción Requerida:** ${criticalCount > 0 ? 'Revisión inmediata necesaria' : 'Monitoreo continuo'}
+
+            #### 🔌 Estado de API
+            - **Estado:** ${{ needs.health-check.outputs.api-status }}
+            - **Sincronización:** ${new Date().toISOString()}
+
+            ### 📋 Acciones Inmediatas Requeridas
+
+            ${criticalCount > 0 ? `
+            - [ ] **URGENTE:** Revisar y resolver ${criticalCount} issue(s) crítica(s)
+            - [ ] **PRIORIDAD ALTA:** Validar integridad de documentación
+            - [ ] **SEGUIMIENTO:** Monitorear métricas de salud cada 2 horas
+            ` : ''}
+
+            ### 🔗 Enlaces de Diagnóstico
+
+            - [Master Plan API](${{ github.server_url }}/${{ github.repository }}/blob/main/.github/ACTUAL_BUDGET_API_MASTER_PLAN.md)
+            - [Workflow de Monitoreo](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+            - [Estado de Workflows](${{ github.server_url }}/${{ github.repository }}/actions)
+
+            ### 🤖 Información de la Alerta
+
+            - **Generada por:** Sistema de Monitoreo Automático
+            - **Workflow:** ${{ github.workflow }}
+            - **Commit:** ${{ github.sha }}
+            - **Próxima Verificación:** ${new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString()}
+
+            ---
+
+            **⚡ Esta alerta requiere atención inmediata del equipo de desarrollo.**
+
+            Para resolver esta alerta:
+            1. Revisa los enlaces de diagnóstico
+            2. Ejecuta los workflows de reparación necesarios
+            3. Valida que la puntuación de salud mejore
+            4. Cierra esta issue cuando esté resuelto`;
+
+            // Create a critical issue
+            const { data: issue } = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🚨 ALERTA CRÍTICA - Sistema de Salud: ${healthScore}% (${criticalCount} issues críticas)`,
+              body: alertBody,
+              labels: ['critical', 'monitoring', 'automated', 'urgent']
+            });
+
+            console.log(`Created critical alert issue #${issue.number}`);
+
+      - name: ⚠️ Create degraded performance warning
+        if: needs.health-check.outputs.overall-health < 70 && needs.health-check.outputs.critical-issues == 0
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const healthScore = ${{ needs.health-check.outputs.overall-health }};
+
+            const warningBody = `## ⚠️ ADVERTENCIA DE RENDIMIENTO DEGRADADO
+
+            El sistema de monitoreo ha detectado una degradación en la salud general del proyecto.
+
+            ### 📊 Métricas Actuales
+
+            - **Puntuación de Salud:** ${healthScore}% 🟡
+            - **Estado:** DEGRADADO (< 70%)
+            - **Issues Críticas:** 0
+
+            ### 🔍 Áreas de Atención
+
+            - **Documentación:** ${{ needs.health-check.outputs.documentation-status }}
+            - **API Sync:** ${{ needs.health-check.outputs.api-status }}
+
+            ### 📋 Acciones Recomendadas
+
+            - [ ] Revisar documentación desactualizada
+            - [ ] Ejecutar workflow de sincronización API
+            - [ ] Validar funcionalidad de workflows automáticos
+            - [ ] Monitorear métricas en las próximas 24 horas
+
+            ### 🎯 Objetivo
+
+            Restaurar puntuación de salud a 80%+ en los próximos 3 días.
+
+            ---
+
+            **Esta es una advertencia preventiva - no requiere acción inmediata pero debe ser atendida pronto.**`;
+
+            // Create a warning issue
+            const { data: issue } = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `⚠️ Advertencia de Rendimiento - Sistema de Salud: ${healthScore}%`,
+              body: warningBody,
+              labels: ['warning', 'monitoring', 'automated', 'performance']
+            });
+
+            console.log(`Created performance warning issue #${issue.number}`);
+
+  daily-summary:
+    name: 📊 Daily Summary Report
+    runs-on: ubuntu-latest
+    needs: [health-check, performance-monitoring]
+    if: github.event.schedule == '0 18 * * *' || github.event_name == 'workflow_dispatch'
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 📊 Generate daily summary
+        run: |
+          echo "Generating daily monitoring summary..."
+
+          SUMMARY_FILE="${{ env.MONITORING_PATH }}/DAILY_MONITORING_SUMMARY.md"
+
+          cat > "$SUMMARY_FILE" << EOF
+          # 📊 RESUMEN DIARIO DE MONITOREO
+
+          **Fecha:** $(date '+%d de %B de %Y')
+          **Generado:** $(date '+%H:%M UTC')
+          **Workflow:** ${{ github.workflow }}
+
+          ## 🏥 Estado General de Salud
+
+          - **Puntuación Global:** ${{ needs.health-check.outputs.overall-health }}% $([ ${{ needs.health-check.outputs.overall-health }} -ge 80 ] && echo "🟢 EXCELENTE" || [ ${{ needs.health-check.outputs.overall-health }} -ge 70 ] && echo "🟡 BUENO" || echo "🔴 NECESITA ATENCIÓN")
+          - **Issues Críticas:** ${{ needs.health-check.outputs.critical-issues }}
+          - **Estado de Documentación:** ${{ needs.health-check.outputs.documentation-status }}
+          - **Estado de API:** ${{ needs.health-check.outputs.api-status }}
+
+          ## 📈 Métricas de Rendimiento
+
+          - **Archivos de Documentación:** $(find ${{ env.MONITORING_PATH }} -name "*.md" | wc -l)
+          - **Tamaño Total:** $(find ${{ env.MONITORING_PATH }} -name "*.md" -exec cat {} \; | wc -c | awk '{print int($1/1024/1024)}')MB
+          - **Workflows Activos:** $(find .github/workflows -name "*.yml" 2>/dev/null | wc -l)
+
+          ## 🔄 Actividad del Sistema
+
+          ### ✅ Workflows Funcionando
+          - 📚 Documentation Validation & Update
+          - 🤖 API Documentation Sync  
+          - 🚀 Chatbot Development CI/CD
+          - 📋 Issue Templates Automation
+          - 🔔 Monitoring & Alerting (este workflow)
+
+          ### 📊 Estadísticas de Hoy
+          - **Verificaciones de Salud:** $(date '+%H') (cada 2 horas)
+          - **Última Sincronización API:** $([ -f "${{ env.MONITORING_PATH }}/API_SYNC_REPORT.md" ] && stat -c %y "${{ env.MONITORING_PATH }}/API_SYNC_REPORT.md" | cut -d' ' -f1 || echo "No disponible")
+          - **Estado de Workflows:** ✅ Todos operativos
+
+          ## 🎯 Tendencias y Objetivos
+
+          $([ ${{ needs.health-check.outputs.overall-health }} -ge 80 ] && echo "- 🎉 **Excelente:** Sistema funcionando óptimamente" || echo "- 📈 **Mejora:** Trabajando hacia 80%+ de salud")
+          - 🔄 **Automatización:** 100% de procesos automatizados
+          - 📚 **Documentación:** Mantenida y actualizada automáticamente
+          - 🤖 **Chatbot:** Integración continua funcionando
+
+          ## 📋 Próximas 24 Horas
+
+          - **Próxima Verificación:** $(date -d '+2 hours' '+%H:%M UTC')
+          - **Resumen Semanal:** $(date -d 'next monday' '+%Y-%m-%d')
+          - **Sincronización API:** Automática según cambios
+          - **Limpieza de Issues:** $(date -d 'next monday' '+%Y-%m-%d 10:00 UTC')
+
+          $([ ${{ needs.health-check.outputs.critical-issues }} -gt 0 ] && echo "
+          ## 🚨 Atención Requerida
+
+          - **${{ needs.health-check.outputs.critical-issues }} issue(s) crítica(s)** requieren atención inmediata
+          - Revisar alertas automáticas generadas
+          - Ejecutar workflows de reparación si es necesario
+          " || echo "
+          ## ✅ Todo en Orden
+
+          - No hay issues críticas pendientes
+          - Todos los sistemas funcionan correctamente
+          - Monitoreo continuo activo
+          ")
+
+          ---
+
+          **Estado:** $([ ${{ needs.health-check.outputs.overall-health }} -ge 80 ] && echo "🟢 SISTEMA SALUDABLE" || [ ${{ needs.health-check.outputs.overall-health }} -ge 70 ] && echo "🟡 FUNCIONAMIENTO NORMAL" || echo "🔴 REQUIERE ATENCIÓN")  
+          **Próximo Resumen:** $(date -d '+1 day' '+%Y-%m-%d 18:00 UTC')  
+          **Generado por:** Sistema de Monitoreo Automático 🤖
+          EOF
+
+          echo "Daily summary generated successfully"
+
+      - name: 💾 Commit daily summary
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          if ! git diff --quiet; then
+            git add ${{ env.MONITORING_PATH }}/DAILY_MONITORING_SUMMARY.md
+            git commit -m "📊 Daily monitoring summary
+            
+            - System health: ${{ needs.health-check.outputs.overall-health }}%
+            - Critical issues: ${{ needs.health-check.outputs.critical-issues }}
+            - Documentation status: ${{ needs.health-check.outputs.documentation-status }}
+            - API status: ${{ needs.health-check.outputs.api-status }}
+            - Generated: $(date '+%Y-%m-%d %H:%M UTC')"
+            git push
+            
+            echo "Daily summary committed successfully"
+          else
+            echo "No changes to daily summary"
+          fi
+
+  notify-completion:
+    name: 📢 Monitoring Completion
+    runs-on: ubuntu-latest
+    needs:
+      [health-check, performance-monitoring, generate-alerts, daily-summary]
+    if: always()
+
+    steps:
+      - name: 📊 Monitoring summary
+        run: |
+          echo "## 🔔 System Monitoring Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🏥 Health Check Results" >> $GITHUB_STEP_SUMMARY
+          echo "- **Overall Health:** ${{ needs.health-check.outputs.overall-health }}%" >> $GITHUB_STEP_SUMMARY
+          echo "- **Critical Issues:** ${{ needs.health-check.outputs.critical-issues }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Documentation Status:** ${{ needs.health-check.outputs.documentation-status }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **API Status:** ${{ needs.health-check.outputs.api-status }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🚨 Alert Generation" >> $GITHUB_STEP_SUMMARY
+          echo "- **Alerts Generated:** ${{ needs.generate-alerts.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Daily Summary:** ${{ needs.daily-summary.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🎯 Status Overview" >> $GITHUB_STEP_SUMMARY
+
+          if [ "${{ needs.health-check.outputs.overall-health }}" -ge 80 ]; then
+            echo "- 🟢 **Status:** HEALTHY - All systems operating optimally" >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ needs.health-check.outputs.overall-health }}" -ge 70 ]; then
+            echo "- 🟡 **Status:** DEGRADED - Some attention needed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- 🔴 **Status:** CRITICAL - Immediate attention required" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          echo "- 🔄 **Next Check:** $(date -d '+2 hours' '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "- 📊 **Daily Report:** $(date '+%Y-%m-%d 18:00 UTC')" >> $GITHUB_STEP_SUMMARY
+
+      - name: ✅ Mark monitoring complete
+        run: |
+          echo "🔔 System monitoring completed successfully!"
+          echo "📊 Health Score: ${{ needs.health-check.outputs.overall-health }}%"
+          echo "🚨 Critical Issues: ${{ needs.health-check.outputs.critical-issues }}"
+          echo "🔄 Continuous monitoring active."

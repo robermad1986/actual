@@ -2,32 +2,6 @@
   <img src="/demo.png" alt="Actualbudget" />
 </p>
 
-## 🤖 NEW: AI Financial Assistant
-
-This fork includes a **complete integration with Moonshot Kimi K2** AI model for intelligent financial assistance:
-
-- **💬 Conversational Interface**: Chat directly with your financial data
-- **🧠 Smart Analysis**: AI-powered insights about your spending patterns
-- **📊 Contextual Advice**: Personalized recommendations based on your actual data
-- **🐳 Docker Ready**: Fully containerized for easy deployment
-
-### Quick Start with AI Assistant
-
-```bash
-# Start the complete environment with AI
-docker-compose -f docker-compose.full.yml up -d
-
-# Verify AI is working
-curl http://localhost:3000/api/ai/chat/health
-
-# Open Actual Budget and look for the 💬 button
-open http://localhost:3001
-```
-
-📚 **Full Documentation**: [README_CHATBOT.md](README_CHATBOT.md) | [User Guide](GUIA_USUARIO_CHATBOT.md) | [Technical Docs](DOCUMENTACION_TECNICA_CHATBOT.md)
-
----
-
 ## Getting Started
 
 Actual is a local-first personal finance tool. It is 100% free and open-source, written in NodeJS, it has a synchronization element so that all your changes can move between devices without any heavy lifting.
@@ -41,6 +15,28 @@ Want to say thanks? Click the ⭐ at the top of the page.
 - Actual [discord](https://discord.gg/pRYNYr4W5A) community.
 - Actual [Community Documentation](https://actualbudget.org/docs)
 - [Frequently asked questions](https://actualbudget.org/docs/faq)
+
+## 🤖 AI Financial Assistant
+
+This repository includes an **advanced AI-powered financial assistant** that transforms Actual Budget into an intelligent personal finance advisor.
+
+### Features:
+
+- **🧠 Smart Transaction Classification** - Automatic categorization using machine learning
+- **💬 Natural Language Interface** - Chat with your budget in plain English
+- **📊 Intelligent Insights** - AI-powered financial analysis and recommendations
+- **🤖 Automated Budget Coach** - Proactive suggestions for better financial health
+- **🔄 Comprehensive API Integration** - Full access to all 49+ Actual Budget endpoints
+
+### Documentation:
+
+- **📋 [Master Plan](.github/MASTER_WORKFLOW_NAVIGATION.md)** - Complete system overview and navigation
+- **🔧 [API Technical Guide](.github/GUIA_ENDPOINTS_API_ACTUAL_BUDGET.md)** - Comprehensive API reference
+- **🚀 [Implementation Plan](.github/PLAN_IMPLEMENTACION_API_FUNCIONALIDADES.md)** - Step-by-step development roadmap
+- **🧠 [AI Automation Plan](.github/PLAN_AUTOMATIZACION_INTELIGENTE.md)** - Machine learning capabilities
+- **🌟 [Advanced Roadmap](.github/ROADMAP_FUNCIONALIDADES_AVANZADAS.md)** - Future features and vision
+
+The AI system includes automated workflows for documentation maintenance, API synchronization, continuous integration, and intelligent issue management.
 
 ## Installation
 
